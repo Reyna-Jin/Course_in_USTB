@@ -1,0 +1,150 @@
+https://wenku.baidu.com/view/ec7829290066f5335a8121a2.html
+
+https://blog.csdn.net/sishuiliunian0710/article/details/20493101/
+
+https://blog.csdn.net/weixin_34355559/article/details/92150141
+
+https://wenku.baidu.com/view/c4e3447a168884868762d6fb.html
+
+https://wenku.baidu.com/view/e7df069baef8941ea66e053e.html
+
+
+----------------------------
+下方为整个参考过程：
+---------------
+参考：
+
+http://blog.chinaunix.net/uid-20593827-id-4069931.html
+https://blog.csdn.net/sishuiliunian0710/article/details/20493101/
+https://blog.csdn.net/gyx1549624673/article/details/86495953
+https://www.cnblogs.com/zhyantao/p/10614238.html
+http://www.51testing.com/html/92/422092-241401.html
+步骤：
+一、MPI 
+安装教程参考：
+https://blog.csdn.net/u014004096/article/details/50499429
+https://blog.csdn.net/qq_30239975/article/details/77703321?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1
+https://blog.csdn.net/aaaaaaaaaa0198/article/details/7228434
+1.下载安装包
+http://www.mpich.org/downloads/
+版本：mpich-3.3.2
+2.解压安装包
+
+3.mkdir创建安装路径
+
+4.进入解压后的目录下
+使用./configure命令指定安装路径 配置文件
+
+出现错误：No Fortran 77 compiler found. If you don't need to
+        build any Fortran programs, you can disable Fortran support using
+        --disable-fortran. If you do want to build Fortran
+        programs, you need to install a Fortran compiler such as gfortran
+        or ifort before you can proceed.
+
+相关内容：https://wiki.ubuntu.org.cn/Gcc_Fortran_Intro
+就是缺少相关依赖环境 要安装gfortran：
+使用命令sudo apt-get install gfortran安装
+然后使用命令gfortran -v查看版本 安装成功
+
+再次使用./configure命令
+
+make
+
+make install
+
+5.配置环境变量
+打开文件 sudo gedit ~/.bashrc
+在末尾添加
+export MPI_ROOT=/home/guo/soft/MPI/install_MPI
+export PATH=$MPI_ROOT/bin:$PATH
+export MANPATH=$MPI_ROOT/man:$MANPATH
+保存，并更新配置文件
+source ~/.bashrc
+6.测试安装是否成功
+新建一个cpp文件：gedit mpi_hello.cpp
+编译：mpicxx -g -Wall -o mpi_hello.o mpi_hello.cpp
+运行：mpirun -n 4 ./mpi_hello.o
+不报错即为成功
+
+二、
+从官网上得知需要BLAS或 ATLAS或VSIPL 
+http://www.netlib.org/benchmark/hpl/links.html#blas_libs
+ATLAS：
+官网：http://www.netlib.org/atlas/
+http://www.netlib.org/lapack/
+http://blog.sina.com.cn/s/blog_708532ea0100m8nt.html
+ATLAS（自动调谐线性代数软件）项目是一项正在进行的研究工作，重点是应用经验技术，以提供可移植的性能。目前，它提供了C和Fortran77接口来实现一个可移植的高效BLAS，以及一些来自LAPACK的例程。
+
+也可以使用第三方工具 这里选择用MKL
+https://software.intel.com/en-us/mkl/choose-download
+
+<安装BLAS>
+参考教程
+https://www.cnblogs.com/zhyantao/p/10614254.html
+1.下载安装包
+http://www.netlib.org/blas/index.html
+2.解压安装包
+tar -xzf blas-3.8.0.tgz
+3.cd BLAS-3.8.0
+4.make 编译 当前目录下只有.f文件 执行make后每个.f文件生成一个.o文件和一个blas_LINUX.a文件
+5.ar rv libblas.a *.o 把这些.o文件链接起来
+6.进入/home/guo/soft/CBLAS目录
+7.tar -xzf cblas.tgz 解压Clabs的压缩包
+8.cd CBLAS
+9.cp /home/guo/soft/BLAS/BLAS-3.8.0/blas_LINUX.a /home/guo/soft/CBLAS/CBLAS/bin 复制文件
+10.vim Makefile.in
+修改成：
+BLLIB = ../lib/blas_LINUX.a                                              
+CBLIB = ../lib/cblas_$(PLAT).a
+备注：
+“
+CBDIR  is the directory where you unpacked the tar file
+BLLIB  is your Legacy BLAS library
+”
+11.make
+12. 测试安装是否成功 ./testing/xzcblat1
+
+三、HPL
+参考：
+http://blog.chinaunix.net/uid-20593827-id-4069931.html
+http://www.mamicode.com/info-detail-2645306.html
+https://blog.csdn.net/sishuiliunian0710/article/details/20493101/
+
+1.下载安装包 
+http://www.netlib.org/benchmark/hpl/index.html
+版本：hpl-2.3
+2.复制文件 
+sudo cp /home/guo/soft/CBLAS/CBLAS/lib/* /usr/local/lib
+sudo cp /home/guo/soft/BLAS/BLAS-3.8.0/blas_LINUX.a /usr/local/lib
+3.cd /home/guo/soft/HPL
+4.解压tar -xzf hpl-2.3.tar.gz
+5.cd hpl-2.3
+6.cp setup/Make.Linux_PII_CBLAS ./Make.test
+9.修改vim Make.test
+ARCH         = test
+MPdir        = /home/guo/soft/MPI/install_MPI
+MPlib        = $(MPdir)/lib/libmpicxx.a
+LAdir        = /home/guo/soft/CBLAS/CBLAS/lib
+LAlib        = $(LAdir)/cblas_LINUX.a $(LAdir)/blas_LINUX.a
+CC           = /home/guo/soft/MPI/install_MPI/bin/mpicc
+LINKER       = /home/guo/soft/MPI/install_MPI/bin/mpif77
+
+使用which可以查看gcc、mpicc、mpif77的位置
+“在这里编译器是要重点指出的，c编译器可以使用gcc,g++,mpicc,mpicxx等，Fortran77编译器可以使用g77,gfortran,mpif77等在比较新的操作系统里g77基本上已经被fortran取代，并且不易安装，但我们所用的软件可能默认使用的是g77，所以我们要自己手动修改Makefile及其相关文件或安装g77,因为在此之前我们已经安装了mpich2，mpich2所提供的mpicc,mpiccxx,mpif77可以很好的编译我们所需要的软件，在这里我们使用gcc或mpicc作为c编译器，使用mpif77作为Fortran77编译器。也就是说不用专门再安装编译器！”
+10.编译
+make arch=Linux_PII_CBLAS
+11.运行测试
+    cd bin/test
+    mpirun -np 4 ./xhpl > HPL-Benchmark.txt
+12 gedit HPL-Benchmark.txt
+可以看到结果
+安装成功
+
+四、完成LINPACK测试和性能优化
+http://blog.sina.com.cn/s/blog_3eba8f1c0100nsmt.html
+
+
+
+
+
+
