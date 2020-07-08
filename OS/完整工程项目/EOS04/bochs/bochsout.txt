@@ -1,0 +1,3442 @@
+00000000000i[     ] Bochs x86 Emulator 2.3.7
+00000000000i[     ]   Build from CVS snapshot, on June 3, 2008
+00000000000i[     ] System configuration
+00000000000i[     ]   processors: 1 (cores=1, HT threads=1)
+00000000000i[     ]   A20 line support: yes
+00000000000i[     ]   APIC support: no
+00000000000i[     ] CPU configuration
+00000000000i[     ]   level: 5
+00000000000i[     ]   SMP support: no
+00000000000i[     ]   FPU support: yes
+00000000000i[     ]   MMX support: yes
+00000000000i[     ]   SSE support: no
+00000000000i[     ]   CLFLUSH support: no
+00000000000i[     ]   VME support: yes
+00000000000i[     ]   3dnow! support: no
+00000000000i[     ]   PAE support: no
+00000000000i[     ]   PGE support: no
+00000000000i[     ]   PSE support: yes
+00000000000i[     ]   x86-64 support: no
+00000000000i[     ]   SEP support: no
+00000000000i[     ]   MWAIT support: no
+00000000000i[     ]   XSAVE support: no
+00000000000i[     ]   AES support: no
+00000000000i[     ] Optimization configuration
+00000000000i[     ]   Guest2HostTLB support: no
+00000000000i[     ]   RepeatSpeedups support: no
+00000000000i[     ]   Icache support: no
+00000000000i[     ]   Trace cache support: no
+00000000000i[     ]   Fast function calls: no
+00000000000i[     ] Devices configuration
+00000000000i[     ]   ACPI support: no
+00000000000i[     ]   NE2000 support: no
+00000000000i[     ]   PCI support: no
+00000000000i[     ]   SB16 support: no
+00000000000i[     ]   USB support: no
+00000000000i[     ]   VGA extension support: vbe 
+00000000000i[MEM0 ] allocated memory at 028B9020. after alignment, vector=028BA000
+00000000000i[MEM0 ] 32.00MB
+00000000000i[MEM0 ] rom at 0xfffe0000/131072 ('BIOS-bochs-latest')
+00000000000i[MEM0 ] rom at 0xc0000/38400 ('VGABIOS-lgpl-latest')
+00000000000i[CMOS ] Using local time for initial clock
+00000000000i[CMOS ] Setting initial clock to: Thu Dec 19 10:36:43 2019 (time0=1576723003)
+00000000000i[DMA  ] channel 4 used by cascade
+00000000000i[DMA  ] channel 2 used by Floppy Drive
+00000000000i[FDD  ] fd0: '..\floppy.img' ro=0, h=2,t=80,spt=18
+00000000000i[MEM0 ] Register memory access handlers: 0x000a0000 - 0x000bffff
+00000000000i[WGUI ] Desktop Window dimensions: 1536 x 864
+00000000000i[WGUI ] Number of Mouse Buttons = 16
+00000000000i[WGUI ] IME disabled
+00000000000i[VGA  ] interval=300000
+00000000000i[MEM0 ] Register memory access handlers: 0xe0000000 - 0xe07fffff
+00000000000i[VGA  ] VBE Bochs Display Extension Enabled
+00000000000i[     ] init_mem of 'harddrv' plugin device by virtual method
+00000000000i[     ] init_mem of 'keyboard' plugin device by virtual method
+00000000000i[     ] init_mem of 'serial' plugin device by virtual method
+00000000000i[     ] init_mem of 'parallel' plugin device by virtual method
+00000000000i[     ] init_mem of 'extfpuirq' plugin device by virtual method
+00000000000i[     ] init_mem of 'speaker' plugin device by virtual method
+00000000000i[     ] init_dev of 'harddrv' plugin device by virtual method
+00000000000i[HD   ] HD on ata0-0: 'Hard Disk.vhd' 'growing' mode 
+00000000000i[HD   ] redolog : open image Hard Disk.vhd
+00000000000i[HD   ] redolog : Standard Header : magic='Bochs Virtual HD Image', type='Redolog', subtype='Growing', version = 2.0
+00000000000i[HD   ] redolog : Specific Header : #entries=8192, bitmap size=32, exent size = 131072 disk size = 1073479680
+00000000000i[HD   ] redolog : next extent will be at index 0
+00000000000i[HD   ] 'growing' disk opened, growing file is 'Hard Disk.vhd'
+00000000000i[HD   ] ata0-0: autodetect geometry: CHS=2080/16/63
+00000000000i[HD   ] translation on ata0-0 set to 'large'
+00000000000i[HD   ] Using boot sequence floppy, none, none
+00000000000i[HD   ] Floppy boot signature check is enabled
+00000000000i[     ] init_dev of 'keyboard' plugin device by virtual method
+00000000000i[KBD  ] will paste characters every 1000 keyboard ticks
+00000000000i[     ] init_dev of 'serial' plugin device by virtual method
+00000000000i[SER  ] com1: failed to open pipe \\.\pipe\engintime.oslab.com1
+00000000000i[SER  ] com1 at 0x03f8 irq 4
+00000000000i[SER  ] com2: failed to open pipe \\.\pipe\engintime.oslab.com2
+00000000000i[SER  ] com2 at 0x02f8 irq 3
+00000000000i[     ] init_dev of 'parallel' plugin device by virtual method
+00000000000i[PAR  ] parallel port 1 at 0x0378 irq 7
+00000000000i[     ] init_dev of 'extfpuirq' plugin device by virtual method
+00000000000i[     ] init_dev of 'speaker' plugin device by virtual method
+00000000000i[     ] register state of 'harddrv' plugin device by virtual method
+00000000000i[     ] register state of 'keyboard' plugin device by virtual method
+00000000000i[     ] register state of 'serial' plugin device by virtual method
+00000000000i[     ] register state of 'parallel' plugin device by virtual method
+00000000000i[     ] register state of 'extfpuirq' plugin device by virtual method
+00000000000i[     ] register state of 'speaker' plugin device by virtual method
+00000000000i[SYS  ] bx_pc_system_c::Reset(HARDWARE) called
+00000000000i[CPU  ] cpu hardware reset
+00000000000i[     ] reset of 'harddrv' plugin device by virtual method
+00000000000i[     ] reset of 'keyboard' plugin device by virtual method
+00000000000i[     ] reset of 'serial' plugin device by virtual method
+00000000000i[     ] reset of 'parallel' plugin device by virtual method
+00000000000i[     ] reset of 'extfpuirq' plugin device by virtual method
+00000000000i[     ] reset of 'speaker' plugin device by virtual method
+00000000000i[GDBST] setting breakpoint at 8001fdc7
+00000003302i[BIOS ] $Revision: 1.209 $ $Date: 2008/06/02 20:08:10 $
+00000317639i[KBD  ] reset-disable command received
+00000437882i[VBIOS] VGABios $Id: vgabios.c,v 1.67 2008/01/27 09:44:12 vruppert Exp $
+00000437953i[VGA  ] VBE known Display Interface b0c0
+00000437985i[VGA  ] VBE known Display Interface b0c4
+00000440910i[VBIOS] VBE Bios $Id: vbe.c,v 1.60 2008/03/02 07:47:21 vruppert Exp $
+00000763911i[BIOS ] Starting rombios32
+00000764738i[BIOS ] ram_size=0x02000000
+00000765352i[BIOS ] Found 1 cpu(s)
+00000880547i[BIOS ] ata0-0: PCHS=2080/16/63 translation=large LCHS=520/64/63
+00001200000i[WGUI ] dimension update x=720 y=400 fontheight=16 fontwidth=9 bpp=8
+00004760868i[BIOS ] IDE time out
+00016897647i[BIOS ] Booting from 0000:7c00
+00018141601i[FDD  ] controller reset in software
+00044137828i[GDBST] found breakpoint at 8001fdc7
+00044137828i[GDBST] stopped with ac1
+00044137828i[GDBST] reg 8 set to 8001fdc7
+00044137828i[GDBST] Removing breakpoint at 8001fdc7
+00044137828i[GDBST] addr 8001fdc1 len 0
+00044137828i[GDBST] addr 8001fdc1 len 0
+00044137828i[GDBST] addr 8001fdc1 len 0
+00044137828i[GDBST] addr 8001fdc1 len 0
+00044137828i[GDBST] addr 8001fdc1 len 0
+00044137828i[GDBST] addr 8001fdc1 len 0
+00044137828i[GDBST] addr 8001fdc2 len 0
+00044137828i[GDBST] addr 8001fdc3 len 0
+00044137828i[GDBST] addr 8001fdc3 len 0
+00044137828i[GDBST] addr 8001fdc2 len 0
+00044137828i[GDBST] addr 8001fdc3 len 0
+00044137828i[GDBST] addr 8001fdc4 len 0
+00044137828i[GDBST] addr 8001fdc5 len 0
+00044137828i[GDBST] addr 8001fdc6 len 0
+00044137828i[GDBST] addr 803fff78 len 0
+00044137828i[GDBST] addr 803fff74 len 0
+00044137828i[GDBST] addr 80017b23 len 0
+00044137828i[GDBST] addr 80017b23 len 0
+00044137828i[GDBST] addr 80017b23 len 0
+00044137828i[GDBST] addr 80017b23 len 0
+00044137828i[GDBST] addr 80017b23 len 0
+00044137828i[GDBST] addr 80017b23 len 0
+00044137828i[GDBST] addr 80017b23 len 0
+00044137828i[GDBST] addr 803fff7c len 0
+00044137828i[GDBST] addr 803fff74 len 0
+00044137828i[GDBST] addr 803fff80 len 0
+00044137828i[GDBST] addr 803fff74 len 0
+00044137828i[GDBST] addr 800179e9 len 0
+00044137828i[GDBST] addr 800179e9 len 0
+00044137828i[GDBST] addr 800179e9 len 0
+00044137828i[GDBST] addr 800179e9 len 0
+00044137828i[GDBST] addr 800179e9 len 0
+00044137828i[GDBST] addr 800179e9 len 0
+00044137828i[GDBST] addr 800179e9 len 0
+00044137828i[GDBST] addr 803fff84 len 0
+00044137828i[GDBST] addr 803fff74 len 0
+00044137828i[GDBST] addr 803fff88 len 0
+00044137828i[GDBST] addr 8002545c len 0
+00044137828i[GDBST] addr 8002a5dc len 0
+00044137828i[GDBST] addr 8002a5dc len 0
+00044137828i[GDBST] addr 803fdfd8 len 0
+00044137828i[GDBST] reg 4 set to 803fff48
+00044137828i[GDBST] reg 5 set to 803fff48
+00044137828i[GDBST] reg 8 set to 80019fd7
+00044137828i[GDBST] setting breakpoint at 8001fdc7
+00044137828i[GDBST] setting breakpoint at 80017de0
+00044137888i[GDBST] found breakpoint at 80017de0
+00044137888i[GDBST] stopped with ac1
+00044137888i[GDBST] reg 8 set to 80017de0
+00044137888i[GDBST] Removing breakpoint at 8001fdc7
+00044137888i[GDBST] Removing breakpoint at 80017de0
+00044137888i[GDBST] reg 0 set to 803fff90
+00044137888i[GDBST] reg 2 set to 803fc1f0
+00044137888i[GDBST] reg 5 set to 803fff74
+00044137888i[GDBST] reg 8 set to 8001fdc7
+00044137888i[GDBST] reg 9 set to 92
+00044137888i[GDBST] addr 8001fdc1 len 0
+00044137888i[GDBST] addr 8001fdc1 len 0
+00044137888i[GDBST] addr 8001fdc1 len 0
+00044137888i[GDBST] addr 8001fdc1 len 0
+00044137888i[GDBST] addr 8001fdc1 len 0
+00044137888i[GDBST] addr 8001fdc1 len 0
+00044137888i[GDBST] addr 8001fdc2 len 0
+00044137888i[GDBST] addr 8001fdc3 len 0
+00044137888i[GDBST] addr 8001fdc3 len 0
+00044137888i[GDBST] addr 8001fdc2 len 0
+00044137888i[GDBST] addr 8001fdc3 len 0
+00044137888i[GDBST] addr 8001fdc4 len 0
+00044137888i[GDBST] addr 8001fdc5 len 0
+00044137888i[GDBST] addr 8001fdc6 len 0
+00044137888i[GDBST] addr 8002a5dc len 0
+00044137888i[GDBST] addr 803fdfd8 len 0
+00044137888i[GDBST] addr 800268ec len 0
+00044137888i[GDBST] addr 8002a5dc len 0
+00044137888i[GDBST] addr 8002a5cc len 0
+00044137888i[GDBST] addr 803fbfd8 len 0
+00044137888i[GDBST] reg 4 set to 803fff48
+00044137888i[GDBST] reg 5 set to 803fff48
+00044137888i[GDBST] reg 8 set to 80019caf
+00044137888i[GDBST] setting breakpoint at 8001fdc7
+00044137888i[GDBST] setting breakpoint at 80017de0
+00044137948i[GDBST] found breakpoint at 80017de0
+00044137948i[GDBST] stopped with ac1
+00044137948i[GDBST] reg 8 set to 80017de0
+00044137948i[GDBST] Removing breakpoint at 8001fdc7
+00044137948i[GDBST] Removing breakpoint at 80017de0
+00044137948i[GDBST] reg 0 set to 803fff90
+00044137948i[GDBST] reg 1 set to 10
+00044137948i[GDBST] reg 2 set to 803fc1f0
+00044137948i[GDBST] reg 5 set to 803fff74
+00044137948i[GDBST] reg 8 set to 8001fdc7
+00044137948i[GDBST] reg 9 set to 92
+00044137948i[GDBST] addr 8001fdc1 len 0
+00044137948i[GDBST] addr 8001fdc1 len 0
+00044137948i[GDBST] addr 8001fdc1 len 0
+00044137948i[GDBST] addr 8001fdc1 len 0
+00044137948i[GDBST] addr 8001fdc1 len 0
+00044137948i[GDBST] addr 8001fdc1 len 0
+00044137948i[GDBST] addr 8001fdc2 len 0
+00044137948i[GDBST] addr 8001fdc3 len 0
+00044137948i[GDBST] addr 8001fdc3 len 0
+00044137948i[GDBST] addr 8001fdc2 len 0
+00044137948i[GDBST] addr 8001fdc3 len 0
+00044137948i[GDBST] addr 8001fdc4 len 0
+00044137948i[GDBST] addr 8001fdc5 len 0
+00044137948i[GDBST] addr 8001fdc6 len 0
+00044137948i[GDBST] addr 80025460 len 0
+00044137948i[GDBST] addr 80029b4c len 0
+00044137948i[GDBST] addr 8002a5dc len 0
+00044137948i[GDBST] addr 8002a5dc len 0
+00044137948i[GDBST] addr 803fdfd8 len 0
+00044137948i[GDBST] reg 4 set to 803fff48
+00044137948i[GDBST] reg 5 set to 803fff48
+00044137948i[GDBST] reg 8 set to 80019fd7
+00044137948i[GDBST] setting breakpoint at 8001fdc7
+00044137948i[GDBST] setting breakpoint at 80017de0
+00044138008i[GDBST] found breakpoint at 80017de0
+00044138008i[GDBST] stopped with ac1
+00044138008i[GDBST] reg 8 set to 80017de0
+00044138008i[GDBST] Removing breakpoint at 8001fdc7
+00044138008i[GDBST] Removing breakpoint at 80017de0
+00044138008i[GDBST] reg 0 set to 803fff90
+00044138008i[GDBST] reg 1 set to 10
+00044138008i[GDBST] reg 2 set to 803fc1f0
+00044138008i[GDBST] reg 5 set to 803fff74
+00044138008i[GDBST] reg 8 set to 8001fdc7
+00044138008i[GDBST] reg 9 set to 92
+00044138008i[GDBST] addr 8001fdc1 len 0
+00044138008i[GDBST] addr 8001fdc1 len 0
+00044138008i[GDBST] addr 8001fdc1 len 0
+00044138008i[GDBST] addr 8001fdc1 len 0
+00044138008i[GDBST] addr 8001fdc1 len 0
+00044138008i[GDBST] addr 8001fdc1 len 0
+00044138008i[GDBST] addr 8001fdc2 len 0
+00044138008i[GDBST] addr 8001fdc3 len 0
+00044138008i[GDBST] addr 8001fdc3 len 0
+00044138008i[GDBST] addr 8001fdc2 len 0
+00044138008i[GDBST] addr 8001fdc3 len 0
+00044138008i[GDBST] addr 8001fdc4 len 0
+00044138008i[GDBST] addr 8001fdc5 len 0
+00044138008i[GDBST] addr 8001fdc6 len 0
+00044138008i[GDBST] addr 800268ec len 0
+00044138008e[WGUI ] Sim client size(0, 0) != stretched size(720, 400)!
+00044138008i[GDBST] addr 803fff70 len 0
+00044138008i[GDBST] addr 803fff70 len 0
+00044138008i[GDBST] addr 80025460 len 0
+00044138008i[GDBST] addr 80025460 len 0
+00044138008i[GDBST] addr 8002545c len 0
+00044138008i[GDBST] addr 8002545c len 0
+00044138008i[GDBST] addr 80025460 len 0
+00044138008i[GDBST] addr 803fff70 len 0
+00044138008i[GDBST] addr 803fff70 len 0
+00044138008i[GDBST] addr 803fff70 len 0
+00044138008i[GDBST] addr 803fff70 len 0
+00044138008i[GDBST] addr 803fff70 len 0
+00044138008i[GDBST] addr 803fff70 len 0
+00044138008i[GDBST] addr 803fff70 len 0
+00044138008i[GDBST] addr 803fff70 len 0
+00044138008i[GDBST] addr 803fff70 len 0
+00044138008i[GDBST] addr 803fff70 len 0
+00044138008i[GDBST] addr 803fff70 len 0
+00044138008i[GDBST] addr 803fff70 len 0
+00044138008i[GDBST] addr 803fff70 len 0
+00044138008i[GDBST] addr 803fff70 len 0
+00044138008i[GDBST] addr 803fff70 len 0
+00044138008i[GDBST] addr 803fff70 len 0
+00044138008i[GDBST] stepping
+00044138009i[GDBST] stopped with ac2
+00044138009i[GDBST] setting breakpoint at 8001fdc7
+00044138634i[GDBST] found breakpoint at 8001fdc7
+00044138634i[GDBST] stopped with ac1
+00044138634i[GDBST] reg 8 set to 8001fdc7
+00044138634i[GDBST] Removing breakpoint at 8001fdc7
+00044138634i[GDBST] addr 8001fdc1 len 0
+00044138634i[GDBST] addr 8001fdc1 len 0
+00044138634i[GDBST] addr 8001fdc1 len 0
+00044138634i[GDBST] addr 8001fdc1 len 0
+00044138634i[GDBST] addr 8001fdc1 len 0
+00044138634i[GDBST] addr 8001fdc1 len 0
+00044138634i[GDBST] addr 8001fdc2 len 0
+00044138634i[GDBST] addr 8001fdc3 len 0
+00044138634i[GDBST] addr 8001fdc3 len 0
+00044138634i[GDBST] addr 8001fdc2 len 0
+00044138634i[GDBST] addr 8001fdc3 len 0
+00044138634i[GDBST] addr 8001fdc4 len 0
+00044138634i[GDBST] addr 8001fdc5 len 0
+00044138634i[GDBST] addr 8001fdc6 len 0
+00044138634i[GDBST] addr 803fffe4 len 0
+00044138634i[GDBST] addr 803fffe8 len 0
+00044138634i[GDBST] addr 803fffe4 len 0
+00044138634i[GDBST] addr 80017b23 len 0
+00044138634i[GDBST] addr 80017b23 len 0
+00044138634i[GDBST] addr 80017b23 len 0
+00044138634i[GDBST] addr 80017b23 len 0
+00044138634i[GDBST] addr 80017b23 len 0
+00044138634i[GDBST] addr 80017b23 len 0
+00044138634i[GDBST] addr 80017b23 len 0
+00044138634i[GDBST] addr 803fffe4 len 0
+00044138634i[GDBST] addr 803fffec len 0
+00044138634i[GDBST] addr 803fffe4 len 0
+00044138634i[GDBST] addr 803fffe4 len 0
+00044138634i[GDBST] addr 803ffff0 len 0
+00044138634i[GDBST] addr 803fffe4 len 0
+00044138634i[GDBST] addr 80017a25 len 0
+00044138634i[GDBST] addr 80017a25 len 0
+00044138634i[GDBST] addr 80017a25 len 0
+00044138634i[GDBST] addr 80017a25 len 0
+00044138634i[GDBST] addr 80017a25 len 0
+00044138634i[GDBST] addr 80017a25 len 0
+00044138634i[GDBST] addr 80017a25 len 0
+00044138634i[GDBST] addr 803fffe4 len 0
+00044138634i[GDBST] addr 803ffff4 len 0
+00044138634i[GDBST] addr 803fffe4 len 0
+00044138634i[GDBST] addr 803fffe4 len 0
+00044138634i[GDBST] addr 803ffff8 len 0
+00044138634i[GDBST] addr 8002545c len 0
+00044138634i[GDBST] addr 8002a5dc len 0
+00044138634i[GDBST] addr 8002a5dc len 0
+00044138634i[GDBST] addr 803fdfd8 len 0
+00044138634i[GDBST] reg 4 set to 803fffb8
+00044138634i[GDBST] reg 5 set to 803fffb8
+00044138634i[GDBST] reg 8 set to 80019fd7
+00044138634i[GDBST] setting breakpoint at 8001fdc7
+00044138634i[GDBST] setting breakpoint at 80017de0
+00044138694i[GDBST] found breakpoint at 80017de0
+00044138694i[GDBST] stopped with ac1
+00044138694i[GDBST] reg 8 set to 80017de0
+00044138694i[GDBST] Removing breakpoint at 8001fdc7
+00044138694i[GDBST] Removing breakpoint at 80017de0
+00044138694i[GDBST] reg 0 set to 20
+00044138694i[GDBST] reg 2 set to 20
+00044138694i[GDBST] reg 5 set to 803fffe4
+00044138694i[GDBST] reg 8 set to 8001fdc7
+00044138694i[GDBST] reg 9 set to 92
+00044138694i[GDBST] addr 8001fdc1 len 0
+00044138694i[GDBST] addr 8001fdc1 len 0
+00044138694i[GDBST] addr 8001fdc1 len 0
+00044138694i[GDBST] addr 8001fdc1 len 0
+00044138694i[GDBST] addr 8001fdc1 len 0
+00044138694i[GDBST] addr 8001fdc1 len 0
+00044138694i[GDBST] addr 8001fdc2 len 0
+00044138694i[GDBST] addr 8001fdc3 len 0
+00044138694i[GDBST] addr 8001fdc3 len 0
+00044138694i[GDBST] addr 8001fdc2 len 0
+00044138694i[GDBST] addr 8001fdc3 len 0
+00044138694i[GDBST] addr 8001fdc4 len 0
+00044138694i[GDBST] addr 8001fdc5 len 0
+00044138694i[GDBST] addr 8001fdc6 len 0
+00044138694i[GDBST] addr 8002a5dc len 0
+00044138694i[GDBST] addr 803fdfd8 len 0
+00044138694i[GDBST] addr 800268ec len 0
+00044138694i[GDBST] addr 8002a5dc len 0
+00044138694i[GDBST] addr 8002a5cc len 0
+00044138694i[GDBST] addr 803fbfd8 len 0
+00044138694i[GDBST] reg 4 set to 803fffb8
+00044138694i[GDBST] reg 5 set to 803fffb8
+00044138694i[GDBST] reg 8 set to 80019caf
+00044138694i[GDBST] setting breakpoint at 8001fdc7
+00044138694i[GDBST] setting breakpoint at 80017de0
+00044138754i[GDBST] found breakpoint at 80017de0
+00044138754i[GDBST] stopped with ac1
+00044138754i[GDBST] reg 8 set to 80017de0
+00044138754i[GDBST] Removing breakpoint at 8001fdc7
+00044138754i[GDBST] Removing breakpoint at 80017de0
+00044138754i[GDBST] reg 0 set to 20
+00044138754i[GDBST] reg 1 set to 10
+00044138754i[GDBST] reg 2 set to 20
+00044138754i[GDBST] reg 5 set to 803fffe4
+00044138754i[GDBST] reg 8 set to 8001fdc7
+00044138754i[GDBST] reg 9 set to 92
+00044138754i[GDBST] addr 8001fdc1 len 0
+00044138754i[GDBST] addr 8001fdc1 len 0
+00044138754i[GDBST] addr 8001fdc1 len 0
+00044138754i[GDBST] addr 8001fdc1 len 0
+00044138754i[GDBST] addr 8001fdc1 len 0
+00044138754i[GDBST] addr 8001fdc1 len 0
+00044138754i[GDBST] addr 8001fdc2 len 0
+00044138754i[GDBST] addr 8001fdc3 len 0
+00044138754i[GDBST] addr 8001fdc3 len 0
+00044138754i[GDBST] addr 8001fdc2 len 0
+00044138754i[GDBST] addr 8001fdc3 len 0
+00044138754i[GDBST] addr 8001fdc4 len 0
+00044138754i[GDBST] addr 8001fdc5 len 0
+00044138754i[GDBST] addr 8001fdc6 len 0
+00044138754i[GDBST] addr 80025460 len 0
+00044138754i[GDBST] addr 80025460 len 0
+00044138754i[GDBST] reg 4 set to 803fffb4
+00044138754i[GDBST] reg 5 set to 803fffb4
+00044138754i[GDBST] reg 8 set to 8001cddf
+00044138754i[GDBST] setting breakpoint at 8001fdc7
+00044138754i[GDBST] setting breakpoint at 80017de0
+00044138761i[GDBST] found breakpoint at 80017de0
+00044138761i[GDBST] stopped with ac1
+00044138761i[GDBST] reg 8 set to 80017de0
+00044138761i[GDBST] Removing breakpoint at 8001fdc7
+00044138761i[GDBST] Removing breakpoint at 80017de0
+00044138761i[GDBST] reg 0 set to 20
+00044138761i[GDBST] reg 1 set to 10
+00044138761i[GDBST] reg 2 set to 20
+00044138761i[GDBST] reg 4 set to 803fffbc
+00044138761i[GDBST] reg 5 set to 803fffe4
+00044138761i[GDBST] reg 8 set to 8001fdc7
+00044138761i[GDBST] addr 8001fdc1 len 0
+00044138761i[GDBST] addr 8001fdc1 len 0
+00044138761i[GDBST] addr 8001fdc1 len 0
+00044138761i[GDBST] addr 8001fdc1 len 0
+00044138761i[GDBST] addr 8001fdc1 len 0
+00044138761i[GDBST] addr 8001fdc1 len 0
+00044138761i[GDBST] addr 8001fdc2 len 0
+00044138761i[GDBST] addr 8001fdc3 len 0
+00044138761i[GDBST] addr 8001fdc3 len 0
+00044138761i[GDBST] addr 8001fdc2 len 0
+00044138761i[GDBST] addr 8001fdc3 len 0
+00044138761i[GDBST] addr 8001fdc4 len 0
+00044138761i[GDBST] addr 8001fdc5 len 0
+00044138761i[GDBST] addr 8001fdc6 len 0
+00044138761i[GDBST] addr 80029b4c len 0
+00044138761i[GDBST] addr 8002a5dc len 0
+00044138761i[GDBST] addr 8002a5dc len 0
+00044138761i[GDBST] addr 803fdfd8 len 0
+00044138761i[GDBST] reg 4 set to 803fffb8
+00044138761i[GDBST] reg 5 set to 803fffb8
+00044138761i[GDBST] reg 8 set to 80019fd7
+00044138761i[GDBST] setting breakpoint at 8001fdc7
+00044138761i[GDBST] setting breakpoint at 80017de0
+00044138821i[GDBST] found breakpoint at 80017de0
+00044138821i[GDBST] stopped with ac1
+00044138821i[GDBST] reg 8 set to 80017de0
+00044138821i[GDBST] Removing breakpoint at 8001fdc7
+00044138821i[GDBST] Removing breakpoint at 80017de0
+00044138821i[GDBST] reg 0 set to 20
+00044138821i[GDBST] reg 1 set to 10
+00044138821i[GDBST] reg 2 set to 20
+00044138821i[GDBST] reg 5 set to 803fffe4
+00044138821i[GDBST] reg 8 set to 8001fdc7
+00044138821i[GDBST] reg 9 set to 92
+00044138821i[GDBST] addr 8001fdc1 len 0
+00044138821i[GDBST] addr 8001fdc1 len 0
+00044138821i[GDBST] addr 8001fdc1 len 0
+00044138821i[GDBST] addr 8001fdc1 len 0
+00044138821i[GDBST] addr 8001fdc1 len 0
+00044138821i[GDBST] addr 8001fdc1 len 0
+00044138821i[GDBST] addr 8001fdc2 len 0
+00044138821i[GDBST] addr 8001fdc3 len 0
+00044138821i[GDBST] addr 8001fdc3 len 0
+00044138821i[GDBST] addr 8001fdc2 len 0
+00044138821i[GDBST] addr 8001fdc3 len 0
+00044138821i[GDBST] addr 8001fdc4 len 0
+00044138821i[GDBST] addr 8001fdc5 len 0
+00044138821i[GDBST] addr 8001fdc6 len 0
+00044138821i[GDBST] addr 800268ec len 0
+00044138821i[GDBST] stepping
+00044138822i[GDBST] stopped with ac2
+00044138822i[GDBST] setting breakpoint at 8001fdc7
+00044215194i[GDBST] found breakpoint at 8001fdc7
+00044215194i[GDBST] stopped with ac1
+00044215194i[GDBST] reg 8 set to 8001fdc7
+00044215194i[GDBST] Removing breakpoint at 8001fdc7
+00044215194i[GDBST] addr 8001fdc1 len 0
+00044215194i[GDBST] addr 8001fdc1 len 0
+00044215194i[GDBST] addr 8001fdc1 len 0
+00044215194i[GDBST] addr 8001fdc1 len 0
+00044215194i[GDBST] addr 8001fdc1 len 0
+00044215194i[GDBST] addr 8001fdc1 len 0
+00044215194i[GDBST] addr 8001fdc2 len 0
+00044215194i[GDBST] addr 8001fdc3 len 0
+00044215194i[GDBST] addr 8001fdc3 len 0
+00044215194i[GDBST] addr 8001fdc2 len 0
+00044215194i[GDBST] addr 8001fdc3 len 0
+00044215194i[GDBST] addr 8001fdc4 len 0
+00044215194i[GDBST] addr 8001fdc5 len 0
+00044215194i[GDBST] addr 8001fdc6 len 0
+00044215194i[GDBST] addr 803fffe4 len 0
+00044215194i[GDBST] addr 803fffe8 len 0
+00044215194i[GDBST] addr 803fffe4 len 0
+00044215194i[GDBST] addr 80017b23 len 0
+00044215194i[GDBST] addr 80017b23 len 0
+00044215194i[GDBST] addr 80017b23 len 0
+00044215194i[GDBST] addr 80017b23 len 0
+00044215194i[GDBST] addr 80017b23 len 0
+00044215194i[GDBST] addr 80017b23 len 0
+00044215194i[GDBST] addr 80017b23 len 0
+00044215194i[GDBST] addr 803fffe4 len 0
+00044215194i[GDBST] addr 803fffec len 0
+00044215194i[GDBST] addr 803fffe4 len 0
+00044215194i[GDBST] addr 803fffe4 len 0
+00044215194i[GDBST] addr 803ffff0 len 0
+00044215194i[GDBST] addr 803fffe4 len 0
+00044215194i[GDBST] addr 80017a25 len 0
+00044215194i[GDBST] addr 80017a25 len 0
+00044215194i[GDBST] addr 80017a25 len 0
+00044215194i[GDBST] addr 80017a25 len 0
+00044215194i[GDBST] addr 80017a25 len 0
+00044215194i[GDBST] addr 80017a25 len 0
+00044215194i[GDBST] addr 80017a25 len 0
+00044215194i[GDBST] addr 803fffe4 len 0
+00044215194i[GDBST] addr 803ffff4 len 0
+00044215194i[GDBST] addr 803fffe4 len 0
+00044215194i[GDBST] addr 803fffe4 len 0
+00044215194i[GDBST] addr 803ffff8 len 0
+00044215194i[GDBST] addr 8002545c len 0
+00044215194i[GDBST] addr 8002a5dc len 0
+00044215194i[GDBST] addr 8002a5dc len 0
+00044215194i[GDBST] addr 803fdfd8 len 0
+00044215194i[GDBST] reg 4 set to 803fffb8
+00044215194i[GDBST] reg 5 set to 803fffb8
+00044215194i[GDBST] reg 8 set to 80019fd7
+00044215194i[GDBST] setting breakpoint at 8001fdc7
+00044215194i[GDBST] setting breakpoint at 80017de0
+00044215254i[GDBST] found breakpoint at 80017de0
+00044215254i[GDBST] stopped with ac1
+00044215254i[GDBST] reg 8 set to 80017de0
+00044215254i[GDBST] Removing breakpoint at 8001fdc7
+00044215254i[GDBST] Removing breakpoint at 80017de0
+00044215254i[GDBST] reg 0 set to 20
+00044215254i[GDBST] reg 2 set to 20
+00044215254i[GDBST] reg 5 set to 803fffe4
+00044215254i[GDBST] reg 8 set to 8001fdc7
+00044215254i[GDBST] reg 9 set to 92
+00044215254i[GDBST] addr 8001fdc1 len 0
+00044215254i[GDBST] addr 8001fdc1 len 0
+00044215254i[GDBST] addr 8001fdc1 len 0
+00044215254i[GDBST] addr 8001fdc1 len 0
+00044215254i[GDBST] addr 8001fdc1 len 0
+00044215254i[GDBST] addr 8001fdc1 len 0
+00044215254i[GDBST] addr 8001fdc2 len 0
+00044215254i[GDBST] addr 8001fdc3 len 0
+00044215254i[GDBST] addr 8001fdc3 len 0
+00044215254i[GDBST] addr 8001fdc2 len 0
+00044215254i[GDBST] addr 8001fdc3 len 0
+00044215254i[GDBST] addr 8001fdc4 len 0
+00044215254i[GDBST] addr 8001fdc5 len 0
+00044215254i[GDBST] addr 8001fdc6 len 0
+00044215254i[GDBST] addr 8002a5dc len 0
+00044215254i[GDBST] addr 803fdfd8 len 0
+00044215254i[GDBST] addr 800268ec len 0
+00044215254i[GDBST] addr 8002a5dc len 0
+00044215254i[GDBST] addr 8002a5cc len 0
+00044215254i[GDBST] addr 803fbfd8 len 0
+00044215254i[GDBST] reg 4 set to 803fffb8
+00044215254i[GDBST] reg 5 set to 803fffb8
+00044215254i[GDBST] reg 8 set to 80019caf
+00044215254i[GDBST] setting breakpoint at 8001fdc7
+00044215254i[GDBST] setting breakpoint at 80017de0
+00044215332i[GDBST] found breakpoint at 80017de0
+00044215332i[GDBST] stopped with ac1
+00044215332i[GDBST] reg 8 set to 80017de0
+00044215332i[GDBST] Removing breakpoint at 8001fdc7
+00044215332i[GDBST] Removing breakpoint at 80017de0
+00044215332i[GDBST] reg 0 set to 20
+00044215332i[GDBST] reg 1 set to 10
+00044215332i[GDBST] reg 2 set to 20
+00044215332i[GDBST] reg 5 set to 803fffe4
+00044215332i[GDBST] reg 8 set to 8001fdc7
+00044215332i[GDBST] reg 9 set to 92
+00044215332i[GDBST] addr 8001fdc1 len 0
+00044215332i[GDBST] addr 8001fdc1 len 0
+00044215332i[GDBST] addr 8001fdc1 len 0
+00044215332i[GDBST] addr 8001fdc1 len 0
+00044215332i[GDBST] addr 8001fdc1 len 0
+00044215332i[GDBST] addr 8001fdc1 len 0
+00044215332i[GDBST] addr 8001fdc2 len 0
+00044215332i[GDBST] addr 8001fdc3 len 0
+00044215332i[GDBST] addr 8001fdc3 len 0
+00044215332i[GDBST] addr 8001fdc2 len 0
+00044215332i[GDBST] addr 8001fdc3 len 0
+00044215332i[GDBST] addr 8001fdc4 len 0
+00044215332i[GDBST] addr 8001fdc5 len 0
+00044215332i[GDBST] addr 8001fdc6 len 0
+00044215332i[GDBST] addr 80025460 len 0
+00044215332i[GDBST] addr 80025460 len 0
+00044215332i[GDBST] reg 4 set to 803fffb4
+00044215332i[GDBST] reg 5 set to 803fffb4
+00044215332i[GDBST] reg 8 set to 8001cddf
+00044215332i[GDBST] setting breakpoint at 8001fdc7
+00044215332i[GDBST] setting breakpoint at 80017de0
+00044215339i[GDBST] found breakpoint at 80017de0
+00044215339i[GDBST] stopped with ac1
+00044215339i[GDBST] reg 8 set to 80017de0
+00044215339i[GDBST] Removing breakpoint at 8001fdc7
+00044215339i[GDBST] Removing breakpoint at 80017de0
+00044215339i[GDBST] reg 0 set to 20
+00044215339i[GDBST] reg 1 set to 10
+00044215339i[GDBST] reg 2 set to 20
+00044215339i[GDBST] reg 4 set to 803fffbc
+00044215339i[GDBST] reg 5 set to 803fffe4
+00044215339i[GDBST] reg 8 set to 8001fdc7
+00044215339i[GDBST] addr 8001fdc1 len 0
+00044215339i[GDBST] addr 8001fdc1 len 0
+00044215339i[GDBST] addr 8001fdc1 len 0
+00044215339i[GDBST] addr 8001fdc1 len 0
+00044215339i[GDBST] addr 8001fdc1 len 0
+00044215339i[GDBST] addr 8001fdc1 len 0
+00044215339i[GDBST] addr 8001fdc2 len 0
+00044215339i[GDBST] addr 8001fdc3 len 0
+00044215339i[GDBST] addr 8001fdc3 len 0
+00044215339i[GDBST] addr 8001fdc2 len 0
+00044215339i[GDBST] addr 8001fdc3 len 0
+00044215339i[GDBST] addr 8001fdc4 len 0
+00044215339i[GDBST] addr 8001fdc5 len 0
+00044215339i[GDBST] addr 8001fdc6 len 0
+00044215339i[GDBST] addr 80029b4c len 0
+00044215339i[GDBST] addr 80029b50 len 0
+00044215339i[GDBST] addr 8002a5dc len 0
+00044215339i[GDBST] addr 8002a5dc len 0
+00044215339i[GDBST] addr 803fdfd8 len 0
+00044215339i[GDBST] reg 4 set to 803fffb8
+00044215339i[GDBST] reg 5 set to 803fffb8
+00044215339i[GDBST] reg 8 set to 80019fd7
+00044215339i[GDBST] setting breakpoint at 8001fdc7
+00044215339i[GDBST] setting breakpoint at 80017de0
+00044215399i[GDBST] found breakpoint at 80017de0
+00044215399i[GDBST] stopped with ac1
+00044215399i[GDBST] reg 8 set to 80017de0
+00044215399i[GDBST] Removing breakpoint at 8001fdc7
+00044215399i[GDBST] Removing breakpoint at 80017de0
+00044215399i[GDBST] reg 0 set to 20
+00044215399i[GDBST] reg 1 set to 10
+00044215399i[GDBST] reg 2 set to 20
+00044215399i[GDBST] reg 5 set to 803fffe4
+00044215399i[GDBST] reg 8 set to 8001fdc7
+00044215399i[GDBST] reg 9 set to 92
+00044215399i[GDBST] addr 8001fdc1 len 0
+00044215399i[GDBST] addr 8001fdc1 len 0
+00044215399i[GDBST] addr 8001fdc1 len 0
+00044215399i[GDBST] addr 8001fdc1 len 0
+00044215399i[GDBST] addr 8001fdc1 len 0
+00044215399i[GDBST] addr 8001fdc1 len 0
+00044215399i[GDBST] addr 8001fdc2 len 0
+00044215399i[GDBST] addr 8001fdc3 len 0
+00044215399i[GDBST] addr 8001fdc3 len 0
+00044215399i[GDBST] addr 8001fdc2 len 0
+00044215399i[GDBST] addr 8001fdc3 len 0
+00044215399i[GDBST] addr 8001fdc4 len 0
+00044215399i[GDBST] addr 8001fdc5 len 0
+00044215399i[GDBST] addr 8001fdc6 len 0
+00044215399i[GDBST] addr 800268ec len 0
+00044215399i[GDBST] stepping
+00044215400i[GDBST] stopped with ac2
+00044215400i[GDBST] setting breakpoint at 8001fdc7
+00044215951i[GDBST] found breakpoint at 8001fdc7
+00044215951i[GDBST] stopped with ac1
+00044215951i[GDBST] reg 8 set to 8001fdc7
+00044215951i[GDBST] Removing breakpoint at 8001fdc7
+00044215951i[GDBST] addr 8001fdc1 len 0
+00044215951i[GDBST] addr 8001fdc1 len 0
+00044215951i[GDBST] addr 8001fdc1 len 0
+00044215951i[GDBST] addr 8001fdc1 len 0
+00044215951i[GDBST] addr 8001fdc1 len 0
+00044215951i[GDBST] addr 8001fdc1 len 0
+00044215951i[GDBST] addr 8001fdc2 len 0
+00044215951i[GDBST] addr 8001fdc3 len 0
+00044215951i[GDBST] addr 8001fdc3 len 0
+00044215951i[GDBST] addr 8001fdc2 len 0
+00044215951i[GDBST] addr 8001fdc3 len 0
+00044215951i[GDBST] addr 8001fdc4 len 0
+00044215951i[GDBST] addr 8001fdc5 len 0
+00044215951i[GDBST] addr 8001fdc6 len 0
+00044215951i[GDBST] addr 803fffe4 len 0
+00044215951i[GDBST] addr 803fffe8 len 0
+00044215951i[GDBST] addr 803fffe4 len 0
+00044215951i[GDBST] addr 80017b23 len 0
+00044215951i[GDBST] addr 80017b23 len 0
+00044215951i[GDBST] addr 80017b23 len 0
+00044215951i[GDBST] addr 80017b23 len 0
+00044215951i[GDBST] addr 80017b23 len 0
+00044215951i[GDBST] addr 80017b23 len 0
+00044215951i[GDBST] addr 80017b23 len 0
+00044215951i[GDBST] addr 803fffe4 len 0
+00044215951i[GDBST] addr 803fffec len 0
+00044215951i[GDBST] addr 803fffe4 len 0
+00044215951i[GDBST] addr 803fffe4 len 0
+00044215951i[GDBST] addr 803ffff0 len 0
+00044215951i[GDBST] addr 803fffe4 len 0
+00044215951i[GDBST] addr 800179e9 len 0
+00044215951i[GDBST] addr 800179e9 len 0
+00044215951i[GDBST] addr 800179e9 len 0
+00044215951i[GDBST] addr 800179e9 len 0
+00044215951i[GDBST] addr 800179e9 len 0
+00044215951i[GDBST] addr 800179e9 len 0
+00044215951i[GDBST] addr 800179e9 len 0
+00044215951i[GDBST] addr 803fffe4 len 0
+00044215951i[GDBST] addr 803ffff4 len 0
+00044215951i[GDBST] addr 803fffe4 len 0
+00044215951i[GDBST] addr 803fffe4 len 0
+00044215951i[GDBST] addr 803ffff8 len 0
+00044215951i[GDBST] addr 8002545c len 0
+00044215951i[GDBST] addr 8002a5dc len 0
+00044215951i[GDBST] addr 8002a5dc len 0
+00044215951i[GDBST] addr 803fdfd8 len 0
+00044215951i[GDBST] reg 4 set to 803fffb8
+00044215951i[GDBST] reg 5 set to 803fffb8
+00044215951i[GDBST] reg 8 set to 80019fd7
+00044215951i[GDBST] setting breakpoint at 8001fdc7
+00044215951i[GDBST] setting breakpoint at 80017de0
+00044216011i[GDBST] found breakpoint at 80017de0
+00044216011i[GDBST] stopped with ac1
+00044216011i[GDBST] reg 8 set to 80017de0
+00044216011i[GDBST] Removing breakpoint at 8001fdc7
+00044216011i[GDBST] Removing breakpoint at 80017de0
+00044216011i[GDBST] reg 0 set to 803fc334
+00044216011i[GDBST] reg 2 set to 803fc2f0
+00044216011i[GDBST] reg 5 set to 803fffe4
+00044216011i[GDBST] reg 8 set to 8001fdc7
+00044216011i[GDBST] reg 9 set to 92
+00044216011i[GDBST] addr 8001fdc1 len 0
+00044216011i[GDBST] addr 8001fdc1 len 0
+00044216011i[GDBST] addr 8001fdc1 len 0
+00044216011i[GDBST] addr 8001fdc1 len 0
+00044216011i[GDBST] addr 8001fdc1 len 0
+00044216011i[GDBST] addr 8001fdc1 len 0
+00044216011i[GDBST] addr 8001fdc2 len 0
+00044216011i[GDBST] addr 8001fdc3 len 0
+00044216011i[GDBST] addr 8001fdc3 len 0
+00044216011i[GDBST] addr 8001fdc2 len 0
+00044216011i[GDBST] addr 8001fdc3 len 0
+00044216011i[GDBST] addr 8001fdc4 len 0
+00044216011i[GDBST] addr 8001fdc5 len 0
+00044216011i[GDBST] addr 8001fdc6 len 0
+00044216011i[GDBST] addr 8002a5dc len 0
+00044216011i[GDBST] addr 803fdfd8 len 0
+00044216011i[GDBST] addr 800268ec len 0
+00044216011i[GDBST] addr 8002a5dc len 0
+00044216011i[GDBST] addr 8002a5cc len 0
+00044216011i[GDBST] addr 803fbfd8 len 0
+00044216011i[GDBST] reg 4 set to 803fffb8
+00044216011i[GDBST] reg 5 set to 803fffb8
+00044216011i[GDBST] reg 8 set to 80019caf
+00044216011i[GDBST] setting breakpoint at 8001fdc7
+00044216011i[GDBST] setting breakpoint at 80017de0
+00044216089i[GDBST] found breakpoint at 80017de0
+00044216089i[GDBST] stopped with ac1
+00044216089i[GDBST] reg 8 set to 80017de0
+00044216089i[GDBST] Removing breakpoint at 8001fdc7
+00044216089i[GDBST] Removing breakpoint at 80017de0
+00044216089i[GDBST] reg 0 set to 803fc334
+00044216089i[GDBST] reg 1 set to 10
+00044216089i[GDBST] reg 2 set to 803fc2f0
+00044216089i[GDBST] reg 5 set to 803fffe4
+00044216089i[GDBST] reg 8 set to 8001fdc7
+00044216089i[GDBST] reg 9 set to 92
+00044216089i[GDBST] addr 8001fdc1 len 0
+00044216089i[GDBST] addr 8001fdc1 len 0
+00044216089i[GDBST] addr 8001fdc1 len 0
+00044216089i[GDBST] addr 8001fdc1 len 0
+00044216089i[GDBST] addr 8001fdc1 len 0
+00044216089i[GDBST] addr 8001fdc1 len 0
+00044216089i[GDBST] addr 8001fdc2 len 0
+00044216089i[GDBST] addr 8001fdc3 len 0
+00044216089i[GDBST] addr 8001fdc3 len 0
+00044216089i[GDBST] addr 8001fdc2 len 0
+00044216089i[GDBST] addr 8001fdc3 len 0
+00044216089i[GDBST] addr 8001fdc4 len 0
+00044216089i[GDBST] addr 8001fdc5 len 0
+00044216089i[GDBST] addr 8001fdc6 len 0
+00044216089i[GDBST] addr 80025460 len 0
+00044216089i[GDBST] addr 80025460 len 0
+00044216089i[GDBST] reg 4 set to 803fffb4
+00044216089i[GDBST] reg 5 set to 803fffb4
+00044216089i[GDBST] reg 8 set to 8001cddf
+00044216089i[GDBST] setting breakpoint at 8001fdc7
+00044216089i[GDBST] setting breakpoint at 80017de0
+00044216096i[GDBST] found breakpoint at 80017de0
+00044216096i[GDBST] stopped with ac1
+00044216096i[GDBST] reg 8 set to 80017de0
+00044216096i[GDBST] Removing breakpoint at 8001fdc7
+00044216096i[GDBST] Removing breakpoint at 80017de0
+00044216096i[GDBST] reg 0 set to 803fc334
+00044216096i[GDBST] reg 1 set to 10
+00044216096i[GDBST] reg 2 set to 803fc2f0
+00044216096i[GDBST] reg 4 set to 803fffbc
+00044216096i[GDBST] reg 5 set to 803fffe4
+00044216096i[GDBST] reg 8 set to 8001fdc7
+00044216096i[GDBST] addr 8001fdc1 len 0
+00044216096i[GDBST] addr 8001fdc1 len 0
+00044216096i[GDBST] addr 8001fdc1 len 0
+00044216096i[GDBST] addr 8001fdc1 len 0
+00044216096i[GDBST] addr 8001fdc1 len 0
+00044216096i[GDBST] addr 8001fdc1 len 0
+00044216096i[GDBST] addr 8001fdc2 len 0
+00044216096i[GDBST] addr 8001fdc3 len 0
+00044216096i[GDBST] addr 8001fdc3 len 0
+00044216096i[GDBST] addr 8001fdc2 len 0
+00044216096i[GDBST] addr 8001fdc3 len 0
+00044216096i[GDBST] addr 8001fdc4 len 0
+00044216096i[GDBST] addr 8001fdc5 len 0
+00044216096i[GDBST] addr 8001fdc6 len 0
+00044216096i[GDBST] addr 80029b4c len 0
+00044216096i[GDBST] addr 80029b50 len 0
+00044216096i[GDBST] addr 8002a5dc len 0
+00044216096i[GDBST] addr 8002a5dc len 0
+00044216096i[GDBST] addr 803fdfd8 len 0
+00044216096i[GDBST] reg 4 set to 803fffb8
+00044216096i[GDBST] reg 5 set to 803fffb8
+00044216096i[GDBST] reg 8 set to 80019fd7
+00044216096i[GDBST] setting breakpoint at 8001fdc7
+00044216096i[GDBST] setting breakpoint at 80017de0
+00044216156i[GDBST] found breakpoint at 80017de0
+00044216156i[GDBST] stopped with ac1
+00044216156i[GDBST] reg 8 set to 80017de0
+00044216156i[GDBST] Removing breakpoint at 8001fdc7
+00044216156i[GDBST] Removing breakpoint at 80017de0
+00044216156i[GDBST] reg 0 set to 803fc334
+00044216156i[GDBST] reg 1 set to 10
+00044216156i[GDBST] reg 2 set to 803fc2f0
+00044216156i[GDBST] reg 5 set to 803fffe4
+00044216156i[GDBST] reg 8 set to 8001fdc7
+00044216156i[GDBST] reg 9 set to 92
+00044216156i[GDBST] addr 8001fdc1 len 0
+00044216156i[GDBST] addr 8001fdc1 len 0
+00044216156i[GDBST] addr 8001fdc1 len 0
+00044216156i[GDBST] addr 8001fdc1 len 0
+00044216156i[GDBST] addr 8001fdc1 len 0
+00044216156i[GDBST] addr 8001fdc1 len 0
+00044216156i[GDBST] addr 8001fdc2 len 0
+00044216156i[GDBST] addr 8001fdc3 len 0
+00044216156i[GDBST] addr 8001fdc3 len 0
+00044216156i[GDBST] addr 8001fdc2 len 0
+00044216156i[GDBST] addr 8001fdc3 len 0
+00044216156i[GDBST] addr 8001fdc4 len 0
+00044216156i[GDBST] addr 8001fdc5 len 0
+00044216156i[GDBST] addr 8001fdc6 len 0
+00044216156i[GDBST] addr 800268ec len 0
+00044216156i[GDBST] stepping
+00044216157i[GDBST] stopped with ac2
+00044216157i[GDBST] setting breakpoint at 8001fdc7
+00044218581i[GDBST] found breakpoint at 8001fdc7
+00044218581i[GDBST] stopped with ac1
+00044218581i[GDBST] reg 8 set to 8001fdc7
+00044218581i[GDBST] Removing breakpoint at 8001fdc7
+00044218581i[GDBST] addr 8001fdc1 len 0
+00044218581i[GDBST] addr 8001fdc1 len 0
+00044218581i[GDBST] addr 8001fdc1 len 0
+00044218581i[GDBST] addr 8001fdc1 len 0
+00044218581i[GDBST] addr 8001fdc1 len 0
+00044218581i[GDBST] addr 8001fdc1 len 0
+00044218581i[GDBST] addr 8001fdc2 len 0
+00044218581i[GDBST] addr 8001fdc3 len 0
+00044218581i[GDBST] addr 8001fdc3 len 0
+00044218581i[GDBST] addr 8001fdc2 len 0
+00044218581i[GDBST] addr 8001fdc3 len 0
+00044218581i[GDBST] addr 8001fdc4 len 0
+00044218581i[GDBST] addr 8001fdc5 len 0
+00044218581i[GDBST] addr 8001fdc6 len 0
+00044218581i[GDBST] addr 803fffe4 len 0
+00044218581i[GDBST] addr 803fffe8 len 0
+00044218581i[GDBST] addr 803fffe4 len 0
+00044218581i[GDBST] addr 80017b23 len 0
+00044218581i[GDBST] addr 80017b23 len 0
+00044218581i[GDBST] addr 80017b23 len 0
+00044218581i[GDBST] addr 80017b23 len 0
+00044218581i[GDBST] addr 80017b23 len 0
+00044218581i[GDBST] addr 80017b23 len 0
+00044218581i[GDBST] addr 80017b23 len 0
+00044218581i[GDBST] addr 803fffe4 len 0
+00044218581i[GDBST] addr 803fffec len 0
+00044218581i[GDBST] addr 803fffe4 len 0
+00044218581i[GDBST] addr 803fffe4 len 0
+00044218581i[GDBST] addr 803ffff0 len 0
+00044218581i[GDBST] addr 803fffe4 len 0
+00044218581i[GDBST] addr 80017a25 len 0
+00044218581i[GDBST] addr 80017a25 len 0
+00044218581i[GDBST] addr 80017a25 len 0
+00044218581i[GDBST] addr 80017a25 len 0
+00044218581i[GDBST] addr 80017a25 len 0
+00044218581i[GDBST] addr 80017a25 len 0
+00044218581i[GDBST] addr 80017a25 len 0
+00044218581i[GDBST] addr 803fffe4 len 0
+00044218581i[GDBST] addr 803ffff4 len 0
+00044218581i[GDBST] addr 803fffe4 len 0
+00044218581i[GDBST] addr 803fffe4 len 0
+00044218581i[GDBST] addr 803ffff8 len 0
+00044218581i[GDBST] addr 8002545c len 0
+00044218581i[GDBST] addr 8002a5dc len 0
+00044218581i[GDBST] addr 8002a5dc len 0
+00044218581i[GDBST] addr 803fdfd8 len 0
+00044218581i[GDBST] reg 4 set to 803fffb8
+00044218581i[GDBST] reg 5 set to 803fffb8
+00044218581i[GDBST] reg 8 set to 80019fd7
+00044218581i[GDBST] setting breakpoint at 8001fdc7
+00044218581i[GDBST] setting breakpoint at 80017de0
+00044218641i[GDBST] found breakpoint at 80017de0
+00044218641i[GDBST] stopped with ac1
+00044218641i[GDBST] reg 8 set to 80017de0
+00044218641i[GDBST] Removing breakpoint at 8001fdc7
+00044218641i[GDBST] Removing breakpoint at 80017de0
+00044218641i[GDBST] reg 0 set to 20
+00044218641i[GDBST] reg 2 set to 20
+00044218641i[GDBST] reg 5 set to 803fffe4
+00044218641i[GDBST] reg 8 set to 8001fdc7
+00044218641i[GDBST] reg 9 set to 92
+00044218641i[GDBST] addr 8001fdc1 len 0
+00044218641i[GDBST] addr 8001fdc1 len 0
+00044218641i[GDBST] addr 8001fdc1 len 0
+00044218641i[GDBST] addr 8001fdc1 len 0
+00044218641i[GDBST] addr 8001fdc1 len 0
+00044218641i[GDBST] addr 8001fdc1 len 0
+00044218641i[GDBST] addr 8001fdc2 len 0
+00044218641i[GDBST] addr 8001fdc3 len 0
+00044218641i[GDBST] addr 8001fdc3 len 0
+00044218641i[GDBST] addr 8001fdc2 len 0
+00044218641i[GDBST] addr 8001fdc3 len 0
+00044218641i[GDBST] addr 8001fdc4 len 0
+00044218641i[GDBST] addr 8001fdc5 len 0
+00044218641i[GDBST] addr 8001fdc6 len 0
+00044218641i[GDBST] addr 8002a5dc len 0
+00044218641i[GDBST] addr 803fdfd8 len 0
+00044218641i[GDBST] addr 800268ec len 0
+00044218641i[GDBST] addr 8002a5dc len 0
+00044218641i[GDBST] addr 8002a5cc len 0
+00044218641i[GDBST] addr 803fbfd8 len 0
+00044218641i[GDBST] reg 4 set to 803fffb8
+00044218641i[GDBST] reg 5 set to 803fffb8
+00044218641i[GDBST] reg 8 set to 80019caf
+00044218641i[GDBST] setting breakpoint at 8001fdc7
+00044218641i[GDBST] setting breakpoint at 80017de0
+00044218719i[GDBST] found breakpoint at 80017de0
+00044218719i[GDBST] stopped with ac1
+00044218719i[GDBST] reg 8 set to 80017de0
+00044218719i[GDBST] Removing breakpoint at 8001fdc7
+00044218719i[GDBST] Removing breakpoint at 80017de0
+00044218719i[GDBST] reg 0 set to 20
+00044218719i[GDBST] reg 1 set to 10
+00044218719i[GDBST] reg 2 set to 20
+00044218719i[GDBST] reg 5 set to 803fffe4
+00044218719i[GDBST] reg 8 set to 8001fdc7
+00044218719i[GDBST] reg 9 set to 92
+00044218719i[GDBST] addr 8001fdc1 len 0
+00044218719i[GDBST] addr 8001fdc1 len 0
+00044218719i[GDBST] addr 8001fdc1 len 0
+00044218719i[GDBST] addr 8001fdc1 len 0
+00044218719i[GDBST] addr 8001fdc1 len 0
+00044218719i[GDBST] addr 8001fdc1 len 0
+00044218719i[GDBST] addr 8001fdc2 len 0
+00044218719i[GDBST] addr 8001fdc3 len 0
+00044218719i[GDBST] addr 8001fdc3 len 0
+00044218719i[GDBST] addr 8001fdc2 len 0
+00044218719i[GDBST] addr 8001fdc3 len 0
+00044218719i[GDBST] addr 8001fdc4 len 0
+00044218719i[GDBST] addr 8001fdc5 len 0
+00044218719i[GDBST] addr 8001fdc6 len 0
+00044218719i[GDBST] addr 80025460 len 0
+00044218719i[GDBST] addr 80025460 len 0
+00044218719i[GDBST] reg 4 set to 803fffb4
+00044218719i[GDBST] reg 5 set to 803fffb4
+00044218719i[GDBST] reg 8 set to 8001cddf
+00044218719i[GDBST] setting breakpoint at 8001fdc7
+00044218719i[GDBST] setting breakpoint at 80017de0
+00044218726i[GDBST] found breakpoint at 80017de0
+00044218726i[GDBST] stopped with ac1
+00044218726i[GDBST] reg 8 set to 80017de0
+00044218726i[GDBST] Removing breakpoint at 8001fdc7
+00044218726i[GDBST] Removing breakpoint at 80017de0
+00044218726i[GDBST] reg 0 set to 20
+00044218726i[GDBST] reg 1 set to 10
+00044218726i[GDBST] reg 2 set to 20
+00044218726i[GDBST] reg 4 set to 803fffbc
+00044218726i[GDBST] reg 5 set to 803fffe4
+00044218726i[GDBST] reg 8 set to 8001fdc7
+00044218726i[GDBST] addr 8001fdc1 len 0
+00044218726i[GDBST] addr 8001fdc1 len 0
+00044218726i[GDBST] addr 8001fdc1 len 0
+00044218726i[GDBST] addr 8001fdc1 len 0
+00044218726i[GDBST] addr 8001fdc1 len 0
+00044218726i[GDBST] addr 8001fdc1 len 0
+00044218726i[GDBST] addr 8001fdc2 len 0
+00044218726i[GDBST] addr 8001fdc3 len 0
+00044218726i[GDBST] addr 8001fdc3 len 0
+00044218726i[GDBST] addr 8001fdc2 len 0
+00044218726i[GDBST] addr 8001fdc3 len 0
+00044218726i[GDBST] addr 8001fdc4 len 0
+00044218726i[GDBST] addr 8001fdc5 len 0
+00044218726i[GDBST] addr 8001fdc6 len 0
+00044218726i[GDBST] addr 80029b4c len 0
+00044218726i[GDBST] addr 80029b50 len 0
+00044218726i[GDBST] addr 8002a5dc len 0
+00044218726i[GDBST] addr 8002a5dc len 0
+00044218726i[GDBST] addr 803fdfd8 len 0
+00044218726i[GDBST] reg 4 set to 803fffb8
+00044218726i[GDBST] reg 5 set to 803fffb8
+00044218726i[GDBST] reg 8 set to 80019fd7
+00044218726i[GDBST] setting breakpoint at 8001fdc7
+00044218726i[GDBST] setting breakpoint at 80017de0
+00044218786i[GDBST] found breakpoint at 80017de0
+00044218786i[GDBST] stopped with ac1
+00044218786i[GDBST] reg 8 set to 80017de0
+00044218786i[GDBST] Removing breakpoint at 8001fdc7
+00044218786i[GDBST] Removing breakpoint at 80017de0
+00044218786i[GDBST] reg 0 set to 20
+00044218786i[GDBST] reg 1 set to 10
+00044218786i[GDBST] reg 2 set to 20
+00044218786i[GDBST] reg 5 set to 803fffe4
+00044218786i[GDBST] reg 8 set to 8001fdc7
+00044218786i[GDBST] reg 9 set to 92
+00044218786i[GDBST] addr 8001fdc1 len 0
+00044218786i[GDBST] addr 8001fdc1 len 0
+00044218786i[GDBST] addr 8001fdc1 len 0
+00044218786i[GDBST] addr 8001fdc1 len 0
+00044218786i[GDBST] addr 8001fdc1 len 0
+00044218786i[GDBST] addr 8001fdc1 len 0
+00044218786i[GDBST] addr 8001fdc2 len 0
+00044218786i[GDBST] addr 8001fdc3 len 0
+00044218786i[GDBST] addr 8001fdc3 len 0
+00044218786i[GDBST] addr 8001fdc2 len 0
+00044218786i[GDBST] addr 8001fdc3 len 0
+00044218786i[GDBST] addr 8001fdc4 len 0
+00044218786i[GDBST] addr 8001fdc5 len 0
+00044218786i[GDBST] addr 8001fdc6 len 0
+00044218786i[GDBST] addr 800268ec len 0
+00044218786i[GDBST] stepping
+00044218787i[GDBST] stopped with ac2
+00044218787i[GDBST] setting breakpoint at 8001fdc7
+00044219541i[GDBST] found breakpoint at 8001fdc7
+00044219541i[GDBST] stopped with ac1
+00044219541i[GDBST] reg 8 set to 8001fdc7
+00044219541i[GDBST] Removing breakpoint at 8001fdc7
+00044219541i[GDBST] addr 8001fdc1 len 0
+00044219541i[GDBST] addr 8001fdc1 len 0
+00044219541i[GDBST] addr 8001fdc1 len 0
+00044219541i[GDBST] addr 8001fdc1 len 0
+00044219541i[GDBST] addr 8001fdc1 len 0
+00044219541i[GDBST] addr 8001fdc1 len 0
+00044219541i[GDBST] addr 8001fdc2 len 0
+00044219541i[GDBST] addr 8001fdc3 len 0
+00044219541i[GDBST] addr 8001fdc3 len 0
+00044219541i[GDBST] addr 8001fdc2 len 0
+00044219541i[GDBST] addr 8001fdc3 len 0
+00044219541i[GDBST] addr 8001fdc4 len 0
+00044219541i[GDBST] addr 8001fdc5 len 0
+00044219541i[GDBST] addr 8001fdc6 len 0
+00044219541i[GDBST] addr 803fffe4 len 0
+00044219541i[GDBST] addr 803fffe8 len 0
+00044219541i[GDBST] addr 803fffe4 len 0
+00044219541i[GDBST] addr 80017b23 len 0
+00044219541i[GDBST] addr 80017b23 len 0
+00044219541i[GDBST] addr 80017b23 len 0
+00044219541i[GDBST] addr 80017b23 len 0
+00044219541i[GDBST] addr 80017b23 len 0
+00044219541i[GDBST] addr 80017b23 len 0
+00044219541i[GDBST] addr 80017b23 len 0
+00044219541i[GDBST] addr 803fffe4 len 0
+00044219541i[GDBST] addr 803fffec len 0
+00044219541i[GDBST] addr 803fffe4 len 0
+00044219541i[GDBST] addr 803fffe4 len 0
+00044219541i[GDBST] addr 803ffff0 len 0
+00044219541i[GDBST] addr 803fffe4 len 0
+00044219541i[GDBST] addr 800179e9 len 0
+00044219541i[GDBST] addr 800179e9 len 0
+00044219541i[GDBST] addr 800179e9 len 0
+00044219541i[GDBST] addr 800179e9 len 0
+00044219541i[GDBST] addr 800179e9 len 0
+00044219541i[GDBST] addr 800179e9 len 0
+00044219541i[GDBST] addr 800179e9 len 0
+00044219541i[GDBST] addr 803fffe4 len 0
+00044219541i[GDBST] addr 803ffff4 len 0
+00044219541i[GDBST] addr 803fffe4 len 0
+00044219541i[GDBST] addr 803fffe4 len 0
+00044219541i[GDBST] addr 803ffff8 len 0
+00044219541i[GDBST] addr 8002545c len 0
+00044219541i[GDBST] addr 8002a5dc len 0
+00044219541i[GDBST] addr 8002a5dc len 0
+00044219541i[GDBST] addr 803fdfd8 len 0
+00044219541i[GDBST] reg 4 set to 803fffb8
+00044219541i[GDBST] reg 5 set to 803fffb8
+00044219541i[GDBST] reg 8 set to 80019fd7
+00044219541i[GDBST] setting breakpoint at 8001fdc7
+00044219541i[GDBST] setting breakpoint at 80017de0
+00044219601i[GDBST] found breakpoint at 80017de0
+00044219601i[GDBST] stopped with ac1
+00044219601i[GDBST] reg 8 set to 80017de0
+00044219601i[GDBST] Removing breakpoint at 8001fdc7
+00044219601i[GDBST] Removing breakpoint at 80017de0
+00044219601i[GDBST] reg 0 set to 803fc434
+00044219601i[GDBST] reg 2 set to 80022944
+00044219601i[GDBST] reg 5 set to 803fffe4
+00044219601i[GDBST] reg 8 set to 8001fdc7
+00044219601i[GDBST] reg 9 set to 92
+00044219601i[GDBST] addr 8001fdc1 len 0
+00044219601i[GDBST] addr 8001fdc1 len 0
+00044219601i[GDBST] addr 8001fdc1 len 0
+00044219601i[GDBST] addr 8001fdc1 len 0
+00044219601i[GDBST] addr 8001fdc1 len 0
+00044219601i[GDBST] addr 8001fdc1 len 0
+00044219601i[GDBST] addr 8001fdc2 len 0
+00044219601i[GDBST] addr 8001fdc3 len 0
+00044219601i[GDBST] addr 8001fdc3 len 0
+00044219601i[GDBST] addr 8001fdc2 len 0
+00044219601i[GDBST] addr 8001fdc3 len 0
+00044219601i[GDBST] addr 8001fdc4 len 0
+00044219601i[GDBST] addr 8001fdc5 len 0
+00044219601i[GDBST] addr 8001fdc6 len 0
+00044219601i[GDBST] addr 8002a5dc len 0
+00044219601i[GDBST] addr 803fdfd8 len 0
+00044219601i[GDBST] addr 800268ec len 0
+00044219601i[GDBST] addr 8002a5dc len 0
+00044219601i[GDBST] addr 8002a5cc len 0
+00044219601i[GDBST] addr 803fbfd8 len 0
+00044219601i[GDBST] reg 4 set to 803fffb8
+00044219601i[GDBST] reg 5 set to 803fffb8
+00044219601i[GDBST] reg 8 set to 80019caf
+00044219601i[GDBST] setting breakpoint at 8001fdc7
+00044219601i[GDBST] setting breakpoint at 80017de0
+00044219679i[GDBST] found breakpoint at 80017de0
+00044219679i[GDBST] stopped with ac1
+00044219679i[GDBST] reg 8 set to 80017de0
+00044219679i[GDBST] Removing breakpoint at 8001fdc7
+00044219679i[GDBST] Removing breakpoint at 80017de0
+00044219679i[GDBST] reg 0 set to 803fc434
+00044219679i[GDBST] reg 1 set to 10
+00044219679i[GDBST] reg 2 set to 80022944
+00044219679i[GDBST] reg 5 set to 803fffe4
+00044219679i[GDBST] reg 8 set to 8001fdc7
+00044219679i[GDBST] reg 9 set to 92
+00044219679i[GDBST] addr 8001fdc1 len 0
+00044219679i[GDBST] addr 8001fdc1 len 0
+00044219679i[GDBST] addr 8001fdc1 len 0
+00044219679i[GDBST] addr 8001fdc1 len 0
+00044219679i[GDBST] addr 8001fdc1 len 0
+00044219679i[GDBST] addr 8001fdc1 len 0
+00044219679i[GDBST] addr 8001fdc2 len 0
+00044219679i[GDBST] addr 8001fdc3 len 0
+00044219679i[GDBST] addr 8001fdc3 len 0
+00044219679i[GDBST] addr 8001fdc2 len 0
+00044219679i[GDBST] addr 8001fdc3 len 0
+00044219679i[GDBST] addr 8001fdc4 len 0
+00044219679i[GDBST] addr 8001fdc5 len 0
+00044219679i[GDBST] addr 8001fdc6 len 0
+00044219679i[GDBST] addr 80025460 len 0
+00044219679i[GDBST] addr 80025460 len 0
+00044219679i[GDBST] reg 4 set to 803fffb4
+00044219679i[GDBST] reg 5 set to 803fffb4
+00044219679i[GDBST] reg 8 set to 8001cddf
+00044219679i[GDBST] setting breakpoint at 8001fdc7
+00044219679i[GDBST] setting breakpoint at 80017de0
+00044219686i[GDBST] found breakpoint at 80017de0
+00044219686i[GDBST] stopped with ac1
+00044219686i[GDBST] reg 8 set to 80017de0
+00044219686i[GDBST] Removing breakpoint at 8001fdc7
+00044219686i[GDBST] Removing breakpoint at 80017de0
+00044219686i[GDBST] reg 0 set to 803fc434
+00044219686i[GDBST] reg 1 set to 10
+00044219686i[GDBST] reg 2 set to 80022944
+00044219686i[GDBST] reg 4 set to 803fffbc
+00044219686i[GDBST] reg 5 set to 803fffe4
+00044219686i[GDBST] reg 8 set to 8001fdc7
+00044219686i[GDBST] addr 8001fdc1 len 0
+00044219686i[GDBST] addr 8001fdc1 len 0
+00044219686i[GDBST] addr 8001fdc1 len 0
+00044219686i[GDBST] addr 8001fdc1 len 0
+00044219686i[GDBST] addr 8001fdc1 len 0
+00044219686i[GDBST] addr 8001fdc1 len 0
+00044219686i[GDBST] addr 8001fdc2 len 0
+00044219686i[GDBST] addr 8001fdc3 len 0
+00044219686i[GDBST] addr 8001fdc3 len 0
+00044219686i[GDBST] addr 8001fdc2 len 0
+00044219686i[GDBST] addr 8001fdc3 len 0
+00044219686i[GDBST] addr 8001fdc4 len 0
+00044219686i[GDBST] addr 8001fdc5 len 0
+00044219686i[GDBST] addr 8001fdc6 len 0
+00044219686i[GDBST] addr 80029b4c len 0
+00044219686i[GDBST] addr 80029b50 len 0
+00044219686i[GDBST] addr 8002a5dc len 0
+00044219686i[GDBST] addr 8002a5dc len 0
+00044219686i[GDBST] addr 803fdfd8 len 0
+00044219686i[GDBST] reg 4 set to 803fffb8
+00044219686i[GDBST] reg 5 set to 803fffb8
+00044219686i[GDBST] reg 8 set to 80019fd7
+00044219686i[GDBST] setting breakpoint at 8001fdc7
+00044219686i[GDBST] setting breakpoint at 80017de0
+00044219746i[GDBST] found breakpoint at 80017de0
+00044219746i[GDBST] stopped with ac1
+00044219746i[GDBST] reg 8 set to 80017de0
+00044219746i[GDBST] Removing breakpoint at 8001fdc7
+00044219746i[GDBST] Removing breakpoint at 80017de0
+00044219746i[GDBST] reg 0 set to 803fc434
+00044219746i[GDBST] reg 1 set to 10
+00044219746i[GDBST] reg 2 set to 80022944
+00044219746i[GDBST] reg 5 set to 803fffe4
+00044219746i[GDBST] reg 8 set to 8001fdc7
+00044219746i[GDBST] reg 9 set to 92
+00044219746i[GDBST] addr 8001fdc1 len 0
+00044219746i[GDBST] addr 8001fdc1 len 0
+00044219746i[GDBST] addr 8001fdc1 len 0
+00044219746i[GDBST] addr 8001fdc1 len 0
+00044219746i[GDBST] addr 8001fdc1 len 0
+00044219746i[GDBST] addr 8001fdc1 len 0
+00044219746i[GDBST] addr 8001fdc2 len 0
+00044219746i[GDBST] addr 8001fdc3 len 0
+00044219746i[GDBST] addr 8001fdc3 len 0
+00044219746i[GDBST] addr 8001fdc2 len 0
+00044219746i[GDBST] addr 8001fdc3 len 0
+00044219746i[GDBST] addr 8001fdc4 len 0
+00044219746i[GDBST] addr 8001fdc5 len 0
+00044219746i[GDBST] addr 8001fdc6 len 0
+00044219746i[GDBST] addr 800268ec len 0
+00044219746i[GDBST] stepping
+00044219747i[GDBST] stopped with ac2
+00044219747i[GDBST] setting breakpoint at 8001fdc7
+00044258556i[GDBST] found breakpoint at 8001fdc7
+00044258556i[GDBST] stopped with ac1
+00044258556i[GDBST] reg 8 set to 8001fdc7
+00044258556i[GDBST] Removing breakpoint at 8001fdc7
+00044258556i[GDBST] addr 8001fdc1 len 0
+00044258556i[GDBST] addr 8001fdc1 len 0
+00044258556i[GDBST] addr 8001fdc1 len 0
+00044258556i[GDBST] addr 8001fdc1 len 0
+00044258556i[GDBST] addr 8001fdc1 len 0
+00044258556i[GDBST] addr 8001fdc1 len 0
+00044258556i[GDBST] addr 8001fdc2 len 0
+00044258556i[GDBST] addr 8001fdc3 len 0
+00044258556i[GDBST] addr 8001fdc3 len 0
+00044258556i[GDBST] addr 8001fdc2 len 0
+00044258556i[GDBST] addr 8001fdc3 len 0
+00044258556i[GDBST] addr 8001fdc4 len 0
+00044258556i[GDBST] addr 8001fdc5 len 0
+00044258556i[GDBST] addr 8001fdc6 len 0
+00044258556i[GDBST] addr 803fffe4 len 0
+00044258556i[GDBST] addr 803fffe8 len 0
+00044258556i[GDBST] addr 803fffe4 len 0
+00044258556i[GDBST] addr 80017b23 len 0
+00044258556i[GDBST] addr 80017b23 len 0
+00044258556i[GDBST] addr 80017b23 len 0
+00044258556i[GDBST] addr 80017b23 len 0
+00044258556i[GDBST] addr 80017b23 len 0
+00044258556i[GDBST] addr 80017b23 len 0
+00044258556i[GDBST] addr 80017b23 len 0
+00044258556i[GDBST] addr 803fffe4 len 0
+00044258556i[GDBST] addr 803fffec len 0
+00044258556i[GDBST] addr 803fffe4 len 0
+00044258556i[GDBST] addr 803fffe4 len 0
+00044258556i[GDBST] addr 803ffff0 len 0
+00044258556i[GDBST] addr 803fffe4 len 0
+00044258556i[GDBST] addr 80017a25 len 0
+00044258556i[GDBST] addr 80017a25 len 0
+00044258556i[GDBST] addr 80017a25 len 0
+00044258556i[GDBST] addr 80017a25 len 0
+00044258556i[GDBST] addr 80017a25 len 0
+00044258556i[GDBST] addr 80017a25 len 0
+00044258556i[GDBST] addr 80017a25 len 0
+00044258556i[GDBST] addr 803fffe4 len 0
+00044258556i[GDBST] addr 803ffff4 len 0
+00044258556i[GDBST] addr 803fffe4 len 0
+00044258556i[GDBST] addr 803fffe4 len 0
+00044258556i[GDBST] addr 803ffff8 len 0
+00044258556i[GDBST] addr 8002545c len 0
+00044258556i[GDBST] addr 8002a5dc len 0
+00044258556i[GDBST] addr 8002a5dc len 0
+00044258556i[GDBST] addr 803fdfd8 len 0
+00044258556i[GDBST] reg 4 set to 803fffb8
+00044258556i[GDBST] reg 5 set to 803fffb8
+00044258556i[GDBST] reg 8 set to 80019fd7
+00044258556i[GDBST] setting breakpoint at 8001fdc7
+00044258556i[GDBST] setting breakpoint at 80017de0
+00044258616i[GDBST] found breakpoint at 80017de0
+00044258616i[GDBST] stopped with ac1
+00044258616i[GDBST] reg 8 set to 80017de0
+00044258616i[GDBST] Removing breakpoint at 8001fdc7
+00044258616i[GDBST] Removing breakpoint at 80017de0
+00044258616i[GDBST] reg 0 set to 20
+00044258616i[GDBST] reg 2 set to 20
+00044258616i[GDBST] reg 5 set to 803fffe4
+00044258616i[GDBST] reg 8 set to 8001fdc7
+00044258616i[GDBST] reg 9 set to 92
+00044258616i[GDBST] addr 8001fdc1 len 0
+00044258616i[GDBST] addr 8001fdc1 len 0
+00044258616i[GDBST] addr 8001fdc1 len 0
+00044258616i[GDBST] addr 8001fdc1 len 0
+00044258616i[GDBST] addr 8001fdc1 len 0
+00044258616i[GDBST] addr 8001fdc1 len 0
+00044258616i[GDBST] addr 8001fdc2 len 0
+00044258616i[GDBST] addr 8001fdc3 len 0
+00044258616i[GDBST] addr 8001fdc3 len 0
+00044258616i[GDBST] addr 8001fdc2 len 0
+00044258616i[GDBST] addr 8001fdc3 len 0
+00044258616i[GDBST] addr 8001fdc4 len 0
+00044258616i[GDBST] addr 8001fdc5 len 0
+00044258616i[GDBST] addr 8001fdc6 len 0
+00044258616i[GDBST] addr 8002a5dc len 0
+00044258616i[GDBST] addr 803fdfd8 len 0
+00044258616i[GDBST] addr 800268ec len 0
+00044258616i[GDBST] addr 8002a5dc len 0
+00044258616i[GDBST] addr 8002a5cc len 0
+00044258616i[GDBST] addr 803fbfd8 len 0
+00044258616i[GDBST] reg 4 set to 803fffb8
+00044258616i[GDBST] reg 5 set to 803fffb8
+00044258616i[GDBST] reg 8 set to 80019caf
+00044258616i[GDBST] setting breakpoint at 8001fdc7
+00044258616i[GDBST] setting breakpoint at 80017de0
+00044258694i[GDBST] found breakpoint at 80017de0
+00044258694i[GDBST] stopped with ac1
+00044258694i[GDBST] reg 8 set to 80017de0
+00044258694i[GDBST] Removing breakpoint at 8001fdc7
+00044258694i[GDBST] Removing breakpoint at 80017de0
+00044258694i[GDBST] reg 0 set to 20
+00044258694i[GDBST] reg 1 set to 18
+00044258694i[GDBST] reg 2 set to 20
+00044258694i[GDBST] reg 5 set to 803fffe4
+00044258694i[GDBST] reg 8 set to 8001fdc7
+00044258694i[GDBST] reg 9 set to 92
+00044258694i[GDBST] addr 8001fdc1 len 0
+00044258694i[GDBST] addr 8001fdc1 len 0
+00044258694i[GDBST] addr 8001fdc1 len 0
+00044258694i[GDBST] addr 8001fdc1 len 0
+00044258694i[GDBST] addr 8001fdc1 len 0
+00044258694i[GDBST] addr 8001fdc1 len 0
+00044258694i[GDBST] addr 8001fdc2 len 0
+00044258694i[GDBST] addr 8001fdc3 len 0
+00044258694i[GDBST] addr 8001fdc3 len 0
+00044258694i[GDBST] addr 8001fdc2 len 0
+00044258694i[GDBST] addr 8001fdc3 len 0
+00044258694i[GDBST] addr 8001fdc4 len 0
+00044258694i[GDBST] addr 8001fdc5 len 0
+00044258694i[GDBST] addr 8001fdc6 len 0
+00044258694i[GDBST] addr 80025460 len 0
+00044258694i[GDBST] addr 80025460 len 0
+00044258694i[GDBST] reg 4 set to 803fffb4
+00044258694i[GDBST] reg 5 set to 803fffb4
+00044258694i[GDBST] reg 8 set to 8001cddf
+00044258694i[GDBST] setting breakpoint at 8001fdc7
+00044258694i[GDBST] setting breakpoint at 80017de0
+00044258701i[GDBST] found breakpoint at 80017de0
+00044258701i[GDBST] stopped with ac1
+00044258701i[GDBST] reg 8 set to 80017de0
+00044258701i[GDBST] Removing breakpoint at 8001fdc7
+00044258701i[GDBST] Removing breakpoint at 80017de0
+00044258701i[GDBST] reg 0 set to 20
+00044258701i[GDBST] reg 1 set to 18
+00044258701i[GDBST] reg 2 set to 20
+00044258701i[GDBST] reg 4 set to 803fffbc
+00044258701i[GDBST] reg 5 set to 803fffe4
+00044258701i[GDBST] reg 8 set to 8001fdc7
+00044258701i[GDBST] addr 8001fdc1 len 0
+00044258701i[GDBST] addr 8001fdc1 len 0
+00044258701i[GDBST] addr 8001fdc1 len 0
+00044258701i[GDBST] addr 8001fdc1 len 0
+00044258701i[GDBST] addr 8001fdc1 len 0
+00044258701i[GDBST] addr 8001fdc1 len 0
+00044258701i[GDBST] addr 8001fdc2 len 0
+00044258701i[GDBST] addr 8001fdc3 len 0
+00044258701i[GDBST] addr 8001fdc3 len 0
+00044258701i[GDBST] addr 8001fdc2 len 0
+00044258701i[GDBST] addr 8001fdc3 len 0
+00044258701i[GDBST] addr 8001fdc4 len 0
+00044258701i[GDBST] addr 8001fdc5 len 0
+00044258701i[GDBST] addr 8001fdc6 len 0
+00044258701i[GDBST] addr 80029b4c len 0
+00044258701i[GDBST] addr 80029b50 len 0
+00044258701i[GDBST] addr 8002a5dc len 0
+00044258701i[GDBST] addr 8002a5dc len 0
+00044258701i[GDBST] addr 803fdfd8 len 0
+00044258701i[GDBST] reg 4 set to 803fffb8
+00044258701i[GDBST] reg 5 set to 803fffb8
+00044258701i[GDBST] reg 8 set to 80019fd7
+00044258701i[GDBST] setting breakpoint at 8001fdc7
+00044258701i[GDBST] setting breakpoint at 80017de0
+00044258761i[GDBST] found breakpoint at 80017de0
+00044258761i[GDBST] stopped with ac1
+00044258761i[GDBST] reg 8 set to 80017de0
+00044258761i[GDBST] Removing breakpoint at 8001fdc7
+00044258761i[GDBST] Removing breakpoint at 80017de0
+00044258761i[GDBST] reg 0 set to 20
+00044258761i[GDBST] reg 1 set to 18
+00044258761i[GDBST] reg 2 set to 20
+00044258761i[GDBST] reg 5 set to 803fffe4
+00044258761i[GDBST] reg 8 set to 8001fdc7
+00044258761i[GDBST] reg 9 set to 92
+00044258761i[GDBST] addr 8001fdc1 len 0
+00044258761i[GDBST] addr 8001fdc1 len 0
+00044258761i[GDBST] addr 8001fdc1 len 0
+00044258761i[GDBST] addr 8001fdc1 len 0
+00044258761i[GDBST] addr 8001fdc1 len 0
+00044258761i[GDBST] addr 8001fdc1 len 0
+00044258761i[GDBST] addr 8001fdc2 len 0
+00044258761i[GDBST] addr 8001fdc3 len 0
+00044258761i[GDBST] addr 8001fdc3 len 0
+00044258761i[GDBST] addr 8001fdc2 len 0
+00044258761i[GDBST] addr 8001fdc3 len 0
+00044258761i[GDBST] addr 8001fdc4 len 0
+00044258761i[GDBST] addr 8001fdc5 len 0
+00044258761i[GDBST] addr 8001fdc6 len 0
+00044258761i[GDBST] addr 800268ec len 0
+00044258761i[GDBST] stepping
+00044258762i[GDBST] stopped with ac2
+00044258762i[GDBST] setting breakpoint at 8001fdc7
+00044259970i[GDBST] found breakpoint at 8001fdc7
+00044259970i[GDBST] stopped with ac1
+00044259970i[GDBST] reg 8 set to 8001fdc7
+00044259970i[GDBST] Removing breakpoint at 8001fdc7
+00044259970i[GDBST] addr 8001fdc1 len 0
+00044259970i[GDBST] addr 8001fdc1 len 0
+00044259970i[GDBST] addr 8001fdc1 len 0
+00044259970i[GDBST] addr 8001fdc1 len 0
+00044259970i[GDBST] addr 8001fdc1 len 0
+00044259970i[GDBST] addr 8001fdc1 len 0
+00044259970i[GDBST] addr 8001fdc2 len 0
+00044259970i[GDBST] addr 8001fdc3 len 0
+00044259970i[GDBST] addr 8001fdc3 len 0
+00044259970i[GDBST] addr 8001fdc2 len 0
+00044259970i[GDBST] addr 8001fdc3 len 0
+00044259970i[GDBST] addr 8001fdc4 len 0
+00044259970i[GDBST] addr 8001fdc5 len 0
+00044259970i[GDBST] addr 8001fdc6 len 0
+00044259970i[GDBST] addr 803fffe4 len 0
+00044259970i[GDBST] addr 803fffe8 len 0
+00044259970i[GDBST] addr 803fffe4 len 0
+00044259970i[GDBST] addr 80017b23 len 0
+00044259970i[GDBST] addr 80017b23 len 0
+00044259970i[GDBST] addr 80017b23 len 0
+00044259970i[GDBST] addr 80017b23 len 0
+00044259970i[GDBST] addr 80017b23 len 0
+00044259970i[GDBST] addr 80017b23 len 0
+00044259970i[GDBST] addr 80017b23 len 0
+00044259970i[GDBST] addr 803fffe4 len 0
+00044259970i[GDBST] addr 803fffec len 0
+00044259970i[GDBST] addr 803fffe4 len 0
+00044259970i[GDBST] addr 803fffe4 len 0
+00044259970i[GDBST] addr 803ffff0 len 0
+00044259970i[GDBST] addr 803fffe4 len 0
+00044259970i[GDBST] addr 800179e9 len 0
+00044259970i[GDBST] addr 800179e9 len 0
+00044259970i[GDBST] addr 800179e9 len 0
+00044259970i[GDBST] addr 800179e9 len 0
+00044259970i[GDBST] addr 800179e9 len 0
+00044259970i[GDBST] addr 800179e9 len 0
+00044259970i[GDBST] addr 800179e9 len 0
+00044259970i[GDBST] addr 803fffe4 len 0
+00044259970i[GDBST] addr 803ffff4 len 0
+00044259970i[GDBST] addr 803fffe4 len 0
+00044259970i[GDBST] addr 803fffe4 len 0
+00044259970i[GDBST] addr 803ffff8 len 0
+00044259970i[GDBST] addr 8002545c len 0
+00044259970i[GDBST] addr 8002a5dc len 0
+00044259970i[GDBST] addr 8002a5dc len 0
+00044259970i[GDBST] addr 803fdfd8 len 0
+00044259970i[GDBST] reg 4 set to 803fffb8
+00044259970i[GDBST] reg 5 set to 803fffb8
+00044259970i[GDBST] reg 8 set to 80019fd7
+00044259970i[GDBST] setting breakpoint at 8001fdc7
+00044259970i[GDBST] setting breakpoint at 80017de0
+00044260030i[GDBST] found breakpoint at 80017de0
+00044260030i[GDBST] stopped with ac1
+00044260030i[GDBST] reg 8 set to 80017de0
+00044260030i[GDBST] Removing breakpoint at 8001fdc7
+00044260030i[GDBST] Removing breakpoint at 80017de0
+00044260030i[GDBST] reg 0 set to 803fc434
+00044260030i[GDBST] reg 2 set to 3c0
+00044260030i[GDBST] reg 5 set to 803fffe4
+00044260030i[GDBST] reg 8 set to 8001fdc7
+00044260030i[GDBST] reg 9 set to 92
+00044260030i[GDBST] addr 8001fdc1 len 0
+00044260030i[GDBST] addr 8001fdc1 len 0
+00044260030i[GDBST] addr 8001fdc1 len 0
+00044260030i[GDBST] addr 8001fdc1 len 0
+00044260030i[GDBST] addr 8001fdc1 len 0
+00044260030i[GDBST] addr 8001fdc1 len 0
+00044260030i[GDBST] addr 8001fdc2 len 0
+00044260030i[GDBST] addr 8001fdc3 len 0
+00044260030i[GDBST] addr 8001fdc3 len 0
+00044260030i[GDBST] addr 8001fdc2 len 0
+00044260030i[GDBST] addr 8001fdc3 len 0
+00044260030i[GDBST] addr 8001fdc4 len 0
+00044260030i[GDBST] addr 8001fdc5 len 0
+00044260030i[GDBST] addr 8001fdc6 len 0
+00044260030i[GDBST] addr 8002a5dc len 0
+00044260030i[GDBST] addr 803fdfd8 len 0
+00044260030i[GDBST] addr 800268ec len 0
+00044260030i[GDBST] addr 8002a5dc len 0
+00044260030i[GDBST] addr 8002a5cc len 0
+00044260030i[GDBST] addr 803fbfd8 len 0
+00044260030i[GDBST] reg 4 set to 803fffb8
+00044260030i[GDBST] reg 5 set to 803fffb8
+00044260030i[GDBST] reg 8 set to 80019caf
+00044260030i[GDBST] setting breakpoint at 8001fdc7
+00044260030i[GDBST] setting breakpoint at 80017de0
+00044260108i[GDBST] found breakpoint at 80017de0
+00044260108i[GDBST] stopped with ac1
+00044260108i[GDBST] reg 8 set to 80017de0
+00044260108i[GDBST] Removing breakpoint at 8001fdc7
+00044260108i[GDBST] Removing breakpoint at 80017de0
+00044260108i[GDBST] reg 0 set to 803fc434
+00044260108i[GDBST] reg 1 set to 10
+00044260108i[GDBST] reg 2 set to 3c0
+00044260108i[GDBST] reg 5 set to 803fffe4
+00044260108i[GDBST] reg 8 set to 8001fdc7
+00044260108i[GDBST] reg 9 set to 92
+00044260108i[GDBST] addr 8001fdc1 len 0
+00044260108i[GDBST] addr 8001fdc1 len 0
+00044260108i[GDBST] addr 8001fdc1 len 0
+00044260108i[GDBST] addr 8001fdc1 len 0
+00044260108i[GDBST] addr 8001fdc1 len 0
+00044260108i[GDBST] addr 8001fdc1 len 0
+00044260108i[GDBST] addr 8001fdc2 len 0
+00044260108i[GDBST] addr 8001fdc3 len 0
+00044260108i[GDBST] addr 8001fdc3 len 0
+00044260108i[GDBST] addr 8001fdc2 len 0
+00044260108i[GDBST] addr 8001fdc3 len 0
+00044260108i[GDBST] addr 8001fdc4 len 0
+00044260108i[GDBST] addr 8001fdc5 len 0
+00044260108i[GDBST] addr 8001fdc6 len 0
+00044260108i[GDBST] addr 80025460 len 0
+00044260108i[GDBST] addr 80025460 len 0
+00044260108i[GDBST] reg 4 set to 803fffb4
+00044260108i[GDBST] reg 5 set to 803fffb4
+00044260108i[GDBST] reg 8 set to 8001cddf
+00044260108i[GDBST] setting breakpoint at 8001fdc7
+00044260108i[GDBST] setting breakpoint at 80017de0
+00044260115i[GDBST] found breakpoint at 80017de0
+00044260115i[GDBST] stopped with ac1
+00044260115i[GDBST] reg 8 set to 80017de0
+00044260115i[GDBST] Removing breakpoint at 8001fdc7
+00044260115i[GDBST] Removing breakpoint at 80017de0
+00044260115i[GDBST] reg 0 set to 803fc434
+00044260115i[GDBST] reg 1 set to 10
+00044260115i[GDBST] reg 2 set to 3c0
+00044260115i[GDBST] reg 4 set to 803fffbc
+00044260115i[GDBST] reg 5 set to 803fffe4
+00044260115i[GDBST] reg 8 set to 8001fdc7
+00044260115i[GDBST] addr 8001fdc1 len 0
+00044260115i[GDBST] addr 8001fdc1 len 0
+00044260115i[GDBST] addr 8001fdc1 len 0
+00044260115i[GDBST] addr 8001fdc1 len 0
+00044260115i[GDBST] addr 8001fdc1 len 0
+00044260115i[GDBST] addr 8001fdc1 len 0
+00044260115i[GDBST] addr 8001fdc2 len 0
+00044260115i[GDBST] addr 8001fdc3 len 0
+00044260115i[GDBST] addr 8001fdc3 len 0
+00044260115i[GDBST] addr 8001fdc2 len 0
+00044260115i[GDBST] addr 8001fdc3 len 0
+00044260115i[GDBST] addr 8001fdc4 len 0
+00044260115i[GDBST] addr 8001fdc5 len 0
+00044260115i[GDBST] addr 8001fdc6 len 0
+00044260115i[GDBST] addr 80029b4c len 0
+00044260115i[GDBST] addr 80029b50 len 0
+00044260115i[GDBST] addr 8002a5dc len 0
+00044260115i[GDBST] addr 8002a5dc len 0
+00044260115i[GDBST] addr 803fdfd8 len 0
+00044260115i[GDBST] reg 4 set to 803fffb8
+00044260115i[GDBST] reg 5 set to 803fffb8
+00044260115i[GDBST] reg 8 set to 80019fd7
+00044260115i[GDBST] setting breakpoint at 8001fdc7
+00044260115i[GDBST] setting breakpoint at 80017de0
+00044260175i[GDBST] found breakpoint at 80017de0
+00044260175i[GDBST] stopped with ac1
+00044260175i[GDBST] reg 8 set to 80017de0
+00044260175i[GDBST] Removing breakpoint at 8001fdc7
+00044260175i[GDBST] Removing breakpoint at 80017de0
+00044260175i[GDBST] reg 0 set to 803fc434
+00044260175i[GDBST] reg 1 set to 10
+00044260175i[GDBST] reg 2 set to 3c0
+00044260175i[GDBST] reg 5 set to 803fffe4
+00044260175i[GDBST] reg 8 set to 8001fdc7
+00044260175i[GDBST] reg 9 set to 92
+00044260175i[GDBST] addr 8001fdc1 len 0
+00044260175i[GDBST] addr 8001fdc1 len 0
+00044260175i[GDBST] addr 8001fdc1 len 0
+00044260175i[GDBST] addr 8001fdc1 len 0
+00044260175i[GDBST] addr 8001fdc1 len 0
+00044260175i[GDBST] addr 8001fdc1 len 0
+00044260175i[GDBST] addr 8001fdc2 len 0
+00044260175i[GDBST] addr 8001fdc3 len 0
+00044260175i[GDBST] addr 8001fdc3 len 0
+00044260175i[GDBST] addr 8001fdc2 len 0
+00044260175i[GDBST] addr 8001fdc3 len 0
+00044260175i[GDBST] addr 8001fdc4 len 0
+00044260175i[GDBST] addr 8001fdc5 len 0
+00044260175i[GDBST] addr 8001fdc6 len 0
+00044260175i[GDBST] addr 800268ec len 0
+00044260175i[GDBST] stepping
+00044260176i[GDBST] stopped with ac2
+00044260176i[GDBST] setting breakpoint at 8001fdc7
+00044260654i[FDD  ] controller reset in software
+00044261236i[GDBST] found breakpoint at 8001fdc7
+00044261236i[GDBST] stopped with ac1
+00044261236i[GDBST] reg 8 set to 8001fdc7
+00044261236i[GDBST] Removing breakpoint at 8001fdc7
+00044261236i[GDBST] addr 8001fdc1 len 0
+00044261236i[GDBST] addr 8001fdc1 len 0
+00044261236i[GDBST] addr 8001fdc1 len 0
+00044261236i[GDBST] addr 8001fdc1 len 0
+00044261236i[GDBST] addr 8001fdc1 len 0
+00044261236i[GDBST] addr 8001fdc1 len 0
+00044261236i[GDBST] addr 8001fdc2 len 0
+00044261236i[GDBST] addr 8001fdc3 len 0
+00044261236i[GDBST] addr 8001fdc3 len 0
+00044261236i[GDBST] addr 8001fdc2 len 0
+00044261236i[GDBST] addr 8001fdc3 len 0
+00044261236i[GDBST] addr 8001fdc4 len 0
+00044261236i[GDBST] addr 8001fdc5 len 0
+00044261236i[GDBST] addr 8001fdc6 len 0
+00044261236i[GDBST] addr 803fffe4 len 0
+00044261236i[GDBST] addr 803fffe8 len 0
+00044261236i[GDBST] addr 803fffe4 len 0
+00044261236i[GDBST] addr 80017b23 len 0
+00044261236i[GDBST] addr 80017b23 len 0
+00044261236i[GDBST] addr 80017b23 len 0
+00044261236i[GDBST] addr 80017b23 len 0
+00044261236i[GDBST] addr 80017b23 len 0
+00044261236i[GDBST] addr 80017b23 len 0
+00044261236i[GDBST] addr 80017b23 len 0
+00044261236i[GDBST] addr 803fffe4 len 0
+00044261236i[GDBST] addr 803fffec len 0
+00044261236i[GDBST] addr 803fffe4 len 0
+00044261236i[GDBST] addr 803fffe4 len 0
+00044261236i[GDBST] addr 803ffff0 len 0
+00044261236i[GDBST] addr 803fffe4 len 0
+00044261236i[GDBST] addr 80017a25 len 0
+00044261236i[GDBST] addr 80017a25 len 0
+00044261236i[GDBST] addr 80017a25 len 0
+00044261236i[GDBST] addr 80017a25 len 0
+00044261236i[GDBST] addr 80017a25 len 0
+00044261236i[GDBST] addr 80017a25 len 0
+00044261236i[GDBST] addr 80017a25 len 0
+00044261236i[GDBST] addr 803fffe4 len 0
+00044261236i[GDBST] addr 803ffff4 len 0
+00044261236i[GDBST] addr 803fffe4 len 0
+00044261236i[GDBST] addr 803fffe4 len 0
+00044261236i[GDBST] addr 803ffff8 len 0
+00044261236i[GDBST] addr 8002545c len 0
+00044261236i[GDBST] addr 8002a5dc len 0
+00044261236i[GDBST] addr 8002a5dc len 0
+00044261236i[GDBST] addr 803fdfd8 len 0
+00044261236i[GDBST] reg 4 set to 803fffb8
+00044261236i[GDBST] reg 5 set to 803fffb8
+00044261236i[GDBST] reg 8 set to 80019fd7
+00044261236i[GDBST] setting breakpoint at 8001fdc7
+00044261236i[GDBST] setting breakpoint at 80017de0
+00044261296i[GDBST] found breakpoint at 80017de0
+00044261296i[GDBST] stopped with ac1
+00044261296i[GDBST] reg 8 set to 80017de0
+00044261296i[GDBST] Removing breakpoint at 8001fdc7
+00044261296i[GDBST] Removing breakpoint at 80017de0
+00044261296i[GDBST] reg 0 set to 20
+00044261296i[GDBST] reg 2 set to 20
+00044261296i[GDBST] reg 5 set to 803fffe4
+00044261296i[GDBST] reg 8 set to 8001fdc7
+00044261296i[GDBST] reg 9 set to 92
+00044261296i[GDBST] addr 8001fdc1 len 0
+00044261296i[GDBST] addr 8001fdc1 len 0
+00044261296i[GDBST] addr 8001fdc1 len 0
+00044261296i[GDBST] addr 8001fdc1 len 0
+00044261296i[GDBST] addr 8001fdc1 len 0
+00044261296i[GDBST] addr 8001fdc1 len 0
+00044261296i[GDBST] addr 8001fdc2 len 0
+00044261296i[GDBST] addr 8001fdc3 len 0
+00044261296i[GDBST] addr 8001fdc3 len 0
+00044261296i[GDBST] addr 8001fdc2 len 0
+00044261296i[GDBST] addr 8001fdc3 len 0
+00044261296i[GDBST] addr 8001fdc4 len 0
+00044261296i[GDBST] addr 8001fdc5 len 0
+00044261296i[GDBST] addr 8001fdc6 len 0
+00044261296i[GDBST] addr 8002a5dc len 0
+00044261296i[GDBST] addr 803fdfd8 len 0
+00044261296i[GDBST] addr 800268ec len 0
+00044261296i[GDBST] addr 8002a5dc len 0
+00044261296i[GDBST] addr 8002a5cc len 0
+00044261296i[GDBST] addr 803fbfd8 len 0
+00044261296i[GDBST] reg 4 set to 803fffb8
+00044261296i[GDBST] reg 5 set to 803fffb8
+00044261296i[GDBST] reg 8 set to 80019caf
+00044261296i[GDBST] setting breakpoint at 8001fdc7
+00044261296i[GDBST] setting breakpoint at 80017de0
+00044261374i[GDBST] found breakpoint at 80017de0
+00044261374i[GDBST] stopped with ac1
+00044261374i[GDBST] reg 8 set to 80017de0
+00044261374i[GDBST] Removing breakpoint at 8001fdc7
+00044261374i[GDBST] Removing breakpoint at 80017de0
+00044261374i[GDBST] reg 0 set to 20
+00044261374i[GDBST] reg 1 set to 18
+00044261374i[GDBST] reg 2 set to 20
+00044261374i[GDBST] reg 5 set to 803fffe4
+00044261374i[GDBST] reg 8 set to 8001fdc7
+00044261374i[GDBST] reg 9 set to 92
+00044261374i[GDBST] addr 8001fdc1 len 0
+00044261374i[GDBST] addr 8001fdc1 len 0
+00044261374i[GDBST] addr 8001fdc1 len 0
+00044261374i[GDBST] addr 8001fdc1 len 0
+00044261374i[GDBST] addr 8001fdc1 len 0
+00044261374i[GDBST] addr 8001fdc1 len 0
+00044261374i[GDBST] addr 8001fdc2 len 0
+00044261374i[GDBST] addr 8001fdc3 len 0
+00044261374i[GDBST] addr 8001fdc3 len 0
+00044261374i[GDBST] addr 8001fdc2 len 0
+00044261374i[GDBST] addr 8001fdc3 len 0
+00044261374i[GDBST] addr 8001fdc4 len 0
+00044261374i[GDBST] addr 8001fdc5 len 0
+00044261374i[GDBST] addr 8001fdc6 len 0
+00044261374i[GDBST] addr 80025460 len 0
+00044261374i[GDBST] addr 80025460 len 0
+00044261374i[GDBST] reg 4 set to 803fffb4
+00044261374i[GDBST] reg 5 set to 803fffb4
+00044261374i[GDBST] reg 8 set to 8001cddf
+00044261374i[GDBST] setting breakpoint at 8001fdc7
+00044261374i[GDBST] setting breakpoint at 80017de0
+00044261381i[GDBST] found breakpoint at 80017de0
+00044261381i[GDBST] stopped with ac1
+00044261381i[GDBST] reg 8 set to 80017de0
+00044261381i[GDBST] Removing breakpoint at 8001fdc7
+00044261381i[GDBST] Removing breakpoint at 80017de0
+00044261381i[GDBST] reg 0 set to 20
+00044261381i[GDBST] reg 1 set to 18
+00044261381i[GDBST] reg 2 set to 20
+00044261381i[GDBST] reg 4 set to 803fffbc
+00044261381i[GDBST] reg 5 set to 803fffe4
+00044261381i[GDBST] reg 8 set to 8001fdc7
+00044261381i[GDBST] addr 8001fdc1 len 0
+00044261381i[GDBST] addr 8001fdc1 len 0
+00044261381i[GDBST] addr 8001fdc1 len 0
+00044261381i[GDBST] addr 8001fdc1 len 0
+00044261381i[GDBST] addr 8001fdc1 len 0
+00044261381i[GDBST] addr 8001fdc1 len 0
+00044261381i[GDBST] addr 8001fdc2 len 0
+00044261381i[GDBST] addr 8001fdc3 len 0
+00044261381i[GDBST] addr 8001fdc3 len 0
+00044261381i[GDBST] addr 8001fdc2 len 0
+00044261381i[GDBST] addr 8001fdc3 len 0
+00044261381i[GDBST] addr 8001fdc4 len 0
+00044261381i[GDBST] addr 8001fdc5 len 0
+00044261381i[GDBST] addr 8001fdc6 len 0
+00044261381i[GDBST] addr 80029b4c len 0
+00044261381i[GDBST] addr 80029b50 len 0
+00044261381i[GDBST] addr 8002a5dc len 0
+00044261381i[GDBST] addr 8002a5dc len 0
+00044261381i[GDBST] addr 803fdfd8 len 0
+00044261381i[GDBST] reg 4 set to 803fffb8
+00044261381i[GDBST] reg 5 set to 803fffb8
+00044261381i[GDBST] reg 8 set to 80019fd7
+00044261381i[GDBST] setting breakpoint at 8001fdc7
+00044261381i[GDBST] setting breakpoint at 80017de0
+00044261441i[GDBST] found breakpoint at 80017de0
+00044261441i[GDBST] stopped with ac1
+00044261441i[GDBST] reg 8 set to 80017de0
+00044261441i[GDBST] Removing breakpoint at 8001fdc7
+00044261441i[GDBST] Removing breakpoint at 80017de0
+00044261441i[GDBST] reg 0 set to 20
+00044261441i[GDBST] reg 1 set to 18
+00044261441i[GDBST] reg 2 set to 20
+00044261441i[GDBST] reg 5 set to 803fffe4
+00044261441i[GDBST] reg 8 set to 8001fdc7
+00044261441i[GDBST] reg 9 set to 92
+00044261441i[GDBST] addr 8001fdc1 len 0
+00044261441i[GDBST] addr 8001fdc1 len 0
+00044261441i[GDBST] addr 8001fdc1 len 0
+00044261441i[GDBST] addr 8001fdc1 len 0
+00044261441i[GDBST] addr 8001fdc1 len 0
+00044261441i[GDBST] addr 8001fdc1 len 0
+00044261441i[GDBST] addr 8001fdc2 len 0
+00044261441i[GDBST] addr 8001fdc3 len 0
+00044261441i[GDBST] addr 8001fdc3 len 0
+00044261441i[GDBST] addr 8001fdc2 len 0
+00044261441i[GDBST] addr 8001fdc3 len 0
+00044261441i[GDBST] addr 8001fdc4 len 0
+00044261441i[GDBST] addr 8001fdc5 len 0
+00044261441i[GDBST] addr 8001fdc6 len 0
+00044261441i[GDBST] addr 800268ec len 0
+00044261441i[GDBST] stepping
+00044261442i[GDBST] stopped with ac2
+00044261442i[GDBST] setting breakpoint at 8001fdc7
+00044262855i[FDD  ] io_write: config control register: 0x00
+00044265061i[GDBST] found breakpoint at 8001fdc7
+00044265061i[GDBST] stopped with ac1
+00044265061i[GDBST] reg 8 set to 8001fdc7
+00044265061i[GDBST] Removing breakpoint at 8001fdc7
+00044265061i[GDBST] addr 8001fdc1 len 0
+00044265061i[GDBST] addr 8001fdc1 len 0
+00044265061i[GDBST] addr 8001fdc1 len 0
+00044265061i[GDBST] addr 8001fdc1 len 0
+00044265061i[GDBST] addr 8001fdc1 len 0
+00044265061i[GDBST] addr 8001fdc1 len 0
+00044265061i[GDBST] addr 8001fdc2 len 0
+00044265061i[GDBST] addr 8001fdc3 len 0
+00044265061i[GDBST] addr 8001fdc3 len 0
+00044265061i[GDBST] addr 8001fdc2 len 0
+00044265061i[GDBST] addr 8001fdc3 len 0
+00044265061i[GDBST] addr 8001fdc4 len 0
+00044265061i[GDBST] addr 8001fdc5 len 0
+00044265061i[GDBST] addr 8001fdc6 len 0
+00044265061i[GDBST] addr 803fffe4 len 0
+00044265061i[GDBST] addr 803fffe8 len 0
+00044265061i[GDBST] addr 803fffe4 len 0
+00044265061i[GDBST] addr 80017b23 len 0
+00044265061i[GDBST] addr 80017b23 len 0
+00044265061i[GDBST] addr 80017b23 len 0
+00044265061i[GDBST] addr 80017b23 len 0
+00044265061i[GDBST] addr 80017b23 len 0
+00044265061i[GDBST] addr 80017b23 len 0
+00044265061i[GDBST] addr 80017b23 len 0
+00044265061i[GDBST] addr 803fffe4 len 0
+00044265061i[GDBST] addr 803fffec len 0
+00044265061i[GDBST] addr 803fffe4 len 0
+00044265061i[GDBST] addr 803fffe4 len 0
+00044265061i[GDBST] addr 803ffff0 len 0
+00044265061i[GDBST] addr 803fffe4 len 0
+00044265061i[GDBST] addr 800179e9 len 0
+00044265061i[GDBST] addr 800179e9 len 0
+00044265061i[GDBST] addr 800179e9 len 0
+00044265061i[GDBST] addr 800179e9 len 0
+00044265061i[GDBST] addr 800179e9 len 0
+00044265061i[GDBST] addr 800179e9 len 0
+00044265061i[GDBST] addr 800179e9 len 0
+00044265061i[GDBST] addr 803fffe4 len 0
+00044265061i[GDBST] addr 803ffff4 len 0
+00044265061i[GDBST] addr 803fffe4 len 0
+00044265061i[GDBST] addr 803fffe4 len 0
+00044265061i[GDBST] addr 803ffff8 len 0
+00044265061i[GDBST] addr 8002545c len 0
+00044265061i[GDBST] addr 8002a5dc len 0
+00044265061i[GDBST] addr 8002a5dc len 0
+00044265061i[GDBST] addr 803fdfd8 len 0
+00044265061i[GDBST] reg 4 set to 803fffb8
+00044265061i[GDBST] reg 5 set to 803fffb8
+00044265061i[GDBST] reg 8 set to 80019fd7
+00044265061i[GDBST] setting breakpoint at 8001fdc7
+00044265061i[GDBST] setting breakpoint at 80017de0
+00044265121i[GDBST] found breakpoint at 80017de0
+00044265121i[GDBST] stopped with ac1
+00044265121i[GDBST] reg 8 set to 80017de0
+00044265121i[GDBST] Removing breakpoint at 8001fdc7
+00044265121i[GDBST] Removing breakpoint at 80017de0
+00044265121i[GDBST] reg 0 set to 803fc434
+00044265121i[GDBST] reg 2 set to 80022944
+00044265121i[GDBST] reg 5 set to 803fffe4
+00044265121i[GDBST] reg 8 set to 8001fdc7
+00044265121i[GDBST] reg 9 set to 92
+00044265121i[GDBST] addr 8001fdc1 len 0
+00044265121i[GDBST] addr 8001fdc1 len 0
+00044265121i[GDBST] addr 8001fdc1 len 0
+00044265121i[GDBST] addr 8001fdc1 len 0
+00044265121i[GDBST] addr 8001fdc1 len 0
+00044265121i[GDBST] addr 8001fdc1 len 0
+00044265121i[GDBST] addr 8001fdc2 len 0
+00044265121i[GDBST] addr 8001fdc3 len 0
+00044265121i[GDBST] addr 8001fdc3 len 0
+00044265121i[GDBST] addr 8001fdc2 len 0
+00044265121i[GDBST] addr 8001fdc3 len 0
+00044265121i[GDBST] addr 8001fdc4 len 0
+00044265121i[GDBST] addr 8001fdc5 len 0
+00044265121i[GDBST] addr 8001fdc6 len 0
+00044265121i[GDBST] addr 8002a5dc len 0
+00044265121i[GDBST] addr 803fdfd8 len 0
+00044265121i[GDBST] addr 800268ec len 0
+00044265121i[GDBST] addr 8002a5dc len 0
+00044265121i[GDBST] addr 8002a5cc len 0
+00044265121i[GDBST] addr 803fbfd8 len 0
+00044265121i[GDBST] reg 4 set to 803fffb8
+00044265121i[GDBST] reg 5 set to 803fffb8
+00044265121i[GDBST] reg 8 set to 80019caf
+00044265121i[GDBST] setting breakpoint at 8001fdc7
+00044265121i[GDBST] setting breakpoint at 80017de0
+00044265199i[GDBST] found breakpoint at 80017de0
+00044265199i[GDBST] stopped with ac1
+00044265199i[GDBST] reg 8 set to 80017de0
+00044265199i[GDBST] Removing breakpoint at 8001fdc7
+00044265199i[GDBST] Removing breakpoint at 80017de0
+00044265199i[GDBST] reg 0 set to 803fc434
+00044265199i[GDBST] reg 1 set to 10
+00044265199i[GDBST] reg 2 set to 80022944
+00044265199i[GDBST] reg 5 set to 803fffe4
+00044265199i[GDBST] reg 8 set to 8001fdc7
+00044265199i[GDBST] reg 9 set to 92
+00044265199i[GDBST] addr 8001fdc1 len 0
+00044265199i[GDBST] addr 8001fdc1 len 0
+00044265199i[GDBST] addr 8001fdc1 len 0
+00044265199i[GDBST] addr 8001fdc1 len 0
+00044265199i[GDBST] addr 8001fdc1 len 0
+00044265199i[GDBST] addr 8001fdc1 len 0
+00044265199i[GDBST] addr 8001fdc2 len 0
+00044265199i[GDBST] addr 8001fdc3 len 0
+00044265199i[GDBST] addr 8001fdc3 len 0
+00044265199i[GDBST] addr 8001fdc2 len 0
+00044265199i[GDBST] addr 8001fdc3 len 0
+00044265199i[GDBST] addr 8001fdc4 len 0
+00044265199i[GDBST] addr 8001fdc5 len 0
+00044265199i[GDBST] addr 8001fdc6 len 0
+00044265199i[GDBST] addr 80025460 len 0
+00044265199i[GDBST] addr 80025460 len 0
+00044265199i[GDBST] reg 4 set to 803fffb4
+00044265199i[GDBST] reg 5 set to 803fffb4
+00044265199i[GDBST] reg 8 set to 8001cddf
+00044265199i[GDBST] setting breakpoint at 8001fdc7
+00044265199i[GDBST] setting breakpoint at 80017de0
+00044265206i[GDBST] found breakpoint at 80017de0
+00044265206i[GDBST] stopped with ac1
+00044265206i[GDBST] reg 8 set to 80017de0
+00044265206i[GDBST] Removing breakpoint at 8001fdc7
+00044265206i[GDBST] Removing breakpoint at 80017de0
+00044265206i[GDBST] reg 0 set to 803fc434
+00044265206i[GDBST] reg 1 set to 10
+00044265206i[GDBST] reg 2 set to 80022944
+00044265206i[GDBST] reg 4 set to 803fffbc
+00044265206i[GDBST] reg 5 set to 803fffe4
+00044265206i[GDBST] reg 8 set to 8001fdc7
+00044265206i[GDBST] addr 8001fdc1 len 0
+00044265206i[GDBST] addr 8001fdc1 len 0
+00044265206i[GDBST] addr 8001fdc1 len 0
+00044265206i[GDBST] addr 8001fdc1 len 0
+00044265206i[GDBST] addr 8001fdc1 len 0
+00044265206i[GDBST] addr 8001fdc1 len 0
+00044265206i[GDBST] addr 8001fdc2 len 0
+00044265206i[GDBST] addr 8001fdc3 len 0
+00044265206i[GDBST] addr 8001fdc3 len 0
+00044265206i[GDBST] addr 8001fdc2 len 0
+00044265206i[GDBST] addr 8001fdc3 len 0
+00044265206i[GDBST] addr 8001fdc4 len 0
+00044265206i[GDBST] addr 8001fdc5 len 0
+00044265206i[GDBST] addr 8001fdc6 len 0
+00044265206i[GDBST] addr 80029b4c len 0
+00044265206i[GDBST] addr 80029b50 len 0
+00044265206i[GDBST] addr 8002a5dc len 0
+00044265206i[GDBST] addr 8002a5dc len 0
+00044265206i[GDBST] addr 803fdfd8 len 0
+00044265206i[GDBST] reg 4 set to 803fffb8
+00044265206i[GDBST] reg 5 set to 803fffb8
+00044265206i[GDBST] reg 8 set to 80019fd7
+00044265206i[GDBST] setting breakpoint at 8001fdc7
+00044265206i[GDBST] setting breakpoint at 80017de0
+00044265266i[GDBST] found breakpoint at 80017de0
+00044265266i[GDBST] stopped with ac1
+00044265266i[GDBST] reg 8 set to 80017de0
+00044265266i[GDBST] Removing breakpoint at 8001fdc7
+00044265266i[GDBST] Removing breakpoint at 80017de0
+00044265266i[GDBST] reg 0 set to 803fc434
+00044265266i[GDBST] reg 1 set to 10
+00044265266i[GDBST] reg 2 set to 80022944
+00044265266i[GDBST] reg 5 set to 803fffe4
+00044265266i[GDBST] reg 8 set to 8001fdc7
+00044265266i[GDBST] reg 9 set to 92
+00044265266i[GDBST] addr 8001fdc1 len 0
+00044265266i[GDBST] addr 8001fdc1 len 0
+00044265266i[GDBST] addr 8001fdc1 len 0
+00044265266i[GDBST] addr 8001fdc1 len 0
+00044265266i[GDBST] addr 8001fdc1 len 0
+00044265266i[GDBST] addr 8001fdc1 len 0
+00044265266i[GDBST] addr 8001fdc2 len 0
+00044265266i[GDBST] addr 8001fdc3 len 0
+00044265266i[GDBST] addr 8001fdc3 len 0
+00044265266i[GDBST] addr 8001fdc2 len 0
+00044265266i[GDBST] addr 8001fdc3 len 0
+00044265266i[GDBST] addr 8001fdc4 len 0
+00044265266i[GDBST] addr 8001fdc5 len 0
+00044265266i[GDBST] addr 8001fdc6 len 0
+00044265266i[GDBST] addr 800268ec len 0
+00044265266i[GDBST] stepping
+00044265267i[GDBST] stopped with ac2
+00044265267i[GDBST] setting breakpoint at 8001fdc7
+00044298148i[GDBST] found breakpoint at 8001fdc7
+00044298148i[GDBST] stopped with ac1
+00044298148i[GDBST] reg 8 set to 8001fdc7
+00044298148i[GDBST] Removing breakpoint at 8001fdc7
+00044298148i[GDBST] addr 8001fdc1 len 0
+00044298148i[GDBST] addr 8001fdc1 len 0
+00044298148i[GDBST] addr 8001fdc1 len 0
+00044298148i[GDBST] addr 8001fdc1 len 0
+00044298148i[GDBST] addr 8001fdc1 len 0
+00044298148i[GDBST] addr 8001fdc1 len 0
+00044298148i[GDBST] addr 8001fdc2 len 0
+00044298148i[GDBST] addr 8001fdc3 len 0
+00044298148i[GDBST] addr 8001fdc3 len 0
+00044298148i[GDBST] addr 8001fdc2 len 0
+00044298148i[GDBST] addr 8001fdc3 len 0
+00044298148i[GDBST] addr 8001fdc4 len 0
+00044298148i[GDBST] addr 8001fdc5 len 0
+00044298148i[GDBST] addr 8001fdc6 len 0
+00044298148i[GDBST] addr 803fffe4 len 0
+00044298148i[GDBST] addr 803fffe8 len 0
+00044298148i[GDBST] addr 803fffe4 len 0
+00044298148i[GDBST] addr 80017b23 len 0
+00044298148i[GDBST] addr 80017b23 len 0
+00044298148i[GDBST] addr 80017b23 len 0
+00044298148i[GDBST] addr 80017b23 len 0
+00044298148i[GDBST] addr 80017b23 len 0
+00044298148i[GDBST] addr 80017b23 len 0
+00044298148i[GDBST] addr 80017b23 len 0
+00044298148i[GDBST] addr 803fffe4 len 0
+00044298148i[GDBST] addr 803fffec len 0
+00044298148i[GDBST] addr 803fffe4 len 0
+00044298148i[GDBST] addr 803fffe4 len 0
+00044298148i[GDBST] addr 803ffff0 len 0
+00044298148i[GDBST] addr 803fffe4 len 0
+00044298148i[GDBST] addr 80017a25 len 0
+00044298148i[GDBST] addr 80017a25 len 0
+00044298148i[GDBST] addr 80017a25 len 0
+00044298148i[GDBST] addr 80017a25 len 0
+00044298148i[GDBST] addr 80017a25 len 0
+00044298148i[GDBST] addr 80017a25 len 0
+00044298148i[GDBST] addr 80017a25 len 0
+00044298148i[GDBST] addr 803fffe4 len 0
+00044298148i[GDBST] addr 803ffff4 len 0
+00044298148i[GDBST] addr 803fffe4 len 0
+00044298148i[GDBST] addr 803fffe4 len 0
+00044298148i[GDBST] addr 803ffff8 len 0
+00044298148i[GDBST] addr 8002545c len 0
+00044298148i[GDBST] addr 8002a5dc len 0
+00044298148i[GDBST] addr 8002a5dc len 0
+00044298148i[GDBST] addr 803fdfd8 len 0
+00044298148i[GDBST] reg 4 set to 803fffb8
+00044298148i[GDBST] reg 5 set to 803fffb8
+00044298148i[GDBST] reg 8 set to 80019fd7
+00044298148i[GDBST] setting breakpoint at 8001fdc7
+00044298148i[GDBST] setting breakpoint at 80017de0
+00044298208i[GDBST] found breakpoint at 80017de0
+00044298208i[GDBST] stopped with ac1
+00044298208i[GDBST] reg 8 set to 80017de0
+00044298208i[GDBST] Removing breakpoint at 8001fdc7
+00044298208i[GDBST] Removing breakpoint at 80017de0
+00044298208i[GDBST] reg 0 set to 20
+00044298208i[GDBST] reg 2 set to 20
+00044298208i[GDBST] reg 5 set to 803fffe4
+00044298208i[GDBST] reg 8 set to 8001fdc7
+00044298208i[GDBST] reg 9 set to 92
+00044298208i[GDBST] addr 8001fdc1 len 0
+00044298208i[GDBST] addr 8001fdc1 len 0
+00044298208i[GDBST] addr 8001fdc1 len 0
+00044298208i[GDBST] addr 8001fdc1 len 0
+00044298208i[GDBST] addr 8001fdc1 len 0
+00044298208i[GDBST] addr 8001fdc1 len 0
+00044298208i[GDBST] addr 8001fdc2 len 0
+00044298208i[GDBST] addr 8001fdc3 len 0
+00044298208i[GDBST] addr 8001fdc3 len 0
+00044298208i[GDBST] addr 8001fdc2 len 0
+00044298208i[GDBST] addr 8001fdc3 len 0
+00044298208i[GDBST] addr 8001fdc4 len 0
+00044298208i[GDBST] addr 8001fdc5 len 0
+00044298208i[GDBST] addr 8001fdc6 len 0
+00044298208i[GDBST] addr 8002a5dc len 0
+00044298208i[GDBST] addr 803fdfd8 len 0
+00044298208i[GDBST] addr 800268ec len 0
+00044298208i[GDBST] addr 8002a5dc len 0
+00044298208i[GDBST] addr 8002a5cc len 0
+00044298208i[GDBST] addr 803fbfd8 len 0
+00044298208i[GDBST] reg 4 set to 803fffb8
+00044298208i[GDBST] reg 5 set to 803fffb8
+00044298208i[GDBST] reg 8 set to 80019caf
+00044298208i[GDBST] setting breakpoint at 8001fdc7
+00044298208i[GDBST] setting breakpoint at 80017de0
+00044298286i[GDBST] found breakpoint at 80017de0
+00044298286i[GDBST] stopped with ac1
+00044298286i[GDBST] reg 8 set to 80017de0
+00044298286i[GDBST] Removing breakpoint at 8001fdc7
+00044298286i[GDBST] Removing breakpoint at 80017de0
+00044298286i[GDBST] reg 0 set to 20
+00044298286i[GDBST] reg 1 set to 10
+00044298286i[GDBST] reg 2 set to 20
+00044298286i[GDBST] reg 5 set to 803fffe4
+00044298286i[GDBST] reg 8 set to 8001fdc7
+00044298286i[GDBST] reg 9 set to 92
+00044298286i[GDBST] addr 8001fdc1 len 0
+00044298286i[GDBST] addr 8001fdc1 len 0
+00044298286i[GDBST] addr 8001fdc1 len 0
+00044298286i[GDBST] addr 8001fdc1 len 0
+00044298286i[GDBST] addr 8001fdc1 len 0
+00044298286i[GDBST] addr 8001fdc1 len 0
+00044298286i[GDBST] addr 8001fdc2 len 0
+00044298286i[GDBST] addr 8001fdc3 len 0
+00044298286i[GDBST] addr 8001fdc3 len 0
+00044298286i[GDBST] addr 8001fdc2 len 0
+00044298286i[GDBST] addr 8001fdc3 len 0
+00044298286i[GDBST] addr 8001fdc4 len 0
+00044298286i[GDBST] addr 8001fdc5 len 0
+00044298286i[GDBST] addr 8001fdc6 len 0
+00044298286i[GDBST] addr 80025460 len 0
+00044298286i[GDBST] addr 80025460 len 0
+00044298286i[GDBST] reg 4 set to 803fffb4
+00044298286i[GDBST] reg 5 set to 803fffb4
+00044298286i[GDBST] reg 8 set to 8001cddf
+00044298286i[GDBST] setting breakpoint at 8001fdc7
+00044298286i[GDBST] setting breakpoint at 80017de0
+00044298293i[GDBST] found breakpoint at 80017de0
+00044298293i[GDBST] stopped with ac1
+00044298293i[GDBST] reg 8 set to 80017de0
+00044298293i[GDBST] Removing breakpoint at 8001fdc7
+00044298293i[GDBST] Removing breakpoint at 80017de0
+00044298293i[GDBST] reg 0 set to 20
+00044298293i[GDBST] reg 1 set to 10
+00044298293i[GDBST] reg 2 set to 20
+00044298293i[GDBST] reg 4 set to 803fffbc
+00044298293i[GDBST] reg 5 set to 803fffe4
+00044298293i[GDBST] reg 8 set to 8001fdc7
+00044298293i[GDBST] addr 8001fdc1 len 0
+00044298293i[GDBST] addr 8001fdc1 len 0
+00044298293i[GDBST] addr 8001fdc1 len 0
+00044298293i[GDBST] addr 8001fdc1 len 0
+00044298293i[GDBST] addr 8001fdc1 len 0
+00044298293i[GDBST] addr 8001fdc1 len 0
+00044298293i[GDBST] addr 8001fdc2 len 0
+00044298293i[GDBST] addr 8001fdc3 len 0
+00044298293i[GDBST] addr 8001fdc3 len 0
+00044298293i[GDBST] addr 8001fdc2 len 0
+00044298293i[GDBST] addr 8001fdc3 len 0
+00044298293i[GDBST] addr 8001fdc4 len 0
+00044298293i[GDBST] addr 8001fdc5 len 0
+00044298293i[GDBST] addr 8001fdc6 len 0
+00044298293i[GDBST] addr 80029b4c len 0
+00044298293i[GDBST] addr 80029b50 len 0
+00044298293i[GDBST] addr 8002a5dc len 0
+00044298293i[GDBST] addr 8002a5dc len 0
+00044298293i[GDBST] addr 803fdfd8 len 0
+00044298293i[GDBST] reg 4 set to 803fffb8
+00044298293i[GDBST] reg 5 set to 803fffb8
+00044298293i[GDBST] reg 8 set to 80019fd7
+00044298293i[GDBST] setting breakpoint at 8001fdc7
+00044298293i[GDBST] setting breakpoint at 80017de0
+00044298353i[GDBST] found breakpoint at 80017de0
+00044298353i[GDBST] stopped with ac1
+00044298353i[GDBST] reg 8 set to 80017de0
+00044298353i[GDBST] Removing breakpoint at 8001fdc7
+00044298353i[GDBST] Removing breakpoint at 80017de0
+00044298353i[GDBST] reg 0 set to 20
+00044298353i[GDBST] reg 1 set to 10
+00044298353i[GDBST] reg 2 set to 20
+00044298353i[GDBST] reg 5 set to 803fffe4
+00044298353i[GDBST] reg 8 set to 8001fdc7
+00044298353i[GDBST] reg 9 set to 92
+00044298353i[GDBST] addr 8001fdc1 len 0
+00044298353i[GDBST] addr 8001fdc1 len 0
+00044298353i[GDBST] addr 8001fdc1 len 0
+00044298353i[GDBST] addr 8001fdc1 len 0
+00044298353i[GDBST] addr 8001fdc1 len 0
+00044298353i[GDBST] addr 8001fdc1 len 0
+00044298353i[GDBST] addr 8001fdc2 len 0
+00044298353i[GDBST] addr 8001fdc3 len 0
+00044298353i[GDBST] addr 8001fdc3 len 0
+00044298353i[GDBST] addr 8001fdc2 len 0
+00044298353i[GDBST] addr 8001fdc3 len 0
+00044298353i[GDBST] addr 8001fdc4 len 0
+00044298353i[GDBST] addr 8001fdc5 len 0
+00044298353i[GDBST] addr 8001fdc6 len 0
+00044298353i[GDBST] addr 800268ec len 0
+00044298353i[GDBST] stepping
+00044298354i[GDBST] stopped with ac2
+00044298354i[GDBST] setting breakpoint at 8001fdc7
+00044338148i[GDBST] found breakpoint at 8001fdc7
+00044338148i[GDBST] stopped with ac1
+00044338148i[GDBST] reg 8 set to 8001fdc7
+00044338148i[GDBST] Removing breakpoint at 8001fdc7
+00044338148i[GDBST] addr 8001fdc1 len 0
+00044338148i[GDBST] addr 8001fdc1 len 0
+00044338148i[GDBST] addr 8001fdc1 len 0
+00044338148i[GDBST] addr 8001fdc1 len 0
+00044338148i[GDBST] addr 8001fdc1 len 0
+00044338148i[GDBST] addr 8001fdc1 len 0
+00044338148i[GDBST] addr 8001fdc2 len 0
+00044338148i[GDBST] addr 8001fdc3 len 0
+00044338148i[GDBST] addr 8001fdc3 len 0
+00044338148i[GDBST] addr 8001fdc2 len 0
+00044338148i[GDBST] addr 8001fdc3 len 0
+00044338148i[GDBST] addr 8001fdc4 len 0
+00044338148i[GDBST] addr 8001fdc5 len 0
+00044338148i[GDBST] addr 8001fdc6 len 0
+00044338148i[GDBST] addr 803fffe4 len 0
+00044338148i[GDBST] addr 803fffe8 len 0
+00044338148i[GDBST] addr 803fffe4 len 0
+00044338148i[GDBST] addr 80017b23 len 0
+00044338148i[GDBST] addr 80017b23 len 0
+00044338148i[GDBST] addr 80017b23 len 0
+00044338148i[GDBST] addr 80017b23 len 0
+00044338148i[GDBST] addr 80017b23 len 0
+00044338148i[GDBST] addr 80017b23 len 0
+00044338148i[GDBST] addr 80017b23 len 0
+00044338148i[GDBST] addr 803fffe4 len 0
+00044338148i[GDBST] addr 803fffec len 0
+00044338148i[GDBST] addr 803fffe4 len 0
+00044338148i[GDBST] addr 803fffe4 len 0
+00044338148i[GDBST] addr 803ffff0 len 0
+00044338148i[GDBST] addr 803fffe4 len 0
+00044338148i[GDBST] addr 80017a25 len 0
+00044338148i[GDBST] addr 80017a25 len 0
+00044338148i[GDBST] addr 80017a25 len 0
+00044338148i[GDBST] addr 80017a25 len 0
+00044338148i[GDBST] addr 80017a25 len 0
+00044338148i[GDBST] addr 80017a25 len 0
+00044338148i[GDBST] addr 80017a25 len 0
+00044338148i[GDBST] addr 803fffe4 len 0
+00044338148i[GDBST] addr 803ffff4 len 0
+00044338148i[GDBST] addr 803fffe4 len 0
+00044338148i[GDBST] addr 803fffe4 len 0
+00044338148i[GDBST] addr 803ffff8 len 0
+00044338148i[GDBST] addr 8002545c len 0
+00044338148i[GDBST] addr 8002a5dc len 0
+00044338148i[GDBST] addr 8002a5dc len 0
+00044338148i[GDBST] addr 803fdfd8 len 0
+00044338148i[GDBST] reg 4 set to 803fffb8
+00044338148i[GDBST] reg 5 set to 803fffb8
+00044338148i[GDBST] reg 8 set to 80019fd7
+00044338148i[GDBST] setting breakpoint at 8001fdc7
+00044338148i[GDBST] setting breakpoint at 80017de0
+00044338208i[GDBST] found breakpoint at 80017de0
+00044338208i[GDBST] stopped with ac1
+00044338208i[GDBST] reg 8 set to 80017de0
+00044338208i[GDBST] Removing breakpoint at 8001fdc7
+00044338208i[GDBST] Removing breakpoint at 80017de0
+00044338208i[GDBST] reg 0 set to 20
+00044338208i[GDBST] reg 2 set to 20
+00044338208i[GDBST] reg 5 set to 803fffe4
+00044338208i[GDBST] reg 8 set to 8001fdc7
+00044338208i[GDBST] reg 9 set to 92
+00044338208i[GDBST] addr 8001fdc1 len 0
+00044338208i[GDBST] addr 8001fdc1 len 0
+00044338208i[GDBST] addr 8001fdc1 len 0
+00044338208i[GDBST] addr 8001fdc1 len 0
+00044338208i[GDBST] addr 8001fdc1 len 0
+00044338208i[GDBST] addr 8001fdc1 len 0
+00044338208i[GDBST] addr 8001fdc2 len 0
+00044338208i[GDBST] addr 8001fdc3 len 0
+00044338208i[GDBST] addr 8001fdc3 len 0
+00044338208i[GDBST] addr 8001fdc2 len 0
+00044338208i[GDBST] addr 8001fdc3 len 0
+00044338208i[GDBST] addr 8001fdc4 len 0
+00044338208i[GDBST] addr 8001fdc5 len 0
+00044338208i[GDBST] addr 8001fdc6 len 0
+00044338208i[GDBST] addr 8002a5dc len 0
+00044338208i[GDBST] addr 803fdfd8 len 0
+00044338208i[GDBST] addr 800268ec len 0
+00044338208i[GDBST] addr 8002a5dc len 0
+00044338208i[GDBST] addr 8002a5cc len 0
+00044338208i[GDBST] addr 803fbfd8 len 0
+00044338208i[GDBST] reg 4 set to 803fffb8
+00044338208i[GDBST] reg 5 set to 803fffb8
+00044338208i[GDBST] reg 8 set to 80019caf
+00044338208i[GDBST] setting breakpoint at 8001fdc7
+00044338208i[GDBST] setting breakpoint at 80017de0
+00044338286i[GDBST] found breakpoint at 80017de0
+00044338286i[GDBST] stopped with ac1
+00044338286i[GDBST] reg 8 set to 80017de0
+00044338286i[GDBST] Removing breakpoint at 8001fdc7
+00044338286i[GDBST] Removing breakpoint at 80017de0
+00044338286i[GDBST] reg 0 set to 20
+00044338286i[GDBST] reg 1 set to 10
+00044338286i[GDBST] reg 2 set to 20
+00044338286i[GDBST] reg 5 set to 803fffe4
+00044338286i[GDBST] reg 8 set to 8001fdc7
+00044338286i[GDBST] reg 9 set to 92
+00044338286i[GDBST] addr 8001fdc1 len 0
+00044338286i[GDBST] addr 8001fdc1 len 0
+00044338286i[GDBST] addr 8001fdc1 len 0
+00044338286i[GDBST] addr 8001fdc1 len 0
+00044338286i[GDBST] addr 8001fdc1 len 0
+00044338286i[GDBST] addr 8001fdc1 len 0
+00044338286i[GDBST] addr 8001fdc2 len 0
+00044338286i[GDBST] addr 8001fdc3 len 0
+00044338286i[GDBST] addr 8001fdc3 len 0
+00044338286i[GDBST] addr 8001fdc2 len 0
+00044338286i[GDBST] addr 8001fdc3 len 0
+00044338286i[GDBST] addr 8001fdc4 len 0
+00044338286i[GDBST] addr 8001fdc5 len 0
+00044338286i[GDBST] addr 8001fdc6 len 0
+00044338286i[GDBST] addr 80025460 len 0
+00044338286i[GDBST] addr 80025460 len 0
+00044338286i[GDBST] reg 4 set to 803fffb4
+00044338286i[GDBST] reg 5 set to 803fffb4
+00044338286i[GDBST] reg 8 set to 8001cddf
+00044338286i[GDBST] setting breakpoint at 8001fdc7
+00044338286i[GDBST] setting breakpoint at 80017de0
+00044338293i[GDBST] found breakpoint at 80017de0
+00044338293i[GDBST] stopped with ac1
+00044338293i[GDBST] reg 8 set to 80017de0
+00044338293i[GDBST] Removing breakpoint at 8001fdc7
+00044338293i[GDBST] Removing breakpoint at 80017de0
+00044338293i[GDBST] reg 0 set to 20
+00044338293i[GDBST] reg 1 set to 10
+00044338293i[GDBST] reg 2 set to 20
+00044338293i[GDBST] reg 4 set to 803fffbc
+00044338293i[GDBST] reg 5 set to 803fffe4
+00044338293i[GDBST] reg 8 set to 8001fdc7
+00044338293i[GDBST] addr 8001fdc1 len 0
+00044338293i[GDBST] addr 8001fdc1 len 0
+00044338293i[GDBST] addr 8001fdc1 len 0
+00044338293i[GDBST] addr 8001fdc1 len 0
+00044338293i[GDBST] addr 8001fdc1 len 0
+00044338293i[GDBST] addr 8001fdc1 len 0
+00044338293i[GDBST] addr 8001fdc2 len 0
+00044338293i[GDBST] addr 8001fdc3 len 0
+00044338293i[GDBST] addr 8001fdc3 len 0
+00044338293i[GDBST] addr 8001fdc2 len 0
+00044338293i[GDBST] addr 8001fdc3 len 0
+00044338293i[GDBST] addr 8001fdc4 len 0
+00044338293i[GDBST] addr 8001fdc5 len 0
+00044338293i[GDBST] addr 8001fdc6 len 0
+00044338293i[GDBST] addr 80029b4c len 0
+00044338293i[GDBST] addr 80029b50 len 0
+00044338293i[GDBST] addr 8002a5dc len 0
+00044338293i[GDBST] addr 8002a5dc len 0
+00044338293i[GDBST] addr 803fdfd8 len 0
+00044338293i[GDBST] reg 4 set to 803fffb8
+00044338293i[GDBST] reg 5 set to 803fffb8
+00044338293i[GDBST] reg 8 set to 80019fd7
+00044338293i[GDBST] setting breakpoint at 8001fdc7
+00044338293i[GDBST] setting breakpoint at 80017de0
+00044338353i[GDBST] found breakpoint at 80017de0
+00044338353i[GDBST] stopped with ac1
+00044338353i[GDBST] reg 8 set to 80017de0
+00044338353i[GDBST] Removing breakpoint at 8001fdc7
+00044338353i[GDBST] Removing breakpoint at 80017de0
+00044338353i[GDBST] reg 0 set to 20
+00044338353i[GDBST] reg 1 set to 10
+00044338353i[GDBST] reg 2 set to 20
+00044338353i[GDBST] reg 5 set to 803fffe4
+00044338353i[GDBST] reg 8 set to 8001fdc7
+00044338353i[GDBST] reg 9 set to 92
+00044338353i[GDBST] addr 8001fdc1 len 0
+00044338353i[GDBST] addr 8001fdc1 len 0
+00044338353i[GDBST] addr 8001fdc1 len 0
+00044338353i[GDBST] addr 8001fdc1 len 0
+00044338353i[GDBST] addr 8001fdc1 len 0
+00044338353i[GDBST] addr 8001fdc1 len 0
+00044338353i[GDBST] addr 8001fdc2 len 0
+00044338353i[GDBST] addr 8001fdc3 len 0
+00044338353i[GDBST] addr 8001fdc3 len 0
+00044338353i[GDBST] addr 8001fdc2 len 0
+00044338353i[GDBST] addr 8001fdc3 len 0
+00044338353i[GDBST] addr 8001fdc4 len 0
+00044338353i[GDBST] addr 8001fdc5 len 0
+00044338353i[GDBST] addr 8001fdc6 len 0
+00044338353i[GDBST] addr 800268ec len 0
+00044338353i[GDBST] stepping
+00044338354i[GDBST] stopped with ac2
+00044338354i[GDBST] setting breakpoint at 8001fdc7
+00044378148i[GDBST] found breakpoint at 8001fdc7
+00044378148i[GDBST] stopped with ac1
+00044378148i[GDBST] reg 8 set to 8001fdc7
+00044378148i[GDBST] Removing breakpoint at 8001fdc7
+00044378148i[GDBST] addr 8001fdc1 len 0
+00044378148i[GDBST] addr 8001fdc1 len 0
+00044378148i[GDBST] addr 8001fdc1 len 0
+00044378148i[GDBST] addr 8001fdc1 len 0
+00044378148i[GDBST] addr 8001fdc1 len 0
+00044378148i[GDBST] addr 8001fdc1 len 0
+00044378148i[GDBST] addr 8001fdc2 len 0
+00044378148i[GDBST] addr 8001fdc3 len 0
+00044378148i[GDBST] addr 8001fdc3 len 0
+00044378148i[GDBST] addr 8001fdc2 len 0
+00044378148i[GDBST] addr 8001fdc3 len 0
+00044378148i[GDBST] addr 8001fdc4 len 0
+00044378148i[GDBST] addr 8001fdc5 len 0
+00044378148i[GDBST] addr 8001fdc6 len 0
+00044378148i[GDBST] addr 803fffe4 len 0
+00044378148i[GDBST] addr 803fffe8 len 0
+00044378148i[GDBST] addr 803fffe4 len 0
+00044378148i[GDBST] addr 80017b23 len 0
+00044378148i[GDBST] addr 80017b23 len 0
+00044378148i[GDBST] addr 80017b23 len 0
+00044378148i[GDBST] addr 80017b23 len 0
+00044378148i[GDBST] addr 80017b23 len 0
+00044378148i[GDBST] addr 80017b23 len 0
+00044378148i[GDBST] addr 80017b23 len 0
+00044378148i[GDBST] addr 803fffe4 len 0
+00044378148i[GDBST] addr 803fffec len 0
+00044378148i[GDBST] addr 803fffe4 len 0
+00044378148i[GDBST] addr 803fffe4 len 0
+00044378148i[GDBST] addr 803ffff0 len 0
+00044378148i[GDBST] addr 803fffe4 len 0
+00044378148i[GDBST] addr 80017a25 len 0
+00044378148i[GDBST] addr 80017a25 len 0
+00044378148i[GDBST] addr 80017a25 len 0
+00044378148i[GDBST] addr 80017a25 len 0
+00044378148i[GDBST] addr 80017a25 len 0
+00044378148i[GDBST] addr 80017a25 len 0
+00044378148i[GDBST] addr 80017a25 len 0
+00044378148i[GDBST] addr 803fffe4 len 0
+00044378148i[GDBST] addr 803ffff4 len 0
+00044378148i[GDBST] addr 803fffe4 len 0
+00044378148i[GDBST] addr 803fffe4 len 0
+00044378148i[GDBST] addr 803ffff8 len 0
+00044378148i[GDBST] addr 8002545c len 0
+00044378148i[GDBST] addr 8002a5dc len 0
+00044378148i[GDBST] addr 8002a5dc len 0
+00044378148i[GDBST] addr 803fdfd8 len 0
+00044378148i[GDBST] reg 4 set to 803fffb8
+00044378148i[GDBST] reg 5 set to 803fffb8
+00044378148i[GDBST] reg 8 set to 80019fd7
+00044378148i[GDBST] setting breakpoint at 8001fdc7
+00044378148i[GDBST] setting breakpoint at 80017de0
+00044378208i[GDBST] found breakpoint at 80017de0
+00044378208i[GDBST] stopped with ac1
+00044378208i[GDBST] reg 8 set to 80017de0
+00044378208i[GDBST] Removing breakpoint at 8001fdc7
+00044378208i[GDBST] Removing breakpoint at 80017de0
+00044378208i[GDBST] reg 0 set to 20
+00044378208i[GDBST] reg 2 set to 20
+00044378208i[GDBST] reg 5 set to 803fffe4
+00044378208i[GDBST] reg 8 set to 8001fdc7
+00044378208i[GDBST] reg 9 set to 92
+00044378208i[GDBST] addr 8001fdc1 len 0
+00044378208i[GDBST] addr 8001fdc1 len 0
+00044378208i[GDBST] addr 8001fdc1 len 0
+00044378208i[GDBST] addr 8001fdc1 len 0
+00044378208i[GDBST] addr 8001fdc1 len 0
+00044378208i[GDBST] addr 8001fdc1 len 0
+00044378208i[GDBST] addr 8001fdc2 len 0
+00044378208i[GDBST] addr 8001fdc3 len 0
+00044378208i[GDBST] addr 8001fdc3 len 0
+00044378208i[GDBST] addr 8001fdc2 len 0
+00044378208i[GDBST] addr 8001fdc3 len 0
+00044378208i[GDBST] addr 8001fdc4 len 0
+00044378208i[GDBST] addr 8001fdc5 len 0
+00044378208i[GDBST] addr 8001fdc6 len 0
+00044378208i[GDBST] addr 8002a5dc len 0
+00044378208i[GDBST] addr 803fdfd8 len 0
+00044378208i[GDBST] addr 800268ec len 0
+00044378208i[GDBST] addr 8002a5dc len 0
+00044378208i[GDBST] addr 8002a5cc len 0
+00044378208i[GDBST] addr 803fbfd8 len 0
+00044378208i[GDBST] reg 4 set to 803fffb8
+00044378208i[GDBST] reg 5 set to 803fffb8
+00044378208i[GDBST] reg 8 set to 80019caf
+00044378208i[GDBST] setting breakpoint at 8001fdc7
+00044378208i[GDBST] setting breakpoint at 80017de0
+00044378286i[GDBST] found breakpoint at 80017de0
+00044378286i[GDBST] stopped with ac1
+00044378286i[GDBST] reg 8 set to 80017de0
+00044378286i[GDBST] Removing breakpoint at 8001fdc7
+00044378286i[GDBST] Removing breakpoint at 80017de0
+00044378286i[GDBST] reg 0 set to 20
+00044378286i[GDBST] reg 1 set to 10
+00044378286i[GDBST] reg 2 set to 20
+00044378286i[GDBST] reg 5 set to 803fffe4
+00044378286i[GDBST] reg 8 set to 8001fdc7
+00044378286i[GDBST] reg 9 set to 92
+00044378286i[GDBST] addr 8001fdc1 len 0
+00044378286i[GDBST] addr 8001fdc1 len 0
+00044378286i[GDBST] addr 8001fdc1 len 0
+00044378286i[GDBST] addr 8001fdc1 len 0
+00044378286i[GDBST] addr 8001fdc1 len 0
+00044378286i[GDBST] addr 8001fdc1 len 0
+00044378286i[GDBST] addr 8001fdc2 len 0
+00044378286i[GDBST] addr 8001fdc3 len 0
+00044378286i[GDBST] addr 8001fdc3 len 0
+00044378286i[GDBST] addr 8001fdc2 len 0
+00044378286i[GDBST] addr 8001fdc3 len 0
+00044378286i[GDBST] addr 8001fdc4 len 0
+00044378286i[GDBST] addr 8001fdc5 len 0
+00044378286i[GDBST] addr 8001fdc6 len 0
+00044378286i[GDBST] addr 80025460 len 0
+00044378286i[GDBST] addr 80025460 len 0
+00044378286i[GDBST] reg 4 set to 803fffb4
+00044378286i[GDBST] reg 5 set to 803fffb4
+00044378286i[GDBST] reg 8 set to 8001cddf
+00044378286i[GDBST] setting breakpoint at 8001fdc7
+00044378286i[GDBST] setting breakpoint at 80017de0
+00044378293i[GDBST] found breakpoint at 80017de0
+00044378293i[GDBST] stopped with ac1
+00044378293i[GDBST] reg 8 set to 80017de0
+00044378293i[GDBST] Removing breakpoint at 8001fdc7
+00044378293i[GDBST] Removing breakpoint at 80017de0
+00044378293i[GDBST] reg 0 set to 20
+00044378293i[GDBST] reg 1 set to 10
+00044378293i[GDBST] reg 2 set to 20
+00044378293i[GDBST] reg 4 set to 803fffbc
+00044378293i[GDBST] reg 5 set to 803fffe4
+00044378293i[GDBST] reg 8 set to 8001fdc7
+00044378293i[GDBST] addr 8001fdc1 len 0
+00044378293i[GDBST] addr 8001fdc1 len 0
+00044378293i[GDBST] addr 8001fdc1 len 0
+00044378293i[GDBST] addr 8001fdc1 len 0
+00044378293i[GDBST] addr 8001fdc1 len 0
+00044378293i[GDBST] addr 8001fdc1 len 0
+00044378293i[GDBST] addr 8001fdc2 len 0
+00044378293i[GDBST] addr 8001fdc3 len 0
+00044378293i[GDBST] addr 8001fdc3 len 0
+00044378293i[GDBST] addr 8001fdc2 len 0
+00044378293i[GDBST] addr 8001fdc3 len 0
+00044378293i[GDBST] addr 8001fdc4 len 0
+00044378293i[GDBST] addr 8001fdc5 len 0
+00044378293i[GDBST] addr 8001fdc6 len 0
+00044378293i[GDBST] addr 80029b4c len 0
+00044378293i[GDBST] addr 80029b50 len 0
+00044378293i[GDBST] addr 8002a5dc len 0
+00044378293i[GDBST] addr 8002a5dc len 0
+00044378293i[GDBST] addr 803fdfd8 len 0
+00044378293i[GDBST] reg 4 set to 803fffb8
+00044378293i[GDBST] reg 5 set to 803fffb8
+00044378293i[GDBST] reg 8 set to 80019fd7
+00044378293i[GDBST] setting breakpoint at 8001fdc7
+00044378293i[GDBST] setting breakpoint at 80017de0
+00044378353i[GDBST] found breakpoint at 80017de0
+00044378353i[GDBST] stopped with ac1
+00044378353i[GDBST] reg 8 set to 80017de0
+00044378353i[GDBST] Removing breakpoint at 8001fdc7
+00044378353i[GDBST] Removing breakpoint at 80017de0
+00044378353i[GDBST] reg 0 set to 20
+00044378353i[GDBST] reg 1 set to 10
+00044378353i[GDBST] reg 2 set to 20
+00044378353i[GDBST] reg 5 set to 803fffe4
+00044378353i[GDBST] reg 8 set to 8001fdc7
+00044378353i[GDBST] reg 9 set to 92
+00044378353i[GDBST] addr 8001fdc1 len 0
+00044378353i[GDBST] addr 8001fdc1 len 0
+00044378353i[GDBST] addr 8001fdc1 len 0
+00044378353i[GDBST] addr 8001fdc1 len 0
+00044378353i[GDBST] addr 8001fdc1 len 0
+00044378353i[GDBST] addr 8001fdc1 len 0
+00044378353i[GDBST] addr 8001fdc2 len 0
+00044378353i[GDBST] addr 8001fdc3 len 0
+00044378353i[GDBST] addr 8001fdc3 len 0
+00044378353i[GDBST] addr 8001fdc2 len 0
+00044378353i[GDBST] addr 8001fdc3 len 0
+00044378353i[GDBST] addr 8001fdc4 len 0
+00044378353i[GDBST] addr 8001fdc5 len 0
+00044378353i[GDBST] addr 8001fdc6 len 0
+00044378353i[GDBST] addr 800268ec len 0
+00044378353i[GDBST] stepping
+00044378354i[GDBST] stopped with ac2
+00044378354i[GDBST] setting breakpoint at 8001fdc7
+00044418148i[GDBST] found breakpoint at 8001fdc7
+00044418148i[GDBST] stopped with ac1
+00044418148i[GDBST] reg 8 set to 8001fdc7
+00044418148i[GDBST] Removing breakpoint at 8001fdc7
+00044418148i[GDBST] addr 8001fdc1 len 0
+00044418148i[GDBST] addr 8001fdc1 len 0
+00044418148i[GDBST] addr 8001fdc1 len 0
+00044418148i[GDBST] addr 8001fdc1 len 0
+00044418148i[GDBST] addr 8001fdc1 len 0
+00044418148i[GDBST] addr 8001fdc1 len 0
+00044418148i[GDBST] addr 8001fdc2 len 0
+00044418148i[GDBST] addr 8001fdc3 len 0
+00044418148i[GDBST] addr 8001fdc3 len 0
+00044418148i[GDBST] addr 8001fdc2 len 0
+00044418148i[GDBST] addr 8001fdc3 len 0
+00044418148i[GDBST] addr 8001fdc4 len 0
+00044418148i[GDBST] addr 8001fdc5 len 0
+00044418148i[GDBST] addr 8001fdc6 len 0
+00044418148i[GDBST] addr 803fffe4 len 0
+00044418148i[GDBST] addr 803fffe8 len 0
+00044418148i[GDBST] addr 803fffe4 len 0
+00044418148i[GDBST] addr 80017b23 len 0
+00044418148i[GDBST] addr 80017b23 len 0
+00044418148i[GDBST] addr 80017b23 len 0
+00044418148i[GDBST] addr 80017b23 len 0
+00044418148i[GDBST] addr 80017b23 len 0
+00044418148i[GDBST] addr 80017b23 len 0
+00044418148i[GDBST] addr 80017b23 len 0
+00044418148i[GDBST] addr 803fffe4 len 0
+00044418148i[GDBST] addr 803fffec len 0
+00044418148i[GDBST] addr 803fffe4 len 0
+00044418148i[GDBST] addr 803fffe4 len 0
+00044418148i[GDBST] addr 803ffff0 len 0
+00044418148i[GDBST] addr 803fffe4 len 0
+00044418148i[GDBST] addr 80017a25 len 0
+00044418148i[GDBST] addr 80017a25 len 0
+00044418148i[GDBST] addr 80017a25 len 0
+00044418148i[GDBST] addr 80017a25 len 0
+00044418148i[GDBST] addr 80017a25 len 0
+00044418148i[GDBST] addr 80017a25 len 0
+00044418148i[GDBST] addr 80017a25 len 0
+00044418148i[GDBST] addr 803fffe4 len 0
+00044418148i[GDBST] addr 803ffff4 len 0
+00044418148i[GDBST] addr 803fffe4 len 0
+00044418148i[GDBST] addr 803fffe4 len 0
+00044418148i[GDBST] addr 803ffff8 len 0
+00044418148i[GDBST] addr 8002545c len 0
+00044418148i[GDBST] addr 8002a5dc len 0
+00044418148i[GDBST] addr 8002a5dc len 0
+00044418148i[GDBST] addr 803fdfd8 len 0
+00044418148i[GDBST] reg 4 set to 803fffb8
+00044418148i[GDBST] reg 5 set to 803fffb8
+00044418148i[GDBST] reg 8 set to 80019fd7
+00044418148i[GDBST] setting breakpoint at 8001fdc7
+00044418148i[GDBST] setting breakpoint at 80017de0
+00044418208i[GDBST] found breakpoint at 80017de0
+00044418208i[GDBST] stopped with ac1
+00044418208i[GDBST] reg 8 set to 80017de0
+00044418208i[GDBST] Removing breakpoint at 8001fdc7
+00044418208i[GDBST] Removing breakpoint at 80017de0
+00044418208i[GDBST] reg 0 set to 20
+00044418208i[GDBST] reg 2 set to 20
+00044418208i[GDBST] reg 5 set to 803fffe4
+00044418208i[GDBST] reg 8 set to 8001fdc7
+00044418208i[GDBST] reg 9 set to 92
+00044418208i[GDBST] addr 8001fdc1 len 0
+00044418208i[GDBST] addr 8001fdc1 len 0
+00044418208i[GDBST] addr 8001fdc1 len 0
+00044418208i[GDBST] addr 8001fdc1 len 0
+00044418208i[GDBST] addr 8001fdc1 len 0
+00044418208i[GDBST] addr 8001fdc1 len 0
+00044418208i[GDBST] addr 8001fdc2 len 0
+00044418208i[GDBST] addr 8001fdc3 len 0
+00044418208i[GDBST] addr 8001fdc3 len 0
+00044418208i[GDBST] addr 8001fdc2 len 0
+00044418208i[GDBST] addr 8001fdc3 len 0
+00044418208i[GDBST] addr 8001fdc4 len 0
+00044418208i[GDBST] addr 8001fdc5 len 0
+00044418208i[GDBST] addr 8001fdc6 len 0
+00044418208i[GDBST] addr 8002a5dc len 0
+00044418208i[GDBST] addr 803fdfd8 len 0
+00044418208i[GDBST] addr 800268ec len 0
+00044418208i[GDBST] addr 8002a5dc len 0
+00044418208i[GDBST] addr 8002a5cc len 0
+00044418208i[GDBST] addr 803fbfd8 len 0
+00044418208i[GDBST] reg 4 set to 803fffb8
+00044418208i[GDBST] reg 5 set to 803fffb8
+00044418208i[GDBST] reg 8 set to 80019caf
+00044418208i[GDBST] setting breakpoint at 8001fdc7
+00044418208i[GDBST] setting breakpoint at 80017de0
+00044418286i[GDBST] found breakpoint at 80017de0
+00044418286i[GDBST] stopped with ac1
+00044418286i[GDBST] reg 8 set to 80017de0
+00044418286i[GDBST] Removing breakpoint at 8001fdc7
+00044418286i[GDBST] Removing breakpoint at 80017de0
+00044418286i[GDBST] reg 0 set to 20
+00044418286i[GDBST] reg 1 set to 10
+00044418286i[GDBST] reg 2 set to 20
+00044418286i[GDBST] reg 5 set to 803fffe4
+00044418286i[GDBST] reg 8 set to 8001fdc7
+00044418286i[GDBST] reg 9 set to 92
+00044418286i[GDBST] addr 8001fdc1 len 0
+00044418286i[GDBST] addr 8001fdc1 len 0
+00044418286i[GDBST] addr 8001fdc1 len 0
+00044418286i[GDBST] addr 8001fdc1 len 0
+00044418286i[GDBST] addr 8001fdc1 len 0
+00044418286i[GDBST] addr 8001fdc1 len 0
+00044418286i[GDBST] addr 8001fdc2 len 0
+00044418286i[GDBST] addr 8001fdc3 len 0
+00044418286i[GDBST] addr 8001fdc3 len 0
+00044418286i[GDBST] addr 8001fdc2 len 0
+00044418286i[GDBST] addr 8001fdc3 len 0
+00044418286i[GDBST] addr 8001fdc4 len 0
+00044418286i[GDBST] addr 8001fdc5 len 0
+00044418286i[GDBST] addr 8001fdc6 len 0
+00044418286i[GDBST] addr 80025460 len 0
+00044418286i[GDBST] addr 80025460 len 0
+00044418286i[GDBST] reg 4 set to 803fffb4
+00044418286i[GDBST] reg 5 set to 803fffb4
+00044418286i[GDBST] reg 8 set to 8001cddf
+00044418286i[GDBST] setting breakpoint at 8001fdc7
+00044418286i[GDBST] setting breakpoint at 80017de0
+00044418293i[GDBST] found breakpoint at 80017de0
+00044418293i[GDBST] stopped with ac1
+00044418293i[GDBST] reg 8 set to 80017de0
+00044418293i[GDBST] Removing breakpoint at 8001fdc7
+00044418293i[GDBST] Removing breakpoint at 80017de0
+00044418293i[GDBST] reg 0 set to 20
+00044418293i[GDBST] reg 1 set to 10
+00044418293i[GDBST] reg 2 set to 20
+00044418293i[GDBST] reg 4 set to 803fffbc
+00044418293i[GDBST] reg 5 set to 803fffe4
+00044418293i[GDBST] reg 8 set to 8001fdc7
+00044418293i[GDBST] addr 8001fdc1 len 0
+00044418293i[GDBST] addr 8001fdc1 len 0
+00044418293i[GDBST] addr 8001fdc1 len 0
+00044418293i[GDBST] addr 8001fdc1 len 0
+00044418293i[GDBST] addr 8001fdc1 len 0
+00044418293i[GDBST] addr 8001fdc1 len 0
+00044418293i[GDBST] addr 8001fdc2 len 0
+00044418293i[GDBST] addr 8001fdc3 len 0
+00044418293i[GDBST] addr 8001fdc3 len 0
+00044418293i[GDBST] addr 8001fdc2 len 0
+00044418293i[GDBST] addr 8001fdc3 len 0
+00044418293i[GDBST] addr 8001fdc4 len 0
+00044418293i[GDBST] addr 8001fdc5 len 0
+00044418293i[GDBST] addr 8001fdc6 len 0
+00044418293i[GDBST] addr 80029b4c len 0
+00044418293i[GDBST] addr 80029b50 len 0
+00044418293i[GDBST] addr 8002a5dc len 0
+00044418293i[GDBST] addr 8002a5dc len 0
+00044418293i[GDBST] addr 803fdfd8 len 0
+00044418293i[GDBST] reg 4 set to 803fffb8
+00044418293i[GDBST] reg 5 set to 803fffb8
+00044418293i[GDBST] reg 8 set to 80019fd7
+00044418293i[GDBST] setting breakpoint at 8001fdc7
+00044418293i[GDBST] setting breakpoint at 80017de0
+00044418353i[GDBST] found breakpoint at 80017de0
+00044418353i[GDBST] stopped with ac1
+00044418353i[GDBST] reg 8 set to 80017de0
+00044418353i[GDBST] Removing breakpoint at 8001fdc7
+00044418353i[GDBST] Removing breakpoint at 80017de0
+00044418353i[GDBST] reg 0 set to 20
+00044418353i[GDBST] reg 1 set to 10
+00044418353i[GDBST] reg 2 set to 20
+00044418353i[GDBST] reg 5 set to 803fffe4
+00044418353i[GDBST] reg 8 set to 8001fdc7
+00044418353i[GDBST] reg 9 set to 92
+00044418353i[GDBST] addr 8001fdc1 len 0
+00044418353i[GDBST] addr 8001fdc1 len 0
+00044418353i[GDBST] addr 8001fdc1 len 0
+00044418353i[GDBST] addr 8001fdc1 len 0
+00044418353i[GDBST] addr 8001fdc1 len 0
+00044418353i[GDBST] addr 8001fdc1 len 0
+00044418353i[GDBST] addr 8001fdc2 len 0
+00044418353i[GDBST] addr 8001fdc3 len 0
+00044418353i[GDBST] addr 8001fdc3 len 0
+00044418353i[GDBST] addr 8001fdc2 len 0
+00044418353i[GDBST] addr 8001fdc3 len 0
+00044418353i[GDBST] addr 8001fdc4 len 0
+00044418353i[GDBST] addr 8001fdc5 len 0
+00044418353i[GDBST] addr 8001fdc6 len 0
+00044418353i[GDBST] addr 800268ec len 0
+00044418353i[GDBST] stepping
+00044418354i[GDBST] stopped with ac2
+00044418354i[GDBST] setting breakpoint at 8001fdc7
+00044458148i[GDBST] found breakpoint at 8001fdc7
+00044458148i[GDBST] stopped with ac1
+00044458148i[GDBST] reg 8 set to 8001fdc7
+00044458148i[GDBST] Removing breakpoint at 8001fdc7
+00044458148i[GDBST] addr 8001fdc1 len 0
+00044458148i[GDBST] addr 8001fdc1 len 0
+00044458148i[GDBST] addr 8001fdc1 len 0
+00044458148i[GDBST] addr 8001fdc1 len 0
+00044458148i[GDBST] addr 8001fdc1 len 0
+00044458148i[GDBST] addr 8001fdc1 len 0
+00044458148i[GDBST] addr 8001fdc2 len 0
+00044458148i[GDBST] addr 8001fdc3 len 0
+00044458148i[GDBST] addr 8001fdc3 len 0
+00044458148i[GDBST] addr 8001fdc2 len 0
+00044458148i[GDBST] addr 8001fdc3 len 0
+00044458148i[GDBST] addr 8001fdc4 len 0
+00044458148i[GDBST] addr 8001fdc5 len 0
+00044458148i[GDBST] addr 8001fdc6 len 0
+00044458148i[GDBST] addr 803fffe4 len 0
+00044458148i[GDBST] addr 803fffe8 len 0
+00044458148i[GDBST] addr 803fffe4 len 0
+00044458148i[GDBST] addr 80017b23 len 0
+00044458148i[GDBST] addr 80017b23 len 0
+00044458148i[GDBST] addr 80017b23 len 0
+00044458148i[GDBST] addr 80017b23 len 0
+00044458148i[GDBST] addr 80017b23 len 0
+00044458148i[GDBST] addr 80017b23 len 0
+00044458148i[GDBST] addr 80017b23 len 0
+00044458148i[GDBST] addr 803fffe4 len 0
+00044458148i[GDBST] addr 803fffec len 0
+00044458148i[GDBST] addr 803fffe4 len 0
+00044458148i[GDBST] addr 803fffe4 len 0
+00044458148i[GDBST] addr 803ffff0 len 0
+00044458148i[GDBST] addr 803fffe4 len 0
+00044458148i[GDBST] addr 80017a25 len 0
+00044458148i[GDBST] addr 80017a25 len 0
+00044458148i[GDBST] addr 80017a25 len 0
+00044458148i[GDBST] addr 80017a25 len 0
+00044458148i[GDBST] addr 80017a25 len 0
+00044458148i[GDBST] addr 80017a25 len 0
+00044458148i[GDBST] addr 80017a25 len 0
+00044458148i[GDBST] addr 803fffe4 len 0
+00044458148i[GDBST] addr 803ffff4 len 0
+00044458148i[GDBST] addr 803fffe4 len 0
+00044458148i[GDBST] addr 803fffe4 len 0
+00044458148i[GDBST] addr 803ffff8 len 0
+00044458148i[GDBST] addr 8002545c len 0
+00044458148i[GDBST] addr 8002a5dc len 0
+00044458148i[GDBST] addr 8002a5dc len 0
+00044458148i[GDBST] addr 803fdfd8 len 0
+00044458148i[GDBST] reg 4 set to 803fffb8
+00044458148i[GDBST] reg 5 set to 803fffb8
+00044458148i[GDBST] reg 8 set to 80019fd7
+00044458148i[GDBST] setting breakpoint at 8001fdc7
+00044458148i[GDBST] setting breakpoint at 80017de0
+00044458208i[GDBST] found breakpoint at 80017de0
+00044458208i[GDBST] stopped with ac1
+00044458208i[GDBST] reg 8 set to 80017de0
+00044458208i[GDBST] Removing breakpoint at 8001fdc7
+00044458208i[GDBST] Removing breakpoint at 80017de0
+00044458208i[GDBST] reg 0 set to 20
+00044458208i[GDBST] reg 2 set to 20
+00044458208i[GDBST] reg 5 set to 803fffe4
+00044458208i[GDBST] reg 8 set to 8001fdc7
+00044458208i[GDBST] reg 9 set to 92
+00044458208i[GDBST] addr 8001fdc1 len 0
+00044458208i[GDBST] addr 8001fdc1 len 0
+00044458208i[GDBST] addr 8001fdc1 len 0
+00044458208i[GDBST] addr 8001fdc1 len 0
+00044458208i[GDBST] addr 8001fdc1 len 0
+00044458208i[GDBST] addr 8001fdc1 len 0
+00044458208i[GDBST] addr 8001fdc2 len 0
+00044458208i[GDBST] addr 8001fdc3 len 0
+00044458208i[GDBST] addr 8001fdc3 len 0
+00044458208i[GDBST] addr 8001fdc2 len 0
+00044458208i[GDBST] addr 8001fdc3 len 0
+00044458208i[GDBST] addr 8001fdc4 len 0
+00044458208i[GDBST] addr 8001fdc5 len 0
+00044458208i[GDBST] addr 8001fdc6 len 0
+00044458208i[GDBST] addr 8002a5dc len 0
+00044458208i[GDBST] addr 803fdfd8 len 0
+00044458208i[GDBST] addr 800268ec len 0
+00044458208i[GDBST] addr 8002a5dc len 0
+00044458208i[GDBST] addr 8002a5cc len 0
+00044458208i[GDBST] addr 803fbfd8 len 0
+00044458208i[GDBST] reg 4 set to 803fffb8
+00044458208i[GDBST] reg 5 set to 803fffb8
+00044458208i[GDBST] reg 8 set to 80019caf
+00044458208i[GDBST] setting breakpoint at 8001fdc7
+00044458208i[GDBST] setting breakpoint at 80017de0
+00044458286i[GDBST] found breakpoint at 80017de0
+00044458286i[GDBST] stopped with ac1
+00044458286i[GDBST] reg 8 set to 80017de0
+00044458286i[GDBST] Removing breakpoint at 8001fdc7
+00044458286i[GDBST] Removing breakpoint at 80017de0
+00044458286i[GDBST] reg 0 set to 20
+00044458286i[GDBST] reg 1 set to 10
+00044458286i[GDBST] reg 2 set to 20
+00044458286i[GDBST] reg 5 set to 803fffe4
+00044458286i[GDBST] reg 8 set to 8001fdc7
+00044458286i[GDBST] reg 9 set to 92
+00044458286i[GDBST] addr 8001fdc1 len 0
+00044458286i[GDBST] addr 8001fdc1 len 0
+00044458286i[GDBST] addr 8001fdc1 len 0
+00044458286i[GDBST] addr 8001fdc1 len 0
+00044458286i[GDBST] addr 8001fdc1 len 0
+00044458286i[GDBST] addr 8001fdc1 len 0
+00044458286i[GDBST] addr 8001fdc2 len 0
+00044458286i[GDBST] addr 8001fdc3 len 0
+00044458286i[GDBST] addr 8001fdc3 len 0
+00044458286i[GDBST] addr 8001fdc2 len 0
+00044458286i[GDBST] addr 8001fdc3 len 0
+00044458286i[GDBST] addr 8001fdc4 len 0
+00044458286i[GDBST] addr 8001fdc5 len 0
+00044458286i[GDBST] addr 8001fdc6 len 0
+00044458286i[GDBST] addr 80025460 len 0
+00044458286i[GDBST] addr 80025460 len 0
+00044458286i[GDBST] reg 4 set to 803fffb4
+00044458286i[GDBST] reg 5 set to 803fffb4
+00044458286i[GDBST] reg 8 set to 8001cddf
+00044458286i[GDBST] setting breakpoint at 8001fdc7
+00044458286i[GDBST] setting breakpoint at 80017de0
+00044458293i[GDBST] found breakpoint at 80017de0
+00044458293i[GDBST] stopped with ac1
+00044458293i[GDBST] reg 8 set to 80017de0
+00044458293i[GDBST] Removing breakpoint at 8001fdc7
+00044458293i[GDBST] Removing breakpoint at 80017de0
+00044458293i[GDBST] reg 0 set to 20
+00044458293i[GDBST] reg 1 set to 10
+00044458293i[GDBST] reg 2 set to 20
+00044458293i[GDBST] reg 4 set to 803fffbc
+00044458293i[GDBST] reg 5 set to 803fffe4
+00044458293i[GDBST] reg 8 set to 8001fdc7
+00044458293i[GDBST] addr 8001fdc1 len 0
+00044458293i[GDBST] addr 8001fdc1 len 0
+00044458293i[GDBST] addr 8001fdc1 len 0
+00044458293i[GDBST] addr 8001fdc1 len 0
+00044458293i[GDBST] addr 8001fdc1 len 0
+00044458293i[GDBST] addr 8001fdc1 len 0
+00044458293i[GDBST] addr 8001fdc2 len 0
+00044458293i[GDBST] addr 8001fdc3 len 0
+00044458293i[GDBST] addr 8001fdc3 len 0
+00044458293i[GDBST] addr 8001fdc2 len 0
+00044458293i[GDBST] addr 8001fdc3 len 0
+00044458293i[GDBST] addr 8001fdc4 len 0
+00044458293i[GDBST] addr 8001fdc5 len 0
+00044458293i[GDBST] addr 8001fdc6 len 0
+00044458293i[GDBST] addr 80029b4c len 0
+00044458293i[GDBST] addr 80029b50 len 0
+00044458293i[GDBST] addr 8002a5dc len 0
+00044458293i[GDBST] addr 8002a5dc len 0
+00044458293i[GDBST] addr 803fdfd8 len 0
+00044458293i[GDBST] reg 4 set to 803fffb8
+00044458293i[GDBST] reg 5 set to 803fffb8
+00044458293i[GDBST] reg 8 set to 80019fd7
+00044458293i[GDBST] setting breakpoint at 8001fdc7
+00044458293i[GDBST] setting breakpoint at 80017de0
+00044458353i[GDBST] found breakpoint at 80017de0
+00044458353i[GDBST] stopped with ac1
+00044458353i[GDBST] reg 8 set to 80017de0
+00044458353i[GDBST] Removing breakpoint at 8001fdc7
+00044458353i[GDBST] Removing breakpoint at 80017de0
+00044458353i[GDBST] reg 0 set to 20
+00044458353i[GDBST] reg 1 set to 10
+00044458353i[GDBST] reg 2 set to 20
+00044458353i[GDBST] reg 5 set to 803fffe4
+00044458353i[GDBST] reg 8 set to 8001fdc7
+00044458353i[GDBST] reg 9 set to 92
+00044458353i[GDBST] addr 8001fdc1 len 0
+00044458353i[GDBST] addr 8001fdc1 len 0
+00044458353i[GDBST] addr 8001fdc1 len 0
+00044458353i[GDBST] addr 8001fdc1 len 0
+00044458353i[GDBST] addr 8001fdc1 len 0
+00044458353i[GDBST] addr 8001fdc1 len 0
+00044458353i[GDBST] addr 8001fdc2 len 0
+00044458353i[GDBST] addr 8001fdc3 len 0
+00044458353i[GDBST] addr 8001fdc3 len 0
+00044458353i[GDBST] addr 8001fdc2 len 0
+00044458353i[GDBST] addr 8001fdc3 len 0
+00044458353i[GDBST] addr 8001fdc4 len 0
+00044458353i[GDBST] addr 8001fdc5 len 0
+00044458353i[GDBST] addr 8001fdc6 len 0
+00044458353i[GDBST] addr 800268ec len 0
+00044458353i[GDBST] stepping
+00044458354i[GDBST] stopped with ac2
+00044458354i[GDBST] setting breakpoint at 8001fdc7
+00044498148i[GDBST] found breakpoint at 8001fdc7
+00044498148i[GDBST] stopped with ac1
+00044498148i[GDBST] reg 8 set to 8001fdc7
+00044498148i[GDBST] Removing breakpoint at 8001fdc7
+00044498148i[GDBST] addr 8001fdc1 len 0
+00044498148i[GDBST] addr 8001fdc1 len 0
+00044498148i[GDBST] addr 8001fdc1 len 0
+00044498148i[GDBST] addr 8001fdc1 len 0
+00044498148i[GDBST] addr 8001fdc1 len 0
+00044498148i[GDBST] addr 8001fdc1 len 0
+00044498148i[GDBST] addr 8001fdc2 len 0
+00044498148i[GDBST] addr 8001fdc3 len 0
+00044498148i[GDBST] addr 8001fdc3 len 0
+00044498148i[GDBST] addr 8001fdc2 len 0
+00044498148i[GDBST] addr 8001fdc3 len 0
+00044498148i[GDBST] addr 8001fdc4 len 0
+00044498148i[GDBST] addr 8001fdc5 len 0
+00044498148i[GDBST] addr 8001fdc6 len 0
+00044498148i[GDBST] addr 803fffe4 len 0
+00044498148i[GDBST] addr 803fffe8 len 0
+00044498148i[GDBST] addr 803fffe4 len 0
+00044498148i[GDBST] addr 80017b23 len 0
+00044498148i[GDBST] addr 80017b23 len 0
+00044498148i[GDBST] addr 80017b23 len 0
+00044498148i[GDBST] addr 80017b23 len 0
+00044498148i[GDBST] addr 80017b23 len 0
+00044498148i[GDBST] addr 80017b23 len 0
+00044498148i[GDBST] addr 80017b23 len 0
+00044498148i[GDBST] addr 803fffe4 len 0
+00044498148i[GDBST] addr 803fffec len 0
+00044498148i[GDBST] addr 803fffe4 len 0
+00044498148i[GDBST] addr 803fffe4 len 0
+00044498148i[GDBST] addr 803ffff0 len 0
+00044498148i[GDBST] addr 803fffe4 len 0
+00044498148i[GDBST] addr 80017a25 len 0
+00044498148i[GDBST] addr 80017a25 len 0
+00044498148i[GDBST] addr 80017a25 len 0
+00044498148i[GDBST] addr 80017a25 len 0
+00044498148i[GDBST] addr 80017a25 len 0
+00044498148i[GDBST] addr 80017a25 len 0
+00044498148i[GDBST] addr 80017a25 len 0
+00044498148i[GDBST] addr 803fffe4 len 0
+00044498148i[GDBST] addr 803ffff4 len 0
+00044498148i[GDBST] addr 803fffe4 len 0
+00044498148i[GDBST] addr 803fffe4 len 0
+00044498148i[GDBST] addr 803ffff8 len 0
+00044498148i[GDBST] addr 8002545c len 0
+00044498148i[GDBST] addr 8002a5dc len 0
+00044498148i[GDBST] addr 8002a5dc len 0
+00044498148i[GDBST] addr 803fdfd8 len 0
+00044498148i[GDBST] reg 4 set to 803fffb8
+00044498148i[GDBST] reg 5 set to 803fffb8
+00044498148i[GDBST] reg 8 set to 80019fd7
+00044498148i[GDBST] setting breakpoint at 8001fdc7
+00044498148i[GDBST] setting breakpoint at 80017de0
+00044498208i[GDBST] found breakpoint at 80017de0
+00044498208i[GDBST] stopped with ac1
+00044498208i[GDBST] reg 8 set to 80017de0
+00044498208i[GDBST] Removing breakpoint at 8001fdc7
+00044498208i[GDBST] Removing breakpoint at 80017de0
+00044498208i[GDBST] reg 0 set to 20
+00044498208i[GDBST] reg 2 set to 20
+00044498208i[GDBST] reg 5 set to 803fffe4
+00044498208i[GDBST] reg 8 set to 8001fdc7
+00044498208i[GDBST] reg 9 set to 92
+00044498208i[GDBST] addr 8001fdc1 len 0
+00044498208i[GDBST] addr 8001fdc1 len 0
+00044498208i[GDBST] addr 8001fdc1 len 0
+00044498208i[GDBST] addr 8001fdc1 len 0
+00044498208i[GDBST] addr 8001fdc1 len 0
+00044498208i[GDBST] addr 8001fdc1 len 0
+00044498208i[GDBST] addr 8001fdc2 len 0
+00044498208i[GDBST] addr 8001fdc3 len 0
+00044498208i[GDBST] addr 8001fdc3 len 0
+00044498208i[GDBST] addr 8001fdc2 len 0
+00044498208i[GDBST] addr 8001fdc3 len 0
+00044498208i[GDBST] addr 8001fdc4 len 0
+00044498208i[GDBST] addr 8001fdc5 len 0
+00044498208i[GDBST] addr 8001fdc6 len 0
+00044498208i[GDBST] addr 8002a5dc len 0
+00044498208i[GDBST] addr 803fdfd8 len 0
+00044498208i[GDBST] addr 800268ec len 0
+00044498208i[GDBST] addr 8002a5dc len 0
+00044498208i[GDBST] addr 8002a5cc len 0
+00044498208i[GDBST] addr 803fbfd8 len 0
+00044498208i[GDBST] reg 4 set to 803fffb8
+00044498208i[GDBST] reg 5 set to 803fffb8
+00044498208i[GDBST] reg 8 set to 80019caf
+00044498208i[GDBST] setting breakpoint at 8001fdc7
+00044498208i[GDBST] setting breakpoint at 80017de0
+00044498286i[GDBST] found breakpoint at 80017de0
+00044498286i[GDBST] stopped with ac1
+00044498286i[GDBST] reg 8 set to 80017de0
+00044498286i[GDBST] Removing breakpoint at 8001fdc7
+00044498286i[GDBST] Removing breakpoint at 80017de0
+00044498286i[GDBST] reg 0 set to 20
+00044498286i[GDBST] reg 1 set to 10
+00044498286i[GDBST] reg 2 set to 20
+00044498286i[GDBST] reg 5 set to 803fffe4
+00044498286i[GDBST] reg 8 set to 8001fdc7
+00044498286i[GDBST] reg 9 set to 92
+00044498286i[GDBST] addr 8001fdc1 len 0
+00044498286i[GDBST] addr 8001fdc1 len 0
+00044498286i[GDBST] addr 8001fdc1 len 0
+00044498286i[GDBST] addr 8001fdc1 len 0
+00044498286i[GDBST] addr 8001fdc1 len 0
+00044498286i[GDBST] addr 8001fdc1 len 0
+00044498286i[GDBST] addr 8001fdc2 len 0
+00044498286i[GDBST] addr 8001fdc3 len 0
+00044498286i[GDBST] addr 8001fdc3 len 0
+00044498286i[GDBST] addr 8001fdc2 len 0
+00044498286i[GDBST] addr 8001fdc3 len 0
+00044498286i[GDBST] addr 8001fdc4 len 0
+00044498286i[GDBST] addr 8001fdc5 len 0
+00044498286i[GDBST] addr 8001fdc6 len 0
+00044498286i[GDBST] addr 80025460 len 0
+00044498286i[GDBST] addr 80025460 len 0
+00044498286i[GDBST] reg 4 set to 803fffb4
+00044498286i[GDBST] reg 5 set to 803fffb4
+00044498286i[GDBST] reg 8 set to 8001cddf
+00044498286i[GDBST] setting breakpoint at 8001fdc7
+00044498286i[GDBST] setting breakpoint at 80017de0
+00044498293i[GDBST] found breakpoint at 80017de0
+00044498293i[GDBST] stopped with ac1
+00044498293i[GDBST] reg 8 set to 80017de0
+00044498293i[GDBST] Removing breakpoint at 8001fdc7
+00044498293i[GDBST] Removing breakpoint at 80017de0
+00044498293i[GDBST] reg 0 set to 20
+00044498293i[GDBST] reg 1 set to 10
+00044498293i[GDBST] reg 2 set to 20
+00044498293i[GDBST] reg 4 set to 803fffbc
+00044498293i[GDBST] reg 5 set to 803fffe4
+00044498293i[GDBST] reg 8 set to 8001fdc7
+00044498293i[GDBST] addr 8001fdc1 len 0
+00044498293i[GDBST] addr 8001fdc1 len 0
+00044498293i[GDBST] addr 8001fdc1 len 0
+00044498293i[GDBST] addr 8001fdc1 len 0
+00044498293i[GDBST] addr 8001fdc1 len 0
+00044498293i[GDBST] addr 8001fdc1 len 0
+00044498293i[GDBST] addr 8001fdc2 len 0
+00044498293i[GDBST] addr 8001fdc3 len 0
+00044498293i[GDBST] addr 8001fdc3 len 0
+00044498293i[GDBST] addr 8001fdc2 len 0
+00044498293i[GDBST] addr 8001fdc3 len 0
+00044498293i[GDBST] addr 8001fdc4 len 0
+00044498293i[GDBST] addr 8001fdc5 len 0
+00044498293i[GDBST] addr 8001fdc6 len 0
+00044498293i[GDBST] addr 80029b4c len 0
+00044498293i[GDBST] addr 80029b50 len 0
+00044498293i[GDBST] addr 8002a5dc len 0
+00044498293i[GDBST] addr 8002a5dc len 0
+00044498293i[GDBST] addr 803fdfd8 len 0
+00044498293i[GDBST] reg 4 set to 803fffb8
+00044498293i[GDBST] reg 5 set to 803fffb8
+00044498293i[GDBST] reg 8 set to 80019fd7
+00044498293i[GDBST] setting breakpoint at 8001fdc7
+00044498293i[GDBST] setting breakpoint at 80017de0
+00044498353i[GDBST] found breakpoint at 80017de0
+00044498353i[GDBST] stopped with ac1
+00044498353i[GDBST] reg 8 set to 80017de0
+00044498353i[GDBST] Removing breakpoint at 8001fdc7
+00044498353i[GDBST] Removing breakpoint at 80017de0
+00044498353i[GDBST] reg 0 set to 20
+00044498353i[GDBST] reg 1 set to 10
+00044498353i[GDBST] reg 2 set to 20
+00044498353i[GDBST] reg 5 set to 803fffe4
+00044498353i[GDBST] reg 8 set to 8001fdc7
+00044498353i[GDBST] reg 9 set to 92
+00044498353i[GDBST] addr 8001fdc1 len 0
+00044498353i[GDBST] addr 8001fdc1 len 0
+00044498353i[GDBST] addr 8001fdc1 len 0
+00044498353i[GDBST] addr 8001fdc1 len 0
+00044498353i[GDBST] addr 8001fdc1 len 0
+00044498353i[GDBST] addr 8001fdc1 len 0
+00044498353i[GDBST] addr 8001fdc2 len 0
+00044498353i[GDBST] addr 8001fdc3 len 0
+00044498353i[GDBST] addr 8001fdc3 len 0
+00044498353i[GDBST] addr 8001fdc2 len 0
+00044498353i[GDBST] addr 8001fdc3 len 0
+00044498353i[GDBST] addr 8001fdc4 len 0
+00044498353i[GDBST] addr 8001fdc5 len 0
+00044498353i[GDBST] addr 8001fdc6 len 0
+00044498353i[GDBST] addr 800268ec len 0
+00044498353i[GDBST] stepping
+00044498354i[GDBST] stopped with ac2
+00044498354i[GDBST] setting breakpoint at 8001fdc7
+00044538152i[GDBST] found breakpoint at 8001fdc7
+00044538152i[GDBST] stopped with ac1
+00044538152i[GDBST] reg 8 set to 8001fdc7
+00044538152i[GDBST] Removing breakpoint at 8001fdc7
+00044538152i[GDBST] addr 8001fdc1 len 0
+00044538152i[GDBST] addr 8001fdc1 len 0
+00044538152i[GDBST] addr 8001fdc1 len 0
+00044538152i[GDBST] addr 8001fdc1 len 0
+00044538152i[GDBST] addr 8001fdc1 len 0
+00044538152i[GDBST] addr 8001fdc1 len 0
+00044538152i[GDBST] addr 8001fdc2 len 0
+00044538152i[GDBST] addr 8001fdc3 len 0
+00044538152i[GDBST] addr 8001fdc3 len 0
+00044538152i[GDBST] addr 8001fdc2 len 0
+00044538152i[GDBST] addr 8001fdc3 len 0
+00044538152i[GDBST] addr 8001fdc4 len 0
+00044538152i[GDBST] addr 8001fdc5 len 0
+00044538152i[GDBST] addr 8001fdc6 len 0
+00044538152i[GDBST] addr 803fffe4 len 0
+00044538152i[GDBST] addr 803fffe8 len 0
+00044538152i[GDBST] addr 803fffe4 len 0
+00044538152i[GDBST] addr 80017b23 len 0
+00044538152i[GDBST] addr 80017b23 len 0
+00044538152i[GDBST] addr 80017b23 len 0
+00044538152i[GDBST] addr 80017b23 len 0
+00044538152i[GDBST] addr 80017b23 len 0
+00044538152i[GDBST] addr 80017b23 len 0
+00044538152i[GDBST] addr 80017b23 len 0
+00044538152i[GDBST] addr 803fffe4 len 0
+00044538152i[GDBST] addr 803fffec len 0
+00044538152i[GDBST] addr 803fffe4 len 0
+00044538152i[GDBST] addr 803fffe4 len 0
+00044538152i[GDBST] addr 803ffff0 len 0
+00044538152i[GDBST] addr 803fffe4 len 0
+00044538152i[GDBST] addr 80017a25 len 0
+00044538152i[GDBST] addr 80017a25 len 0
+00044538152i[GDBST] addr 80017a25 len 0
+00044538152i[GDBST] addr 80017a25 len 0
+00044538152i[GDBST] addr 80017a25 len 0
+00044538152i[GDBST] addr 80017a25 len 0
+00044538152i[GDBST] addr 80017a25 len 0
+00044538152i[GDBST] addr 803fffe4 len 0
+00044538152i[GDBST] addr 803ffff4 len 0
+00044538152i[GDBST] addr 803fffe4 len 0
+00044538152i[GDBST] addr 803fffe4 len 0
+00044538152i[GDBST] addr 803ffff8 len 0
+00044538152i[GDBST] addr 8002545c len 0
+00044538152i[GDBST] addr 8002a5dc len 0
+00044538152i[GDBST] addr 8002a5dc len 0
+00044538152i[GDBST] addr 803fdfd8 len 0
+00044538152i[GDBST] reg 4 set to 803fffb8
+00044538152i[GDBST] reg 5 set to 803fffb8
+00044538152i[GDBST] reg 8 set to 80019fd7
+00044538152i[GDBST] setting breakpoint at 8001fdc7
+00044538152i[GDBST] setting breakpoint at 80017de0
+00044538212i[GDBST] found breakpoint at 80017de0
+00044538212i[GDBST] stopped with ac1
+00044538212i[GDBST] reg 8 set to 80017de0
+00044538212i[GDBST] Removing breakpoint at 8001fdc7
+00044538212i[GDBST] Removing breakpoint at 80017de0
+00044538212i[GDBST] reg 0 set to 20
+00044538212i[GDBST] reg 2 set to 20
+00044538212i[GDBST] reg 5 set to 803fffe4
+00044538212i[GDBST] reg 8 set to 8001fdc7
+00044538212i[GDBST] reg 9 set to 92
+00044538212i[GDBST] addr 8001fdc1 len 0
+00044538212i[GDBST] addr 8001fdc1 len 0
+00044538212i[GDBST] addr 8001fdc1 len 0
+00044538212i[GDBST] addr 8001fdc1 len 0
+00044538212i[GDBST] addr 8001fdc1 len 0
+00044538212i[GDBST] addr 8001fdc1 len 0
+00044538212i[GDBST] addr 8001fdc2 len 0
+00044538212i[GDBST] addr 8001fdc3 len 0
+00044538212i[GDBST] addr 8001fdc3 len 0
+00044538212i[GDBST] addr 8001fdc2 len 0
+00044538212i[GDBST] addr 8001fdc3 len 0
+00044538212i[GDBST] addr 8001fdc4 len 0
+00044538212i[GDBST] addr 8001fdc5 len 0
+00044538212i[GDBST] addr 8001fdc6 len 0
+00044538212i[GDBST] addr 8002a5dc len 0
+00044538212i[GDBST] addr 803fdfd8 len 0
+00044538212i[GDBST] addr 800268ec len 0
+00044538212i[GDBST] addr 8002a5dc len 0
+00044538212i[GDBST] addr 8002a5cc len 0
+00044538212i[GDBST] addr 803fbfd8 len 0
+00044538212i[GDBST] reg 4 set to 803fffb8
+00044538212i[GDBST] reg 5 set to 803fffb8
+00044538212i[GDBST] reg 8 set to 80019caf
+00044538212i[GDBST] setting breakpoint at 8001fdc7
+00044538212i[GDBST] setting breakpoint at 80017de0
+00044538290i[GDBST] found breakpoint at 80017de0
+00044538290i[GDBST] stopped with ac1
+00044538290i[GDBST] reg 8 set to 80017de0
+00044538290i[GDBST] Removing breakpoint at 8001fdc7
+00044538290i[GDBST] Removing breakpoint at 80017de0
+00044538290i[GDBST] reg 0 set to 20
+00044538290i[GDBST] reg 1 set to 10
+00044538290i[GDBST] reg 2 set to 20
+00044538290i[GDBST] reg 5 set to 803fffe4
+00044538290i[GDBST] reg 8 set to 8001fdc7
+00044538290i[GDBST] reg 9 set to 92
+00044538290i[GDBST] addr 8001fdc1 len 0
+00044538290i[GDBST] addr 8001fdc1 len 0
+00044538290i[GDBST] addr 8001fdc1 len 0
+00044538290i[GDBST] addr 8001fdc1 len 0
+00044538290i[GDBST] addr 8001fdc1 len 0
+00044538290i[GDBST] addr 8001fdc1 len 0
+00044538290i[GDBST] addr 8001fdc2 len 0
+00044538290i[GDBST] addr 8001fdc3 len 0
+00044538290i[GDBST] addr 8001fdc3 len 0
+00044538290i[GDBST] addr 8001fdc2 len 0
+00044538290i[GDBST] addr 8001fdc3 len 0
+00044538290i[GDBST] addr 8001fdc4 len 0
+00044538290i[GDBST] addr 8001fdc5 len 0
+00044538290i[GDBST] addr 8001fdc6 len 0
+00044538290i[GDBST] addr 80025460 len 0
+00044538290i[GDBST] addr 80025460 len 0
+00044538290i[GDBST] reg 4 set to 803fffb4
+00044538290i[GDBST] reg 5 set to 803fffb4
+00044538290i[GDBST] reg 8 set to 8001cddf
+00044538290i[GDBST] setting breakpoint at 8001fdc7
+00044538290i[GDBST] setting breakpoint at 80017de0
+00044538297i[GDBST] found breakpoint at 80017de0
+00044538297i[GDBST] stopped with ac1
+00044538297i[GDBST] reg 8 set to 80017de0
+00044538297i[GDBST] Removing breakpoint at 8001fdc7
+00044538297i[GDBST] Removing breakpoint at 80017de0
+00044538297i[GDBST] reg 0 set to 20
+00044538297i[GDBST] reg 1 set to 10
+00044538297i[GDBST] reg 2 set to 20
+00044538297i[GDBST] reg 4 set to 803fffbc
+00044538297i[GDBST] reg 5 set to 803fffe4
+00044538297i[GDBST] reg 8 set to 8001fdc7
+00044538297i[GDBST] addr 8001fdc1 len 0
+00044538297i[GDBST] addr 8001fdc1 len 0
+00044538297i[GDBST] addr 8001fdc1 len 0
+00044538297i[GDBST] addr 8001fdc1 len 0
+00044538297i[GDBST] addr 8001fdc1 len 0
+00044538297i[GDBST] addr 8001fdc1 len 0
+00044538297i[GDBST] addr 8001fdc2 len 0
+00044538297i[GDBST] addr 8001fdc3 len 0
+00044538297i[GDBST] addr 8001fdc3 len 0
+00044538297i[GDBST] addr 8001fdc2 len 0
+00044538297i[GDBST] addr 8001fdc3 len 0
+00044538297i[GDBST] addr 8001fdc4 len 0
+00044538297i[GDBST] addr 8001fdc5 len 0
+00044538297i[GDBST] addr 8001fdc6 len 0
+00044538297i[GDBST] addr 80029b4c len 0
+00044538297i[GDBST] addr 80029b50 len 0
+00044538297i[GDBST] addr 8002a5dc len 0
+00044538297i[GDBST] addr 8002a5dc len 0
+00044538297i[GDBST] addr 803fdfd8 len 0
+00044538297i[GDBST] reg 4 set to 803fffb8
+00044538297i[GDBST] reg 5 set to 803fffb8
+00044538297i[GDBST] reg 8 set to 80019fd7
+00044538297i[GDBST] setting breakpoint at 8001fdc7
+00044538297i[GDBST] setting breakpoint at 80017de0
+00044538357i[GDBST] found breakpoint at 80017de0
+00044538357i[GDBST] stopped with ac1
+00044538357i[GDBST] reg 8 set to 80017de0
+00044538357i[GDBST] Removing breakpoint at 8001fdc7
+00044538357i[GDBST] Removing breakpoint at 80017de0
+00044538357i[GDBST] reg 0 set to 20
+00044538357i[GDBST] reg 1 set to 10
+00044538357i[GDBST] reg 2 set to 20
+00044538357i[GDBST] reg 5 set to 803fffe4
+00044538357i[GDBST] reg 8 set to 8001fdc7
+00044538357i[GDBST] reg 9 set to 92
+00044538357i[GDBST] addr 8001fdc1 len 0
+00044538357i[GDBST] addr 8001fdc1 len 0
+00044538357i[GDBST] addr 8001fdc1 len 0
+00044538357i[GDBST] addr 8001fdc1 len 0
+00044538357i[GDBST] addr 8001fdc1 len 0
+00044538357i[GDBST] addr 8001fdc1 len 0
+00044538357i[GDBST] addr 8001fdc2 len 0
+00044538357i[GDBST] addr 8001fdc3 len 0
+00044538357i[GDBST] addr 8001fdc3 len 0
+00044538357i[GDBST] addr 8001fdc2 len 0
+00044538357i[GDBST] addr 8001fdc3 len 0
+00044538357i[GDBST] addr 8001fdc4 len 0
+00044538357i[GDBST] addr 8001fdc5 len 0
+00044538357i[GDBST] addr 8001fdc6 len 0
+00044538357i[GDBST] addr 800268ec len 0
+00044538357i[GDBST] stepping
+00044538358i[GDBST] stopped with ac2
+00044538358i[GDBST] setting breakpoint at 8001fdc7
+00044578152i[GDBST] found breakpoint at 8001fdc7
+00044578152i[GDBST] stopped with ac1
+00044578152i[GDBST] reg 8 set to 8001fdc7
+00044578152i[GDBST] Removing breakpoint at 8001fdc7
+00044578152i[GDBST] addr 8001fdc1 len 0
+00044578152i[GDBST] addr 8001fdc1 len 0
+00044578152i[GDBST] addr 8001fdc1 len 0
+00044578152i[GDBST] addr 8001fdc1 len 0
+00044578152i[GDBST] addr 8001fdc1 len 0
+00044578152i[GDBST] addr 8001fdc1 len 0
+00044578152i[GDBST] addr 8001fdc2 len 0
+00044578152i[GDBST] addr 8001fdc3 len 0
+00044578152i[GDBST] addr 8001fdc3 len 0
+00044578152i[GDBST] addr 8001fdc2 len 0
+00044578152i[GDBST] addr 8001fdc3 len 0
+00044578152i[GDBST] addr 8001fdc4 len 0
+00044578152i[GDBST] addr 8001fdc5 len 0
+00044578152i[GDBST] addr 8001fdc6 len 0
+00044578152i[GDBST] addr 803fffe4 len 0
+00044578152i[GDBST] addr 803fffe8 len 0
+00044578152i[GDBST] addr 803fffe4 len 0
+00044578152i[GDBST] addr 80017b23 len 0
+00044578152i[GDBST] addr 80017b23 len 0
+00044578152i[GDBST] addr 80017b23 len 0
+00044578152i[GDBST] addr 80017b23 len 0
+00044578152i[GDBST] addr 80017b23 len 0
+00044578152i[GDBST] addr 80017b23 len 0
+00044578152i[GDBST] addr 80017b23 len 0
+00044578152i[GDBST] addr 803fffe4 len 0
+00044578152i[GDBST] addr 803fffec len 0
+00044578152i[GDBST] addr 803fffe4 len 0
+00044578152i[GDBST] addr 803fffe4 len 0
+00044578152i[GDBST] addr 803ffff0 len 0
+00044578152i[GDBST] addr 803fffe4 len 0
+00044578152i[GDBST] addr 80017a25 len 0
+00044578152i[GDBST] addr 80017a25 len 0
+00044578152i[GDBST] addr 80017a25 len 0
+00044578152i[GDBST] addr 80017a25 len 0
+00044578152i[GDBST] addr 80017a25 len 0
+00044578152i[GDBST] addr 80017a25 len 0
+00044578152i[GDBST] addr 80017a25 len 0
+00044578152i[GDBST] addr 803fffe4 len 0
+00044578152i[GDBST] addr 803ffff4 len 0
+00044578152i[GDBST] addr 803fffe4 len 0
+00044578152i[GDBST] addr 803fffe4 len 0
+00044578152i[GDBST] addr 803ffff8 len 0
+00044578152i[GDBST] addr 8002545c len 0
+00044578152i[GDBST] addr 8002a5dc len 0
+00044578152i[GDBST] addr 8002a5dc len 0
+00044578152i[GDBST] addr 803fdfd8 len 0
+00044578152i[GDBST] reg 4 set to 803fffb8
+00044578152i[GDBST] reg 5 set to 803fffb8
+00044578152i[GDBST] reg 8 set to 80019fd7
+00044578152i[GDBST] setting breakpoint at 8001fdc7
+00044578152i[GDBST] setting breakpoint at 80017de0
+00044578212i[GDBST] found breakpoint at 80017de0
+00044578212i[GDBST] stopped with ac1
+00044578212i[GDBST] reg 8 set to 80017de0
+00044578212i[GDBST] Removing breakpoint at 8001fdc7
+00044578212i[GDBST] Removing breakpoint at 80017de0
+00044578212i[GDBST] reg 0 set to 20
+00044578212i[GDBST] reg 2 set to 20
+00044578212i[GDBST] reg 5 set to 803fffe4
+00044578212i[GDBST] reg 8 set to 8001fdc7
+00044578212i[GDBST] reg 9 set to 92
+00044578212i[GDBST] addr 8001fdc1 len 0
+00044578212i[GDBST] addr 8001fdc1 len 0
+00044578212i[GDBST] addr 8001fdc1 len 0
+00044578212i[GDBST] addr 8001fdc1 len 0
+00044578212i[GDBST] addr 8001fdc1 len 0
+00044578212i[GDBST] addr 8001fdc1 len 0
+00044578212i[GDBST] addr 8001fdc2 len 0
+00044578212i[GDBST] addr 8001fdc3 len 0
+00044578212i[GDBST] addr 8001fdc3 len 0
+00044578212i[GDBST] addr 8001fdc2 len 0
+00044578212i[GDBST] addr 8001fdc3 len 0
+00044578212i[GDBST] addr 8001fdc4 len 0
+00044578212i[GDBST] addr 8001fdc5 len 0
+00044578212i[GDBST] addr 8001fdc6 len 0
+00044578212i[GDBST] addr 8002a5dc len 0
+00044578212i[GDBST] addr 803fdfd8 len 0
+00044578212i[GDBST] addr 800268ec len 0
+00044578212i[GDBST] addr 8002a5dc len 0
+00044578212i[GDBST] addr 8002a5cc len 0
+00044578212i[GDBST] addr 803fbfd8 len 0
+00044578212i[GDBST] reg 4 set to 803fffb8
+00044578212i[GDBST] reg 5 set to 803fffb8
+00044578212i[GDBST] reg 8 set to 80019caf
+00044578212i[GDBST] setting breakpoint at 8001fdc7
+00044578212i[GDBST] setting breakpoint at 80017de0
+00044578290i[GDBST] found breakpoint at 80017de0
+00044578290i[GDBST] stopped with ac1
+00044578290i[GDBST] reg 8 set to 80017de0
+00044578290i[GDBST] Removing breakpoint at 8001fdc7
+00044578290i[GDBST] Removing breakpoint at 80017de0
+00044578290i[GDBST] reg 0 set to 20
+00044578290i[GDBST] reg 1 set to 10
+00044578290i[GDBST] reg 2 set to 20
+00044578290i[GDBST] reg 5 set to 803fffe4
+00044578290i[GDBST] reg 8 set to 8001fdc7
+00044578290i[GDBST] reg 9 set to 92
+00044578290i[GDBST] addr 8001fdc1 len 0
+00044578290i[GDBST] addr 8001fdc1 len 0
+00044578290i[GDBST] addr 8001fdc1 len 0
+00044578290i[GDBST] addr 8001fdc1 len 0
+00044578290i[GDBST] addr 8001fdc1 len 0
+00044578290i[GDBST] addr 8001fdc1 len 0
+00044578290i[GDBST] addr 8001fdc2 len 0
+00044578290i[GDBST] addr 8001fdc3 len 0
+00044578290i[GDBST] addr 8001fdc3 len 0
+00044578290i[GDBST] addr 8001fdc2 len 0
+00044578290i[GDBST] addr 8001fdc3 len 0
+00044578290i[GDBST] addr 8001fdc4 len 0
+00044578290i[GDBST] addr 8001fdc5 len 0
+00044578290i[GDBST] addr 8001fdc6 len 0
+00044578290i[GDBST] addr 80025460 len 0
+00044578290i[GDBST] addr 80025460 len 0
+00044578290i[GDBST] reg 4 set to 803fffb4
+00044578290i[GDBST] reg 5 set to 803fffb4
+00044578290i[GDBST] reg 8 set to 8001cddf
+00044578290i[GDBST] setting breakpoint at 8001fdc7
+00044578290i[GDBST] setting breakpoint at 80017de0
+00044578297i[GDBST] found breakpoint at 80017de0
+00044578297i[GDBST] stopped with ac1
+00044578297i[GDBST] reg 8 set to 80017de0
+00044578297i[GDBST] Removing breakpoint at 8001fdc7
+00044578297i[GDBST] Removing breakpoint at 80017de0
+00044578297i[GDBST] reg 0 set to 20
+00044578297i[GDBST] reg 1 set to 10
+00044578297i[GDBST] reg 2 set to 20
+00044578297i[GDBST] reg 4 set to 803fffbc
+00044578297i[GDBST] reg 5 set to 803fffe4
+00044578297i[GDBST] reg 8 set to 8001fdc7
+00044578297i[GDBST] addr 8001fdc1 len 0
+00044578297i[GDBST] addr 8001fdc1 len 0
+00044578297i[GDBST] addr 8001fdc1 len 0
+00044578297i[GDBST] addr 8001fdc1 len 0
+00044578297i[GDBST] addr 8001fdc1 len 0
+00044578297i[GDBST] addr 8001fdc1 len 0
+00044578297i[GDBST] addr 8001fdc2 len 0
+00044578297i[GDBST] addr 8001fdc3 len 0
+00044578297i[GDBST] addr 8001fdc3 len 0
+00044578297i[GDBST] addr 8001fdc2 len 0
+00044578297i[GDBST] addr 8001fdc3 len 0
+00044578297i[GDBST] addr 8001fdc4 len 0
+00044578297i[GDBST] addr 8001fdc5 len 0
+00044578297i[GDBST] addr 8001fdc6 len 0
+00044578297i[GDBST] addr 80029b4c len 0
+00044578297i[GDBST] addr 80029b50 len 0
+00044578297i[GDBST] addr 8002a5dc len 0
+00044578297i[GDBST] addr 8002a5dc len 0
+00044578297i[GDBST] addr 803fdfd8 len 0
+00044578297i[GDBST] reg 4 set to 803fffb8
+00044578297i[GDBST] reg 5 set to 803fffb8
+00044578297i[GDBST] reg 8 set to 80019fd7
+00044578297i[GDBST] setting breakpoint at 8001fdc7
+00044578297i[GDBST] setting breakpoint at 80017de0
+00044578357i[GDBST] found breakpoint at 80017de0
+00044578357i[GDBST] stopped with ac1
+00044578357i[GDBST] reg 8 set to 80017de0
+00044578357i[GDBST] Removing breakpoint at 8001fdc7
+00044578357i[GDBST] Removing breakpoint at 80017de0
+00044578357i[GDBST] reg 0 set to 20
+00044578357i[GDBST] reg 1 set to 10
+00044578357i[GDBST] reg 2 set to 20
+00044578357i[GDBST] reg 5 set to 803fffe4
+00044578357i[GDBST] reg 8 set to 8001fdc7
+00044578357i[GDBST] reg 9 set to 92
+00044578357i[GDBST] addr 8001fdc1 len 0
+00044578357i[GDBST] addr 8001fdc1 len 0
+00044578357i[GDBST] addr 8001fdc1 len 0
+00044578357i[GDBST] addr 8001fdc1 len 0
+00044578357i[GDBST] addr 8001fdc1 len 0
+00044578357i[GDBST] addr 8001fdc1 len 0
+00044578357i[GDBST] addr 8001fdc2 len 0
+00044578357i[GDBST] addr 8001fdc3 len 0
+00044578357i[GDBST] addr 8001fdc3 len 0
+00044578357i[GDBST] addr 8001fdc2 len 0
+00044578357i[GDBST] addr 8001fdc3 len 0
+00044578357i[GDBST] addr 8001fdc4 len 0
+00044578357i[GDBST] addr 8001fdc5 len 0
+00044578357i[GDBST] addr 8001fdc6 len 0
+00044578357i[GDBST] addr 800268ec len 0
